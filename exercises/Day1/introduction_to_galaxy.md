@@ -11,6 +11,6 @@
 
 <div class="tables-end"></div>
 
-## Galaxy website
+## 1. Galaxy website
 
 First of all go to [Galaxy Web Server in Europe](https://usegalaxy.eu/).
