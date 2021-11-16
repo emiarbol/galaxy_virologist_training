@@ -92,3 +92,48 @@ Now our data is loading into galaxy. The jobs can have three different states:
 <img src="../images/Waiting.png" alt="waiting" width="200"/><img src="../images/Running.png" alt="running" width="200"/><img src="../images/Done.png" alt="Done" width="200"/>
 
 ## 5. Edit and Visualize your data:
+
+### Visualization
+
+Now we can start using our data. First of all we are going to see how these fasta files look like. There are different ways to do this:
+1. Select the :eye: icon in the right to the file name. For the first time, our center panel has changed, now it contains the content of the fasta file.
+
+<img src="../images/visualize_fastq.png" alt="visualize_fastq" width="200"/><img src="../images/visualization.png" alt="visualization" width="700"/>
+
+2. Another wat is to select the name of the file to see the first five lines of the file.
+
+<img src="../images/name_select.png" alt="name_select" width="200"/><img src="../images/short_visualization.png" alt="short_visualization" width="200"/>
+
+    - When we display this file summary, we obtain additional options to process this file:
+        - Save: Allows you to save your files locally
+<img src="../images/save_data.png" alt="save" width="200"/>
+        - Copy link: copies the link of the data to your clipboard.
+<img src="../images/copy_link.png" alt="copy_link" width="200"/>
+        - View details: Shows a new window in the center panel with additional information about the sample.
+<img src="../images/data_fetch.png" alt="data_fetch" width="200"/>
+<img src="../images/data_fetch.png" alt="data_fetch" width="700"/>
+        - Visualize this data: As we said before in the theory, in the visualization panel you have all the options of visualization allowed in Galaxy, but not all of then fit your data. With this button, you can see which visualization options are better for your type of data.
+<img src="../images/visualize.png" alt="visualize" width="200"/>
+<img src="../images/visualize_options.png" alt="visualize_options" width="700"/>
+        - Help: Displays helo about the tool used to generate the data.
+<img src="../images/help.png" alt="help" width="200"/>        
+
+**Note:** If you select again in the file name, the summary disappears
+
+### Edition
+Now we are going to rename all the fasta files we uploaded to Galaxy. To do this, we have to click in the pencil that appears close to each file name. This will display a new central window with the different edition options for each file:
+
+<img src="../images/edit_name_fastq.png" alt="edit_name_fastq" width="200"/>
+<img src="../images/edit_1.png" alt="edit_1" width="700"/>
+
+This screen allows you to perform different things. Starting from the right:
+- Set permissions: Allows you to manage the access and permissions of the selected file, for the different users registered.
+- Datatype: Allows you change the datatype of the existing dataset but not modify its contents. Use this if Galaxy has incorrectly guessed the type of your dataset.
+- Convert: Allows you to create a new dataset with the contents of this dataset converted to a new format.
+- Change the attributes: Allows you to rename the file, add some additional information.
+
+:warning: Select **Save** button to save the changes.
+
+We are going to rename the files as shown here:
+
+<img src="../images/rename.png" alt="rename" width="200"/>
