@@ -1,4 +1,4 @@
-# Galaxy for virologist training Exercise 1: Introduction to Galaxy 
+# Galaxy for virologist training Exercise 1: Introduction to Galaxy
 
 <div class="tables-start"></div>
 
@@ -13,4 +13,34 @@
 
 ## 1. Galaxy website
 
-First of all go to [Galaxy Web Server in Europe](https://usegalaxy.eu/).
+First of all go to [Galaxy Web Server in Europe](https://usegalaxy.eu/) and you will se an image like this one:
+
+<p align="center"><img src="../images/Galaxy_web.PNG" alt="Webiste" width="500"></p>
+
+Where you have 4 different elements:
+1. The first one in yellow is the Title panel with the buttons:
+    - Home (house): To go to the home page in Spanish
+    - Workflows: To go to the workflow manager
+    - Visualize: Displays the visualization manager and options
+    - Share Data: Displays the sharing options
+    - Help: Displays all the help menu available
+    - Login or Register
+    - Galaxy Training Materials (graduation cap): Displays de Galaxy Trainings list
+    - Enable/Disable scratchbook (9 squares)
+2. The left side panel in blue with al the tools in this Galaxy mirror
+3. Central panel in red, which will let you run analyses and view outputs
+4. Right panel in green, with the history record.
+
+## 2. Signin/Login:
+The first thing we would do is to signin the website so you can save your history. To do that you should follow the next steps:
+1. Select Login or Register in the header panel
+2. Select **Register here**.
+3. Fill in the registration information. :warning: Use an email you can access now, because it will ask you to confirm your e-mail adres.
+4. Log into your e-mail and verify your Galaxy account.
+5. Log in with your credentials.
+
+<p align="center"><img src="../images/login_1.jpg" alt="Login 1" width="500"></p>
+
+<p align="center"><img src="../images/login_2.jpg" alt="Login 2" width="500"></p>
+
+<p align="center"><img src="../images/login_3.PNG" alt="Login 3" width="500"></p>
