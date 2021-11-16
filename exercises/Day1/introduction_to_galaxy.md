@@ -15,7 +15,7 @@
 
 First of all go to [Galaxy Web Server in Europe](https://usegalaxy.eu/) and you will se an image like this one:
 
-<p align="center"><img src="../images/Galaxy_web.PNG" alt="Webiste" width="500"></p>
+<p align="center"><img src="../images/Galaxy_web.PNG" alt="Webiste" width="700"></p>
 
 Where you have 4 different elements:
 1. The first one in yellow is the Title panel with the buttons:
@@ -39,8 +39,8 @@ The first thing we would do is to signin the website so you can save your histor
 4. Log into your e-mail and verify your Galaxy account.
 5. Log in with your credentials.
 
-<p align="center"><img src="../images/login_1.jpg" alt="Login 1" width="500"></p>
+<p align="center"><img src="../images/login_1.jpg" alt="Login 1" width="700"></p>
 
-<p align="center"><img src="../images/login_2.jpg" alt="Login 2" width="500"></p>
+<p align="center"><img src="../images/login_2.png" alt="Login 2" width="700"></p>
 
-<p align="center"><img src="../images/login_3.PNG" alt="Login 3" width="500"></p>
+<p align="center"><img src="../images/login_3.PNG" alt="Login 3" width="700"></p>
