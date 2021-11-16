@@ -11,6 +11,8 @@
 
 <div class="tables-end"></div>
 
+When we have to do a bioinformatic analysis using a reference genome, we need to provide **just one reference file**. The problem with the segmented genomes, such as happens with Crimea Congo's, is that we have one different file for each fragment in the databases. So here we are going to learn how to load the different segments of a genome in Galaxy and concatenate them in order to create a unique fasta file that can be used for further analyses. Also we are going to learn how to count the number of sequences in a multifasta file, and the number of nucleotides in each sequence in a fasta file.
+
 ## 1. Galaxy website
 
 First of all go to [Galaxy Web Server in Europe](https://usegalaxy.eu/) and you will se an image like this one:
@@ -56,3 +58,13 @@ Now select the [Home](https://usegalaxy.eu/) button and return to the home page.
 2. Click once on **Unnamed history** which is the title of your history and type a new meaningful name for it. In our case it would be good **Crimea Congo Reference Genome**. Then type **Enter** on the keyboard and the new name will be set.
 
 <img src="../images/history_1.png" alt="History 1" width="200"/><img src="../images/history_2.png" alt="History 2" width="200"/><img src="../images/history_3.png" alt="History 3" width="200"/>
+
+## 4. Loading data:
+
+Now we are going to load the data. In this case we are going to use the Crimea Congo reference genome. Crimea Congo's genome is segmented in 3 different segments:
+- S segment: DQ133507
+- M segment: EU037902
+- L segment: EU044832
+
+In order to load these fragments in Galaxy we have to follow these steps:
+1.
