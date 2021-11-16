@@ -105,6 +105,7 @@ Now we can start using our data. First of all we are going to see how these fast
 <img src="../images/name_select.png" alt="name_select" width="200"/><img src="../images/short_visualization.png" alt="short_visualization" width="200"/>
 
 When we display this file summary, we obtain additional options to process this file:
+
         - Save: Allows you to save your files locally
 <img src="../images/save_data.png" alt="save" width="200"/>
         - Copy link: copies the link of the data to your clipboard.
