@@ -107,16 +107,25 @@ Now we can start using our data. First of all we are going to see how these fast
 When we display this file summary, we obtain additional options to process this file:
 
         - Save: Allows you to save your files locally
+
 <img src="../images/save_data.png" alt="save" width="200"/>
+
         - Copy link: copies the link of the data to your clipboard.
+
 <img src="../images/copy_link.png" alt="copy_link" width="200"/>
+
         - View details: Shows a new window in the center panel with additional information about the sample.
+
 <img src="../images/data_fetch.png" alt="data_fetch" width="200"/>
 <img src="../images/data_fetch.png" alt="data_fetch" width="700"/>
+
         - Visualize this data: As we said before in the theory, in the visualization panel you have all the options of visualization allowed in Galaxy, but not all of then fit your data. With this button, you can see which visualization options are better for your type of data.
+
 <img src="../images/visualize.png" alt="visualize" width="200"/>
 <img src="../images/visualize_options.png" alt="visualize_options" width="700"/>
+
         - Help: Displays helo about the tool used to generate the data.
+
 <img src="../images/help.png" alt="help" width="200"/>        
 
 **Note:** If you select again in the file name, the summary disappears
@@ -138,3 +147,7 @@ This screen allows you to perform different things. Starting from the right:
 We are going to rename the files as shown here:
 
 <img src="../images/rename.png" alt="rename" width="200"/>
+
+
+### History more
+When you have just one history, everything is quite easy to manage, but whenever you have more histories, you need to learn how to use the history manager. To go to the history manager you have to select the
