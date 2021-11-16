@@ -6,7 +6,7 @@
 |---------|-------------------------------------------|
 |**Training dataset:**| None
 |**Questions:**| <ul><li>How many nucleotides has each fragment of Crimea Congo genome?</li><li>How do I create a fasta reference for Crimea Congo?</li></ul>|
-|**Objectives**:|<ul><li>Familiarize with Galaxy website</li><li>Learn how to upload data in Galaxy</li><li>Learn how to run tools in Galaxy</li><li>Understand the Galaxy's history</li><li>Learn how to visualize data in Galaxy</li><li>Learn how to create a workflow</li><li>Learn how to load a workflow in Galaxy</li></ul>|
+|**Objectives**:|<ul><li>Familiarize with Galaxy website</li><li>Understand the Galaxy's history</li><li>Learn how to upload data in Galaxy</li><li>Learn how to visualize data in Galaxy</li><li>Learn how to run tools in Galaxy</li><li>Learn how to create a workflow</li><li>Learn how to load a workflow in Galaxy</li></ul>|
 |**Estimated time**:| 1h 15 min |
 
 <div class="tables-end"></div>
@@ -33,7 +33,7 @@ Where you have 4 different elements:
 3. Central panel in red, which will let you run analyses and view outputs
 4. Right panel in green, with the history record.
 
-## 2. Signin/Login:
+### Signin/Login:
 The first thing we would do is to signin the website so you can save your history. To do that you should follow the next steps:
 1. Select Login or Register in the header panel
 2. Select **Register here**.
@@ -47,7 +47,7 @@ The first thing we would do is to signin the website so you can save your histor
 
 <p align="center"><img src="../images/login_3.PNG" alt="Login 3" width="900"></p>
 
-## 3. history
+## 2. Galaxy's history
 
 Now select the [Home](https://usegalaxy.eu/) button and return to the home page. We are going to learn how to manage the history, which is in the right panel. To do this, we will follow these steps:
 
@@ -59,7 +59,7 @@ Now select the [Home](https://usegalaxy.eu/) button and return to the home page.
 
 <img src="../images/history_1.png" alt="History 1" width="200"/><img src="../images/history_2.png" alt="History 2" width="200"/><img src="../images/history_3.png" alt="History 3" width="200"/>
 
-## 4. Loading data:
+## 3. Loading data:
 
 Now we are going to load the data. In this case we are going to use the Crimea Congo reference genome. Crimea Congo's genome is segmented in 3 different segments:
 - S segment: DQ133507
@@ -67,4 +67,28 @@ Now we are going to load the data. In this case we are going to use the Crimea C
 - L segment: EU044832
 
 In order to load these fragments in Galaxy we have to follow these steps:
-1.
+1. In the left side panel, select **Upload Data**
+2. In the new panel select **Paste/Fetch Data**
+3. Then copy the following block of text:
+```
+https://raw.githubusercontent.com/BU-ISCIII/galaxy_virologist_training/one_week_4day_format/exercises/Day1/data/S_DQ133507.fasta
+https://raw.githubusercontent.com/BU-ISCIII/galaxy_virologist_training/one_week_4day_format/exercises/Day1/data/M_EU037902.fasta
+https://raw.githubusercontent.com/BU-ISCIII/galaxy_virologist_training/one_week_4day_format/exercises/Day1/data/L_EU044832.fasta
+```
+4. Now, in the **Download data from the web by entering URLs (one per line) or directly paste content.** square, paste the text you copied before
+5. Select **Start**
+
+<img src="../images/Upload_1" alt="Upload 1" width="700"/>
+<img src="../images/Upload_2" alt="Upload 2" width="700"/>
+<img src="../images/Upload_3" alt="Upload 3" width="700"/>
+<img src="../images/Upload_2" alt="Upload 4" width="700"/>
+
+
+Now our data is loading into galaxy. The jobs can have three different states:
+1. Waiting: Your jobs will have a grey color and a clock on their left side. In this state your jobs are waiting to enter in the Galaxy server.
+2. Running: Your jobs will have an orange color and rotatory dots on their left side. In this state your jobs are running in the Galaxy server.
+3. Done: Your jobs will have a green color. Your data is ready to be used.
+
+<img src="../images/Waiting.png" alt="waiting" width="200"/><img src="../images/Running.png" alt="running" width="200"/><img src="../images/Done.png" alt="Done" width="200"/>
+
+## 5. Edit and Visualize your data:
