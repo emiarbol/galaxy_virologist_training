@@ -5,7 +5,7 @@
 |**Title**| Galaxy |
 |---------|-------------------------------------------|
 |**Training dataset:**| None
-|**Questions:**| <ul><li>How do I use Galaxy web server?</li></ul>|
+|**Questions:**| <ul><li>How many nucleotides has each fragment of Crimea Congo genome?</li><li>How do I create a fasta reference for Crimea Congo?</li></ul>|
 |**Objectives**:|<ul><li>Familiarize with Galaxy website</li><li>Learn how to upload data in Galaxy</li><li>Learn how to run tools in Galaxy</li><li>Understand the Galaxy's history</li><li>Learn how to visualize data in Galaxy</li><li>Learn how to create a workflow</li><li>Learn how to load a workflow in Galaxy</li></ul>|
 |**Estimated time**:| 1h 15 min |
 
@@ -44,3 +44,5 @@ The first thing we would do is to signin the website so you can save your histor
 <p align="center"><img src="../images/login_2.png" alt="Login 2" width="900"></p>
 
 <p align="center"><img src="../images/login_3.PNG" alt="Login 3" width="900"></p>
+
+## 3.
