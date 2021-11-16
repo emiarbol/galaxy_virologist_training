@@ -78,10 +78,10 @@ https://raw.githubusercontent.com/BU-ISCIII/galaxy_virologist_training/one_week_
 4. Now, in the **Download data from the web by entering URLs (one per line) or directly paste content.** square, paste the text you copied before
 5. Select **Start**
 
-<img src="../images/Upload_1" alt="Upload 1" width="700"/>
-<img src="../images/Upload_2" alt="Upload 2" width="700"/>
-<img src="../images/Upload_3" alt="Upload 3" width="700"/>
-<img src="../images/Upload_2" alt="Upload 4" width="700"/>
+<img src="../images/Upload_1.png" alt="Upload 1" width="700"/>
+<img src="../images/Upload_2.png" alt="Upload 2" width="700"/>
+<img src="../images/Upload_3.png" alt="Upload 3" width="700"/>
+<img src="../images/Upload_2.png" alt="Upload 4" width="700"/>
 
 
 Now our data is loading into galaxy. The jobs can have three different states:
@@ -100,10 +100,9 @@ Now we can start using our data. First of all we are going to see how these fast
 
 <img src="../images/visualize_fastq.png" alt="visualize_fastq" width="200"/><img src="../images/visualization.png" alt="visualization" width="700"/>
 
-2. Another wat is to select the name of the file to see the first five lines of the file.
+2. Another way is to select the name of the file to see the first five lines of the file.
 
 <img src="../images/name_select.png" alt="name_select" width="200"/><img src="../images/short_visualization.png" alt="short_visualization" width="200"/>
-
     - When we display this file summary, we obtain additional options to process this file:
         - Save: Allows you to save your files locally
 <img src="../images/save_data.png" alt="save" width="200"/>
