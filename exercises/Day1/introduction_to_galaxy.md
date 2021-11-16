@@ -55,4 +55,4 @@ Now select the [Home](https://usegalaxy.eu/) button and return to the home page.
         - Select the option Create New from the menu
 2. Click once on **Unnamed history** which is the title of your history and type a new meaningful name for it. In our case it would be good **Crimea Congo Reference Genome**. Then type **Enter** on the keyboard and the new name will be set.
 
-<img src="../images/history_1.png" alt="History 1" width="200"><img src="../images/history_2.png" alt="History 2" width="200"><img src="../images/history_3.png" alt="History 3" width="200">
+<img src="../images/history_1.png" alt="History 1" width="200"/><img src="../images/history_2.png" alt="History 2" width="200"/><img src="../images/history_3.png" alt="History 3" width="200"/>
