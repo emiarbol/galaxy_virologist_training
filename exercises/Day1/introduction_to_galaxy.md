@@ -45,4 +45,14 @@ The first thing we would do is to signin the website so you can save your histor
 
 <p align="center"><img src="../images/login_3.PNG" alt="Login 3" width="900"></p>
 
-## 3.
+## 3. history
+
+Now select the [Home](https://usegalaxy.eu/) button and return to the home page. We are going to learn how to manage the history, which is in the right panel. To do this, we will follow these steps:
+
+1. Click the new-history (**+**) icon at the top of the history panel.
+    - If the new-history is missing:
+        - Click on the galaxy-gear icon (History options) on the top of the history panel
+        - Select the option Create New from the menu
+2. Click once on **Unnamed history** which is the title of your history and type a new meaningful name for it. In our case it would be good **Crimea Congo Reference Genome**. Then type **Enter** on the keyboard and the new name will be set.
+
+<p align="left"><img src="../images/history_1.png" alt="History 1" width="200"></p><p align="center"><img src="../images/history_2.png" alt="History 2" width="200"></p><p align="right"><img src="../images/history_3.png" alt="History 3" width="200"></p>
