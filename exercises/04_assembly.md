@@ -65,7 +65,11 @@ Some considerations:
 4. Click execute and wait.
 <p align="center"><img src="images/spades_params.png" alt="Spades params" width="400"></p>
 5. Click the :eye: icon in the history: Spades Contigs stats.
-    - How many contigs has been assembled?
+    <details>
+    <summary>How many contigs has been assembled?</summary>
+    </br>
+    93
+    </details>
 6. Click the :eye: icon in the history: Spades scaffolds.
 
 ### Assembly quality control with Quast
@@ -77,13 +81,33 @@ Some considerations:
 <p align="center"><img src="images/quast_params2.png" alt="quast params" width="400"></p>
 
 4. Click the :eye: icon Quast HTML report.
-    - How much of or reference genome have we reconstructed?
-    - How many contigs do we have greater than 1000 pb?
-    - Which is the largest contig in the assembly?
-    - Which is the N50?
+    <details>
+    <summary>How much of or reference genome have we reconstructed?</summary>
+    </br>
+    Genome fraction: 83.979%
+    </details>
+    <details>
+    <summary>How many contigs do we have greater than 1000 pb?</summary>
+    </br>
+    5
+    </details>
+    <details>
+    <summary>How long is the largest contig in the assembly?</summary>
+    </br>
+    3029
+    </details>
+    <details>
+    <summary>Which is the N50?</summary
+    </br>
+        1836
+    </details>
 
 5. Open the Icarus viewer in the quast report.
 
 <p align="center"><img src="images/icarus.png" alt="quast params" width="400"></p>
 
-    - How many contigs align against our reference genome?
+    <details>
+        <summary>How many contigs align against our reference genome?</summary>
+        </br>
+        6
+    </details>
