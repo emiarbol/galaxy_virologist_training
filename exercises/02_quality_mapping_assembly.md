@@ -26,7 +26,7 @@ After the mapping step we are going to transform our fastq file in a bam file wh
 ### Create new history
 - Click the `+` icon at the top of the history panel and create a new history with the name `mapping 101 tutorial` as explained [here](https://github.com/BU-ISCIII/galaxy_virologist_training/blob/one_week_4day_format/exercises/01_introduction_to_galaxy.md#2-galaxys-history)
 - Import and rename the read files `ERR5310322_1` and `ERR5310322_2`
-<p align="center"><img src="images/upload_data_mapping.jpg" alt="Upload data mapping" width="900"></p>
+<p align="center"><img src="images/upload_data_mapping.png" alt="Upload data mapping" width="900"></p>
 
 - Import the reference genome.
 - Rename the reference genome.
