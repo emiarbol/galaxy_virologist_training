@@ -204,12 +204,11 @@ Now we are going to rename the fasta file as follows:
 
 <img src="images/rename_ref_genome.png" alt="rename_ref_genome" width="700"/>
 
-```{admonition} How do I create a fasta reference for fragmented Crimea Congo genome?
-:class: dropdown
-
+<details>
+<summary>How do I create a fasta reference for fragmented Crimea Congo genome?</summary>
+<br>
 **By concatenating the different fragments of the genome**
-```
-
+</details>
 
 ### History more
 When you have just one history, everything is quite easy to manage, but whenever you have more histories, you need to learn how to use the history manager. To go to the history manager you have to select the
