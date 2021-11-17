@@ -37,18 +37,22 @@ The material includes slides with theory concepts and a bunch of practical exerc
 
 ### Day 2
 
-- **Talk 3:** [TAnálisis de calidad y preprocesamiento de los datos genómicos](slides/Day2/03_quality_preprocessing.pdf)
+- **Talk 3:** [Análisis de calidad y preprocesamiento de los datos genómicos](slides/Day2/03_quality_preprocessing.pdf)
 - **Talk 4:** [Ensamblado de genomas y mapping](slides/Day2/XXXXX.pdf)
 - [**Exercise 2**](exercises/02_quality.md) -- [Download pdf](exercises/02_quality.pdf)
 - [**Exercise 3**](exercises/03_mapping.md) -- [Download pdf](exercises/03_mapping.pdf)
-- [**Exercise 4**](exercises/04_assembly.md) -- [Download pdf](exercises/04_assembly.pdf)
+- [**Exercise 4**](exercises/04_assembly_illumina.md) -- [Download pdf](exercises/04_assembly_illumina.pdf)
+- [**Exercise 5**](exercises/05_assembly_nanopore.md) -- [Download pdf](exercises/05_assembly_nanopore.pdf)
+
 
 ### Day 3
 
-- **Talk 5:** [Alineamiento frente a genoma de referencia y llamada a variantes: identificación de SNPs y obtención de secuencia consenso](slides/Day3/XXX.pdf)
-- [**Exercise 3**](exercises/Day3/03_varisnt_calling.md) -- [Download pdf](exercises/Day2/03_varisnt_calling.pdf)
+- **Talk 5:** [Alineamiento frente a genoma de referencia y llamada a variantes: identificación de SNPs y obtención de secuencia consenso](slides/XXX.pdf)
+- [**Exercise 6**](exercises/06_variant_calling_illumina.md) -- [Download pdf](exercises/06_variant_calling_illumina.pdf)
+- [**Exercise 7**](exercises/07_variant_calling_nanopore.md) -- [Download pdf](exercises/07_variant_calling_nanopore.pdf)
+
 
 ### Day 4
 
-- **Talk 6:** [Viralrecon](slides/Day4/viralrecon.pdf)
-- [**Exercise 5**](exercises/Day4/04_viralrecon.md) -- [Download pdf](exercises/Day4/04_viralrecon.pdf)
+- **Talk 6:** [Viralrecon](slides/viralrecon.pdf)
+- [**Exercise 8**](exercises/04_viralrecon.md) -- [Download pdf](exercises/04_viralrecon.pdf)
