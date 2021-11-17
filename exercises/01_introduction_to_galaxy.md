@@ -70,11 +70,13 @@ In order to load these fragments in Galaxy we have to follow these steps:
 1. In the left side panel, select **Upload Data**
 2. In the new panel select **Paste/Fetch Data**
 3. Then copy the following block of text:
+
 ```
 https://raw.githubusercontent.com/BU-ISCIII/galaxy_virologist_training/one_week_4day_format/exercises/data/S_DQ133507.fasta
 https://raw.githubusercontent.com/BU-ISCIII/galaxy_virologist_training/one_week_4day_format/exercises/data/M_EU037902.fasta
 https://raw.githubusercontent.com/BU-ISCIII/galaxy_virologist_training/one_week_4day_format/exercises/data/L_EU044832.fasta
 ```
+
 4. Now, in the **Download data from the web by entering URLs (one per line) or directly paste content.** square, paste the text you copied before
 5. Select **Start**
 
@@ -204,11 +206,133 @@ Now we are going to rename the fasta file as follows:
 
 <img src="images/rename_ref_genome.png" alt="rename_ref_genome" width="700"/>
 
+**First Question Answer**
 <details>
 <summary>How do I create a fasta reference for fragmented Crimea Congo genome?</summary>
 <br>
-**By concatenating the different fragments of the genome**
+By concatenating the different fragments of the genome
 </details>
 
-### History more
-When you have just one history, everything is quite easy to manage, but whenever you have more histories, you need to learn how to use the history manager. To go to the history manager you have to select the
+## 7. Furtherly process your data
+
+Now that we have our concatenated fasta file we can check that everything is fine by scrolling down the genome and see that the three fragments are fine, or we can use a tool to analyze fasta files and see the number of sequences in a fasta and the number of nucleotides of each sequence.
+
+To do this we are going to:
+1. Search **fasta** in the tool square.
+2. Select **Fasta Statistics Display summary statistics for a fasta file**
+3. In *fasta or multifasta file* select **multiple data set**
+4. With *Ctrl* key pressed, select the 3 fragments and the multifasta file
+5. Press **Start** button.
+
+<img src="images/fasta_statistics_tool.png" alt="fasta_statistics_tool" width="700"/>
+<img src="images/select_fasta_statistics_sample.png" alt="select_fasta_statistics_sample" width="700"/>
+
+Now we have 4 jobs running, because this tool will run one statistics process for each fasta file we selected.
+
+<img src="images/fasta_statistics_output.png" alt="fasta_statistics_output" width="700"/>
+
+### Results visualization
+Now we are going to se the statistics summary for each fasta file. To do this we have to select the :eye: icon in each of the Fasta Statistics output.
+
+For the **S fragment**, we are going to see the number of sequence in the fasta file and the number of nucleotides. We are going to:
+
+1. Select the :eye: icon in the job with the name *Fasta Statistics on data 1: Fasta summary stats*
+2. See the *num_bp* row, which corresponds to the number of nucleotides in the fasta file, which is 1673.
+3. Check *num_seq* which corresponds to the number of sequences in the fasta file.
+
+<img src="images/S_fragment_stats.png" alt="S_fragment_stats" width="700"/>
+
+Now we are going to repeat this process for the rest of the fasta files:
+
+**M fragment**
+<details>
+<summary>How many nucleotides are in M fragment?</summary>
+<br>
+
+5364 nt
+
+<img src="images/M_fragment_stats.png" alt="M_fragment_stats" width="700"/>
+</details>
+
+**L fragment**
+<details>
+<summary>How many nucleotides are in L fragment?</summary>
+<br>
+
+12150 nt
+
+<img src="images/L_fragment_stats.png" alt="L_fragment_stats" width="700"/>
+</details>
+
+**Crimea Congo Genome**
+<details>
+<summary>How many sequences and nucleotides are in the Crimea Congo reference genome?</summary>
+<br>
+3 sequences (3 fragments)
+
+19187 nt
+
+<img src="images/ccongo_genome_stats.png" alt="ccongo_genome_stats" width="700"/>
+</details>
+
+Now we can answer the second question.
+
+**Second Question Answer**
+<details>
+<summary>How many nucleotides has each fragment of Crimea Congo genome?</summary>
+<br>
+1673 the S fragment
+5364 the M fragment
+12150 the L fragment
+</details>
+
+### Share results
+Now that we know that the reference genome for Crimea Congo is done correctly, we can use it as reference genome for further analysis in this same history, or save it to use it in our computer. To do so:
+1. Select the name of the fasta you want to download: **4: Crimea Congo Ref Genome**
+2. Select the **Save** button in the new panel opened.
+
+<img src="images/save_fasta_ref.png" alt="save_fasta_ref" width="700"/>
+
+## 8. History management
+Now we are going to learn how to manage the history. In this case, we created a new history record and while we were doing our analysis, the steps were recorded in the history.
+
+This history is saved in your account so you can create a new history for a new analysis, and access this one later.
+
+1. To create a new history, select the **+** button in the history panel.
+2. Then rename your new history to: **History TEST**
+
+<img src="images/new_histotry.png" alt="new_histotry" width="200"/>
+
+Now we have a clean history, but we have lost the previous history with the Crimea Congo results. To se the previous history, we have to access the history manager:
+
+<img src="images/history_magaer.png" alt="history_magaer" width="200"/>
+
+Now we can see out previous history with all the Crimea Congo results. We are going to remove the TEST history and then go back to the Crimea Congo Ref Genome history to share it.
+1. Select the dropdown icon :warning: be sure to select the dropdown in the history you want to delete, not in the good one.
+2. Select **Delete**
+3. Press *Switch to* in the Crimea Congo history
+4. Select the HOME icon
+
+<img src="images/remove_swithc_hist.png" alt="remove_swithc_hist" width="700"/>
+
+Once we have finished, we can save our history in order to access this results later or to share them with other lab members. To do this we are going to:
+1. Select the engine icon in the history
+2. Select **Share or publish**
+3. Select the option **Make History accessible**
+
+Now everyone with the link can access the history.
+
+## 9. Create a workflow
+Now we are going to create a workflow so every time we input three fasta files with crimea congo fragments to this workflow, it will concatenate them into a unique fasta file and generate stats of them:
+1. Select the engine icon in the history
+2. Select **Extraer flujo de trabajo**
+3. Check if every step is correct
+4. Rename the workflow to: **Create Crimea Congo Reference Genome**
+5. Select **Create workflow**
+
+
+
+
+**Note:**
+- This hands-on history URL: https://usegalaxy.eu/u/svarona/h/crimea-congo-reference-genome
+- This hands-in workflow URL: https://usegalaxy.eu/u/svarona/w/create-crimea-congo-reference-genome
