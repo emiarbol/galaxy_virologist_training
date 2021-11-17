@@ -1,19 +1,22 @@
-# Galaxy for virologist training Exercise 4: Assembly 101
+# Galaxy for virologist training Exercise 4: Illumina Assembly 101
 
 <div class="tables-start"></div>
 
 |**Title**| Galaxy |
 |---------|-------------------------------------------|
 |**Training dataset:**|  PRJEB43037 - In August 2020 an outbreak of West Nile Virus affected 71 people with meningoencephalitis in Andalusia and 6 more cases in Extremadura (south-west of Spain), causing a total of eight deaths. The virus belonged to the lineage 1 and was relatively similar to previous outbreaks occurred in the Mediterranean region. Here we present a detailed analysis of the outbreak, including an extensive phylogenetic study. This is one of the outbreak samples.
-|**Questions:**| <ul><li>What is mapping?</li><li>What is a BAM file?</li><li>Which metrics are important to check after mapping?</ul>|
-|**Objectives**:|<ul><li>Understand mapping concept</li><li>Learn how to interpret mapping metrics</li><li>Learn how to visualize mapping mapping results</li></ul>|
+|**Questions:**| <ul><li>What is assembly?</li><li>How can I evaluate my assembly?</li></ul>|
+|**Objectives**:|<ul><li>Understand assembly concept</li><li>Learn how to interpret assembly quality control metrics</li></ul>|
 |**Estimated time**:| 40 min |
 
 <div class="tables-end"></div>
 
 ## 1. Description
-One of the most common experiments using massive sequencing are re-sequencing experiments. This type of experiments sequence already known microorganisms where our goal is to discover variation between a aready assembled and known reference and our reads. Mapping is a mandatory step for this kind of experiments, where we need sort all our short sequences(reads) we have in our fastq file without any genomic context.
-After the mapping step we are going to transform our fastq file in a bam file where we are going to have information about where a read came from, meaning we are going to have the coordinates where each read is placed in our reference genome.
+When we don't have a reference genome to map against it, or when we don't want to have any bias in the genome reconstruction what we need to do is a de novo assembly. This type of analysis tries to reconstruct the original genome without any template using only the reads. 
+Some considerations:
+- When we assembly as longer the reads and as longer the size of the library fragments the easier it gets for the assembler. That's why pacbio or nanopore are recommended for assembly.
+- It's almost imposible to reconstruct the entire genome of a large microorganism with only one sequencing, although it can be done for small viruses.
+- Assembly is not recommended for amplicon based libraries due to the depth of coverage uneveness and the amplicons intrinsic bias.
 
 ## 2. Upload data to galaxy
 
@@ -24,7 +27,7 @@ After the mapping step we are going to transform our fastq file in a bam file wh
 - Reference genome NC_009942.1: [fasta](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/875/385/GCF_000875385.1_ViralProj30293/GCF_000875385.1_ViralProj30293_genomic.fna.gz) -- [gff](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/875/385/GCF_000875385.1_ViralProj30293/GCF_000875385.1_ViralProj30293_genomic.gff.gz)
 
 ### Create new history
-- Click the `+` icon at the top of the history panel and create a new history with the name `assembly 101 tutorial` as explained [here](https://github.com/BU-ISCIII/galaxy_virologist_training/blob/one_week_4day_format/exercises/01_introduction_to_galaxy.md#2-galaxys-history)
+- Click the `+` icon at the top of the history panel and create a new history with the name `illumina assembly 101 tutorial` as explained [here](https://github.com/BU-ISCIII/galaxy_virologist_training/blob/one_week_4day_format/exercises/01_introduction_to_galaxy.md#2-galaxys-history)
 
 
 ### Upload data
@@ -53,3 +56,34 @@ After the mapping step we are going to transform our fastq file in a bam file wh
     2. Change the name to `NC_009942.1`
 
 <p align="center"><img src="images/changename2.png" alt="Change name 2" width="900"></p>    
+
+### Assemble reads with Spades
+
+1. Search Spades in the search tool box.
+2. Automatically choose k-mer values: Yes
+3. Select File format: Separate input reads. Forward reads: ERR5310322_1, Reverse Reads: ERR5310322_2
+4. Click execute and wait.
+<p align="center"><img src="images/spades_params.png" alt="Spades params" width="400"></p>
+5. Click the eye icon in the history: Spades Contigs stats.
+    - How many contigs has been assembled?
+6. Click the eye icon in the history: Spades scaffolds.
+
+### Assembly quality control with Quast
+1. Search Quast in the search tool box.
+2. Contigs/Scaffolds file: Spades scaffolds
+3. Use a reference genome: Yes. Select the NC_009942.1 fasta file previously loaded.
+
+<p align="center"><img src="images/quast_params1.png" alt="quast params" width="400"></p>
+<p align="center"><img src="images/quast_params2.png" alt="quast params" width="400"></p>
+
+4. Click the eye icon Quast HTML report.
+    - How much of or reference genome have we reconstructed?
+    - How many contigs do we have greater than 1000 pb?
+    - Which is the largest contig in the assembly?
+    - Which is the N50?
+
+5. Open the Icarus viewer in the quast report.
+
+<p align="center"><img src="images/icarus.png" alt="quast params" width="400"></p>
+
+    - How many contigs align against our reference genome?
