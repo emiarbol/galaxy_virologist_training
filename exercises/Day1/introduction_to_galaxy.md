@@ -149,5 +149,37 @@ We are going to rename the files as shown here:
 <img src="../images/rename.png" alt="rename" width="200"/>
 
 
+## 6. Run tools
+Now we are going to use the fasta files uploaded to Galaxy to run tools. To run tools we have to:
+
+1. Search the tool in the search tab. We want to concatenate the fasta files, so we are going to search for **concatenate** in the bar.
+2. Select the tool we want to use. In this case **Concatenate datasets tail-to-head (cat)**.
+
+<img src="../images/concatenate_tool.png" alt="concatenate_tool" width="700"/>
+
+When we select the tool we are going to see the tool's options in the center panel. We are going to see different information about the tool we want to run. :warning: These options are tool specific. This means each tool has its own options.
+1. Tool name, version and options to save and share the tool
+2. The input dataset options:
+  - We can select data from the history
+  - Upload data from a collection
+  - Upload a dataset (the upload dataset pop up will appear)
+  - Brows a dataset (you can brows dataset from the history)
+3. Insert new dataset blocks (no need in our case)
+4. Execute button
+5. Tool information:
+  - :warning:
+  - What it does
+  - Examples
+  - Citaiton
+
+To concatenate the samples, we will follow the wollowing steps:
+1. In *Datasets to concatenate*:
+  - Press *Ctrl* key in your keyboard
+  - Select the three fasta files without leaving *Ctrl* key
+2. Press execute
+
+<img src="../images/concatenate_tool.png" alt="concatenate_tool" width="700"/>
+
+
 ### History more
 When you have just one history, everything is quite easy to manage, but whenever you have more histories, you need to learn how to use the history manager. To go to the history manager you have to select the
