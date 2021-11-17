@@ -7,7 +7,7 @@
 |**Training dataset:**|  PRJEB43037 - In August 2020 an outbreak of West Nile Virus affected 71 people with meningoencephalitis in Andalusia and 6 more cases in Extremadura (south-west of Spain), causing a total of eight deaths. The virus belonged to the lineage 1 and was relatively similar to previous outbreaks occurred in the Mediterranean region. Here we present a detailed analysis of the outbreak, including an extensive phylogenetic study. This is one of the outbreak samples.
 |**Questions:**| <ul><li>What is mapping?</li><li>What is a BAM file?</li><li>Which metrics are important to check after mapping?</ul>|
 |**Objectives**:|<ul><li>Understand mapping concept</li><li>Learn how to interpret mapping metrics</li><li>Learn how to visualize mapping mapping results</li></ul>|
-|**Estimated time**:| 1h 45 min |
+|**Estimated time**:| 40 min |
 
 <div class="tables-end"></div>
 
