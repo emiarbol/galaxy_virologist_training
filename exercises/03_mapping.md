@@ -38,7 +38,7 @@ After the mapping step we are going to transform our fastq file in a bam file wh
 <p align="center"><img src="images/upload_data_mapping.png" alt="Upload data mapping" width="900"></p>
 
 - Rename R1 and R2 files.
-    1. Click in the pencil in the history for `ERR5310322_1.fastq.gz`
+    1. Click in ✏️ in the history for `ERR5310322_1.fastq.gz`
     2. Change the name to `ERR5310322_1`
     3. Do the same for R2.
     
@@ -49,7 +49,7 @@ After the mapping step we are going to transform our fastq file in a bam file wh
 <p align="center"><img src="images/upload_data_mapping2.png" alt="Upload data mapping 2" width="900"></p>
 
 - Rename the reference genome.
-    1. Click the pencil for the reference file in the history.
+    1. Click the ✏️ for the reference file in the history.
     2. Change the name to `NC_009942.1`
 
 <p align="center"><img src="images/changename2.png" alt="Change name 2" width="900"></p>    
@@ -75,7 +75,7 @@ After the mapping step we are going to transform our fastq file in a bam file wh
 
 ### Visualize bam file and calculate metrics
 
-1. Click the eye icon in the Bowtie2 aligments in history.
+1. Click the 👁️ icon in the Bowtie2 aligments in history.
 
 <p align="center"><img src="images/view_bamfile.png" alt="view bam file" width="200"></p>
 
@@ -83,7 +83,11 @@ After the mapping step we are going to transform our fastq file in a bam file wh
 
 3. Visualize mapping metrics
     - Click on the eye icon on Bowtie2 mapping stats history.
-    - Which is the mapping rate?
+    <details>
+    <summary> Which is the mapping rate?</summary>
+    <br>
+    92,61%
+    </details>
     
 4. Calculate depth of coverage metrics using picard collectWGSMetrics.
     
