@@ -39,7 +39,9 @@ The material includes slides with theory concepts and a bunch of practical exerc
 
 - **Talk 3:** [TAnálisis de calidad y preprocesamiento de los datos genómicos](slides/Day2/03_quality_preprocessing.pdf)
 - **Talk 4:** [Ensamblado de genomas y mapping](slides/Day2/XXXXX.pdf)
-- [**Exercise 2**](exercises/02_quality_mapping_assembly.md) -- [Download pdf](exercises/Day2/02_quality_mapping_assembly.pdf)
+- [**Exercise 2**](exercises/02_quality.md) -- [Download pdf](exercises/02_quality.pdf)
+- [**Exercise 3**](exercises/03_mapping.md) -- [Download pdf](exercises/03_mapping.pdf)
+- [**Exercise 4**](exercises/04_assembly.md) -- [Download pdf](exercises/04_assembly.pdf)
 
 ### Day 3
 
