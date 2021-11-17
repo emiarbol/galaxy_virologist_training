@@ -57,7 +57,7 @@ After the mapping step we are going to transform our fastq file in a bam file wh
 ### Map reads using Bowtie2
 1. Search bowtie2 software in the search tools box on the left.
 
-<p align="center"><img src="images/search_bowtie2.png" alt="Search bowtie" width="200"></p>   
+<p align="center"><img src="images/search_bowtie2.png" alt="Search bowtie" width="400"></p>   
 
 2. Set bowtie2 parameters:
     
