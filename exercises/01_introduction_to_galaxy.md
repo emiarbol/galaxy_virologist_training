@@ -84,7 +84,9 @@ https://raw.githubusercontent.com/BU-ISCIII/galaxy_virologist_training/one_week_
 <img src="images/Upload_2.png" alt="Upload 4" width="700"/>
 
 
-Now our data is loading into galaxy. The jobs can have three different states:
+Now our data is loading into galaxy. You can see that each job receives a different number, so you can keep track of the order of your jobs by the numbers.
+
+The jobs can have three different states:
 1. Waiting: Your jobs will have a grey color and a clock on their left side. In this state your jobs are waiting to enter in the Galaxy server.
 2. Running: Your jobs will have an orange color and rotatory dots on their left side. In this state your jobs are running in the Galaxy server.
 3. Done: Your jobs will have a green color. Your data is ready to be used.
@@ -152,11 +154,13 @@ We are going to rename the files as shown here:
 ## 6. Run tools
 Now we are going to use the fasta files uploaded to Galaxy to run tools. To run tools we have to:
 
+### Search
 1. Search the tool in the search tab. We want to concatenate the fasta files, so we are going to search for **concatenate** in the bar.
 2. Select the tool we want to use. In this case **Concatenate datasets tail-to-head (cat)**.
 
 <img src="images/concatenate_tool.png" alt="concatenate_tool" width="700"/>
 
+### Run tools
 When we select the tool we are going to see the tool's options in the center panel. We are going to see different information about the tool we want to run. :warning: These options are tool specific. This means each tool has its own options.
 1. Tool name, version and options to save and share the tool
 2. The input dataset options:
@@ -178,7 +182,27 @@ To concatenate the samples, we will follow the wollowing steps:
   - Select the three fasta files without leaving *Ctrl* key
 2. Press execute
 
-<img src="images/concatenate_tool.png" alt="concatenate_tool" width="700"/>
+<img src="images/select_samples.png" alt="select_samples" width="700"/>
+
+### Running jobs
+Once we have press execute a new central panel window will appear and our job will be in queue process:
+1. In the top of the panel (blue) you have a summary of what we've just run. In our case 3 input dataset have in run in one unique output process.
+2. In the foot of the panel (red) you have some recommendations from Galaxy to process your data after the process we have just run.
+3. In the history (yellow) we have now a new entry, which is the number 4 with the results of our job.
+
+<img src="images/job_output.png" alt="job_output" width="700"/>
+
+### Visualize results
+Whenever our job is green, we can see the results by clicking in the :eye: icon. Now we can see that we have the three fasta files in a unique fasta files with the different headers on it.
+
+<img src="images/visualize_ref_genome.png" alt="visualize_ref_genome" width="700"/>
+
+Now we are going to rename the fasta file as follows:
+1. Click on the :pencil: icon
+2. Write **Crimea Congo Ref Genome** in the *Name* square
+3. Press **Save**
+
+<img src="images/rename_ref_genome.png" alt="rename_ref_genome" width="700"/>
 
 
 ### History more
