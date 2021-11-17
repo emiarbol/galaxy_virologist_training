@@ -41,7 +41,7 @@ Some considerations:
 <p align="center"><img src="images/upload_data_mapping.png" alt="Upload data mapping" width="900"></p>
 
 - Rename R1 and R2 files.
-    1. Click in the pencil in the history for `ERR5310322_1.fastq.gz`
+    1. Click in the ✏️ in the history for `ERR5310322_1.fastq.gz`
     2. Change the name to `ERR5310322_1`
     3. Do the same for R2.
     
@@ -52,7 +52,7 @@ Some considerations:
 <p align="center"><img src="images/upload_data_mapping2.png" alt="Upload data mapping 2" width="900"></p>
 
 - Rename the reference genome.
-    1. Click the pencil for the reference file in the history.
+    1. Click the ✏️ for the reference file in the history.
     2. Change the name to `NC_009942.1`
 
 <p align="center"><img src="images/changename2.png" alt="Change name 2" width="900"></p>    
@@ -64,9 +64,9 @@ Some considerations:
 3. Select File format: Separate input reads. Forward reads: ERR5310322_1, Reverse Reads: ERR5310322_2
 4. Click execute and wait.
 <p align="center"><img src="images/spades_params.png" alt="Spades params" width="400"></p>
-5. Click the eye icon in the history: Spades Contigs stats.
+5. Click the :eye: icon in the history: Spades Contigs stats.
     - How many contigs has been assembled?
-6. Click the eye icon in the history: Spades scaffolds.
+6. Click the :eye: icon in the history: Spades scaffolds.
 
 ### Assembly quality control with Quast
 1. Search Quast in the search tool box.
@@ -76,7 +76,7 @@ Some considerations:
 <p align="center"><img src="images/quast_params1.png" alt="quast params" width="400"></p>
 <p align="center"><img src="images/quast_params2.png" alt="quast params" width="400"></p>
 
-4. Click the eye icon Quast HTML report.
+4. Click the :eye: icon Quast HTML report.
     - How much of or reference genome have we reconstructed?
     - How many contigs do we have greater than 1000 pb?
     - Which is the largest contig in the assembly?
