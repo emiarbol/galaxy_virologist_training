@@ -320,6 +320,10 @@ Once we have finished, we can save our history in order to access this results l
 2. Select **Share or publish**
 3. Select the option **Make History accessible**
 
+<img src="images/engin_history.png" alt="engin_history" width="200"/><img src="images/share_history_1.png" alt="share_history_1" width="200"/>
+
+<img src="images/share_history_2.png" alt="share_history_2" width="700"/>
+
 Now everyone with the link can access the history.
 
 ## 9. Create a workflow
@@ -330,7 +334,47 @@ Now we are going to create a workflow so every time we input three fasta files w
 4. Rename the workflow to: **Create Crimea Congo Reference Genome**
 5. Select **Create workflow**
 
+<img src="images/engin_history.png" alt="engin_history" width="200"/><img src="images/create_workflow.png" alt="create_workflow" width="200"/>
 
+<img src="images/creatw_workflow_2.png" alt="creatw_workflow_2" width="700"/>
+
+Now your workflow has been created so go to the workflow manager, werwe you can se the list of all your workflows.
+
+<img src="images/workflow_manager.png" alt="workflow_manager" width="700"/>
+
+Now we are going to have a look to the workflow we created:
+1. Select the name of the workflow **Create Crimea Congo Reference Genome**
+2. Select **Edit**
+3. You will see all the squares corresponding to each of the workflow's processes.
+4. Move them a little bit you you can have a better look at it.
+5. Go back to the workflow manager.
+
+<img src="images/edit_workflow_1.png" alt="edit_workflow_1" width="700"/>
+<img src="images/edit_workflow_2.png" alt="edit_workflow_2" width="700"/>
+<img src="images/edit_workflow_3.png" alt="edit_workflow_3" width="700"/>
+
+Now we are going to share our workflow:
+1. Select the name of the workflow **Create Crimea Congo Reference Genome**
+2. Select **Share**
+3. Select **Make Workflow Accesible Via Link**
+4. There you have the link to share it
+5. Go back to the workflow manager.
+
+<img src="images/share_wf_1.png" alt="share_wf_1" width="700"/>
+<img src="images/share_wf_2.png" alt="share_wf_2" width="700"/>
+<img src="images/share_wf_3.png" alt="share_wf_3" width="700"/>
+
+Now we are going to learn how to run a workflow with new data. Crimea congo's genome we already have is the one for the strain Kosovo Hoti. Now we are going to obtain the Reference genome for isolate Ast199, where:
+
+- S segment: KX056052
+- M segment: KX056051
+- L segment: KX056050
+
+
+
+https://raw.githubusercontent.com/BU-ISCIII/galaxy_virologist_training/one_week_4day_format/exercises/data/S_KX056052.fasta
+https://raw.githubusercontent.com/BU-ISCIII/galaxy_virologist_training/one_week_4day_format/exercises/data/M_KX056051.fasta
+https://raw.githubusercontent.com/BU-ISCIII/galaxy_virologist_training/one_week_4day_format/exercises/data/L_KX056050.fasta
 
 
 **Note:**
