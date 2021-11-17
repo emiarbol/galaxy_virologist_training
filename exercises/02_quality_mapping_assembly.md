@@ -77,7 +77,7 @@ After the mapping step we are going to transform our fastq file in a bam file wh
 
 1. Click the eye icon in the Bowtie2 aligments in history.
 
-<p align="center"><img src="images/view_bamfile.png" alt="view bam file" width="900"></p>
+<p align="center"><img src="images/view_bamfile.png" alt="view bam file" width="200"></p>
 
 2. Interpret the columns in the bam format according to theory class.
 
