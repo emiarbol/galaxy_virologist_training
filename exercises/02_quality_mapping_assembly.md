@@ -60,6 +60,7 @@ After the mapping step we are going to transform our fastq file in a bam file wh
 <p align="center"><img src="images/search_bowtie2.png" alt="Search bowtie" width="900"></p>   
 
 2. Set bowtie2 parameters:
+    
     - Is this single or paired library: paired.
     - FASTA/Q file #1 : ERR5310322_1
     - FASTA/Q file #2 : ERR5310322_2
@@ -75,12 +76,17 @@ After the mapping step we are going to transform our fastq file in a bam file wh
 ### Visualize bam file and calculate metrics
 
 1. Click the eye icon in the Bowtie2 aligments in history.
-<p align="center"><img src="images/view_bamfile.png" alt="view bam file" width="900"></p>   
+
+<p align="center"><img src="images/view_bamfile.png" alt="view bam file" width="900"></p>
+
 2. Interpret the columns in the bam format according to theory class.
+
 3. Visualize mapping metrics
     - Click on the eye icon on Bowtie2 mapping stats history.
     - Which is the mapping rate?
-5. Calculate depth of coverage metrics using picard collectWGSMetrics.
+    
+4. Calculate depth of coverage metrics using picard collectWGSMetrics.
+    
     - Search collectwgsmetrics on the search tool box.
     - Select SAM/BAM dataset or dataset collection: Bowtie2 alignments
     - Load reference genome from: History and select reference genome fasta file.
