@@ -106,8 +106,8 @@ Some considerations:
 
 <p align="center"><img src="images/icarus.png" alt="quast params" width="400"></p>
 
-    <details>
-        <summary>How many contigs align against our reference genome?</summary>
-        </br>
-        6
-    </details>
+<details>
+ <summary>How many contigs align against our reference genome?</summary>
+ </br>
+ 6
+</details>
