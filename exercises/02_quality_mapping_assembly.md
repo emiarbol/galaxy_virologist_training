@@ -72,4 +72,21 @@ After the mapping step we are going to transform our fastq file in a bam file wh
 
 3. Click execute and wait.
 
-### Visualize bam file
+### Visualize bam file and calculate metrics
+
+1. Click the eye icon in the Bowtie2 aligments in history.
+<p align="center"><img src="images/view_bamfile.png" alt="view bam file" width="900"></p>   
+2. Interpret the columns in the bam format according to theory class.
+3. Visualize mapping metrics
+    - Click on the eye icon on Bowtie2 mapping stats history.
+    - Which is the mapping rate?
+5. Calculate depth of coverage metrics using picard collectWGSMetrics.
+    - Search collectwgsmetrics on the search tool box.
+    - Select SAM/BAM dataset or dataset collection: Bowtie2 alignments
+    - Load reference genome from: History and select reference genome fasta file.
+    - Treat bases with coverage exceeding this value as if they had coverage at this value: 10000
+
+5. Click execute and wait.
+
+
+### Visualize bam file using IGV
