@@ -5,7 +5,7 @@
 |**Title**| Galaxy |
 |---------|-------------------------------------------|
 |**Training dataset:**| None
-|**Questions:**| <ul><li>How many nucleotides has each fragment of Crimea Congo genome?</li><li>How do I create a fasta reference for Crimea Congo?</li></ul>|
+|**Questions:**| <ul><li>How do I create a fasta reference for Crimea Congo?</li><li>How many nucleotides has each fragment of Crimea Congo genome?</li></ul>|
 |**Objectives**:|<ul><li>Familiarize with Galaxy website</li><li>Understand the Galaxy's history</li><li>Learn how to upload data in Galaxy</li><li>Learn how to visualize data in Galaxy</li><li>Learn how to run tools in Galaxy</li><li>Learn how to create a workflow</li><li>Learn how to load a workflow in Galaxy</li></ul>|
 |**Estimated time**:| 1h 15 min |
 
@@ -203,6 +203,12 @@ Now we are going to rename the fasta file as follows:
 3. Press **Save**
 
 <img src="images/rename_ref_genome.png" alt="rename_ref_genome" width="700"/>
+
+```{admonition} How do I create a fasta reference for fragmented Crimea Congo genome?
+:class: dropdown
+
+**By concatenating the different fragments of the genome**
+```
 
 
 ### History more
