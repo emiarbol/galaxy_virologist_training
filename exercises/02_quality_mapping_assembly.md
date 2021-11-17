@@ -96,3 +96,12 @@ After the mapping step we are going to transform our fastq file in a bam file wh
 
 
 ### Visualize bam file using IGV
+In order to visualize our mapping we will use IGV (Integrative Genomics Viewer). This is an open source and freely available lightweight visualization tool that enables intuitive real-time exploration of diverse, large-scale genomic data sets on standard desktop computers. It supports flexible integration of a wide range of genomic data types including aligned sequence reads, mutations, copy number, RNA interference screens, gene expression, methylation and genomic annotations.
+
+Navigation through a data set is similar to that of Google Maps, allowing the user to zoom and pan seamlessly across the genome at any level of detail from whole genome to base pair. Data sets can be loaded from local or remote sources, including cloud-based resources, enabling investigators to view their own genomic data sets alongside publicly available data.
+
+1. Install [IGV](https://software.broadinstitute.org/software/igv/download)
+2. Launch IGV on your computer
+3. Expand the param-file output of Bowtie2 tool
+4. Click on the local in display with IGV to load the reads into the IGV browser
+5. [Here](https://training.galaxyproject.org/training-material/topics/introduction/tutorials/igv-introduction/tutorial.html) you have a galaxy training document for IGV usage.
