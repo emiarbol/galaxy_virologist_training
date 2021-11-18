@@ -11,11 +11,11 @@
 
 <div class="tables-end"></div>
 
-When we have to do a bioinformatic analysis using a reference genome, we need to provide **just one reference file**. The problem with the segmented genomes, such as happens with Crimea Congo's, is that we have one different file for each fragment in the databases. So here we are going to learn how to load the different segments of a genome in Galaxy and concatenate them in order to create a unique fasta file that can be used for further analyses. Also we are going to learn how to count the number of sequences in a multifasta file, and the number of nucleotides in each sequence in a fasta file.
+When we have to do a bioinformatic analysis using a reference genome, we need to provide **just one reference file**. The problem with segmented genomes, such as Crimea Congo's, is that we have one different file for each fragment in the databases. So here we are going to learn how to load the different segments of a genome in Galaxy and concatenate them in order to create a unique fasta file that can be used for further analyses. Also, we are going to learn how to count the number of sequences in a multifasta file, and the number of nucleotides in each sequence in a fasta file.
 
 ## 1. Galaxy website
 
-First of all go to [Galaxy Web Server in Europe](https://usegalaxy.eu/) and you will se an image like this one:
+First of all go to [Galaxy Web Server in Europe](https://usegalaxy.eu/) and you will se a display such as this one:
 
 <p align="center"><img src="images/Galaxy_web.PNG" alt="Webiste" width="900"></p>
 
@@ -29,16 +29,16 @@ Where you have 4 different elements:
     - Login or Register
     - Galaxy Training Materials (graduation cap): Displays de Galaxy Trainings list
     - Enable/Disable scratchbook (9 squares)
-2. The left side panel in blue with al the tools in this Galaxy mirror
+2. The left side panel in blue with all the tools in this Galaxy mirror
 3. Central panel in red, which will let you run analyses and view outputs
 4. Right panel in green, with the history record.
 
-### Signin/Login:
-The first thing we would do is to signin the website so you can save your history. To do that you should follow the next steps:
+### Sign up/Login:
+The first thing we would do is to sign up, so you can save your history. To do that, you should follow the next steps:
 1. Select Login or Register in the header panel
 2. Select **Register here**.
-3. Fill in the registration information. :warning: Use an email you can access now, because it will ask you to confirm your e-mail adres.
-4. Log into your e-mail and verify your Galaxy account.
+3. Fill in the registration information. :warning: Use an email you can access now, because it will ask you to confirm your e-mail adress.
+4. Log into your e-mail, and verify your Galaxy account.
 5. Log in with your credentials.
 
 <p align="center"><img src="images/login_1.jpg" alt="Login 1" width="900"></p>
@@ -61,7 +61,8 @@ Now select the [Home](https://usegalaxy.eu/) button and return to the home page.
 
 ## 3. Loading data:
 
-Now we are going to load the data. In this case we are going to use the Crimea Congo reference genome. Crimea Congo's genome is segmented in 3 different segments:
+Now we are going to load the data. In this case we are going to use the Crimea Congo reference genome. Crimea Congo's genome is composed of 3 segments, each with its own code:
+
 - S segment: DQ133507
 - M segment: EU037902
 - L segment: EU044832
@@ -85,7 +86,7 @@ https://raw.githubusercontent.com/BU-ISCIII/galaxy_virologist_training/one_week_
 <img src="images/Upload_2.png" alt="Upload 2" width="700"/>
 
 
-Now our data is loading into galaxy. You can see that each job receives a different number, so you can keep track of the order of your jobs by the numbers.
+With this, our data is loading into Galaxy. You can see that each job is given a different number, so you can keep track of the order of your jobs with it.
 
 The jobs can have three different states:
 1. Waiting: Your jobs will have a grey color and a clock on their left side. In this state your jobs are waiting to enter in the Galaxy server.
@@ -98,8 +99,8 @@ The jobs can have three different states:
 
 ### Visualization
 
-Now we can start using our data. First of all we are going to see how these fasta files look like. There are different ways to do this:
-1. Select the :eye: icon in the right to the file name. For the first time, our center panel has changed, now it contains the content of the fasta file.
+Now we can start using our data. First of all, we are going to see how these fasta files look like. There are different ways to do this:
+1. Select the :eye: icon in the right to the file name. For the first time, our center panel has changed, and now it displays the content inside the fasta file.
 
 <img src="images/visualize_fastq.png" alt="visualize_fastq" width="200"/><img src="images/visualization.png" alt="visualization" width="700"/>
 
@@ -127,23 +128,23 @@ When we display this file summary, we obtain additional options to process this 
 <img src="images/visualize.png" alt="visualize" width="200"/>
 <img src="images/visualize_options.png" alt="visualize_options" width="700"/>
 
-- *Help*: Displays helo about the tool used to generate the data.
+- *Help*: Displays help about the tool used to generate the data.
 
 <img src="images/help.png" alt="help" width="200"/>        
 
 **Note:** If you select again in the file name, the summary disappears
 
 ### Edition
-Now we are going to rename all the fasta files we uploaded to Galaxy. To do this, we have to click in the pencil that appears close to each file name. This will display a new central window with the different edition options for each file:
+Now we are going to rename all the fasta files we uploaded to Galaxy. To do this, we have to click in the pencil icon that appears next to each file name. This will display a new central window with the different edition options for each file:
 
 <img src="images/edit_name_fastq.png" alt="edit_name_fastq" width="200"/>
 <img src="images/edit_1.png" alt="edit_1" width="700"/>
 
 This screen allows you to perform different things. Starting from the right:
 - Set permissions: Allows you to manage the access and permissions of the selected file, for the different users registered.
-- Datatype: Allows you change the datatype of the existing dataset but not modify its contents. Use this if Galaxy has incorrectly guessed the type of your dataset.
-- Convert: Allows you to create a new dataset with the contents of this dataset converted to a new format.
-- Change the attributes: Allows you to rename the file, add some additional information.
+- Datatype: Allows you to change the datatype of the existing dataset, but not modify its contents. Use this if Galaxy has incorrectly guessed the type of your dataset.
+- Convert: Allows you to create a new dataset with the contents of this dataset, converted to a new format.
+- Change the attributes: Allows you to rename the file, and add some additional information.
 
 :warning: Select **Save** button to save the changes.
 
@@ -180,21 +181,21 @@ When we select the tool we are going to see the tool's options in the center pan
 To concatenate the samples, we will follow the wollowing steps:
 1. In *Datasets to concatenate*:
     - Press *Ctrl* key in your keyboard
-    - Select the three fasta files without leaving *Ctrl* key
+    - Select the three fasta files <span style="color: red">while still pressing the *Ctrl* key</span>.
 2. Press execute
 
 <img src="images/select_samples.png" alt="select_samples" width="700"/>
 
 ### Running jobs
-Once we have press execute a new central panel window will appear and our job will be in queue process:
-1. In the top of the panel (blue) you have a summary of what we've just run. In our case 3 input dataset have in run in one unique output process.
-2. In the foot of the panel (red) you have some recommendations from Galaxy to process your data after the process we have just run.
-3. In the history (yellow) we have now a new entry, which is the number 4 with the results of our job.
+Once we have pressed **Execute**, a new central panel window will appear and our job will be in queue process:
+1. In the top of the panel (blue) you have a summary of what we've just run. In our case 3 input datasets have are involved in a single process, with a unique output.
+2. In the foot of the panel (red) you have some recommendations from Galaxy on how to process your data after the process we have just run.
+3. In the history (yellow) we have now a new entry, which is the number 4, with the results of our job.
 
 <img src="images/job_output.png" alt="job_output" width="700"/>
 
 ### Visualize results
-Whenever our job is green, we can see the results by clicking in the :eye: icon. Now we can see that we have the three fasta files in a unique fasta files with the different headers on it.
+Whenever our job is green, we can see the results by clicking in the :eye: icon. Now we can see the three sequences for the segments, headers included, in a unique fasta file.
 
 <img src="images/visualize_ref_genome.png" alt="visualize_ref_genome" width="700"/>
 
@@ -214,9 +215,9 @@ By concatenating the different fragments of the genome
 
 ## 7. Furtherly process your data
 
-Now that we have our concatenated fasta file we can check that everything is fine by scrolling down the genome and see that the three fragments are fine, or we can use a tool to analyze fasta files and see the number of sequences in a fasta and the number of nucleotides of each sequence.
+Now that we have our concatenated fasta file, we can check that everything is fine by scrolling down the genome, and checking that the three fragments are fine, or we can use another tool to count the number of sequences in a fasta file, and the number of nucleotides in each sequence.
 
-To do this we are going to:
+To do this, we are going to:
 1. Search **fasta** in the tool square.
 2. Select **Fasta Statistics Display summary statistics for a fasta file**
 3. In *fasta or multifasta file* select **multiple data set**
@@ -233,11 +234,11 @@ Now we have 4 jobs running, because this tool will run one statistics process fo
 ### Results visualization
 Now we are going to se the statistics summary for each fasta file. To do this we have to select the :eye: icon in each of the Fasta Statistics output.
 
-For the **S fragment**, we are going to see the number of sequence in the fasta file and the number of nucleotides. We are going to:
+For the **S fragment**, we are going to see the number of sequences inside the fasta file, and the number of nucleotides. We are going to:
 
 1. Select the :eye: icon in the job with the name *Fasta Statistics on data 1: Fasta summary stats*
-2. See the *num_bp* row, which corresponds to the number of nucleotides in the fasta file, which is 1673.
-3. Check *num_seq* which corresponds to the number of sequences in the fasta file.
+2. See the *num_bp* row, which corresponds to the number of nucleotides in the fasta file, 1673 in this case.
+3. Check *num_seq*, corresponding to the number of sequences in the fasta file.
 
 <img src="images/S_fragment_stats.png" alt="S_fragment_stats" width="700"/>
 
@@ -280,25 +281,25 @@ Now we can answer the second question.
 <details>
 <summary>How many nucleotides has each fragment of Crimea Congo genome?</summary>
 <br>
-1673 the S fragment
-5364 the M fragment
+1673 the S fragment <br>
+5364 the M fragment <br>
 12150 the L fragment
 </details>
 
 ### Share results
-Now that we know that the reference genome for Crimea Congo is done correctly, we can use it as reference genome for further analysis in this same history, or save it to use it in our computer. To do so:
+Now that we know that the reference genome for the whole Crimea Congo virus is done correctly, we can use it as reference genome for further analysis in this same history, or save it to use it in our computer. To do so:
 1. Select the name of the fasta you want to download: **4: Crimea Congo Ref Genome**
-2. Select the **Save** button in the new panel opened.
+2. Select the **Save** button in the emerging panel.
 
 <img src="images/save_fasta_ref.png" alt="save_fasta_ref" width="700"/>
 
 ## 8. History management
-Now we are going to learn how to manage the history. In this case, we created a new history record and while we were doing our analysis, the steps were recorded in the history.
+Now, we are going to learn how to manage the history. In this case, we created a new history record and, while we were doing our analysis, the steps we followed were recorded.
 
-This history is saved in your account so you can create a new history for a new analysis, and access this one later.
+This history is saved in your account so you can create a new one for a new analysis, and access previous analysis later.
 
 1. To create a new history, select the **+** button in the history panel.
-2. Then rename your new history to: **History TEST**
+2. Then, rename your new history to: **History TEST**
 
 <img src="images/new_histotry.png" alt="new_histotry" width="200"/>
 
@@ -306,7 +307,7 @@ Now we have a clean history, but we have lost the previous history with the Crim
 
 <img src="images/history_magaer.png" alt="history_magaer" width="200"/>
 
-Now we can see out previous history with all the Crimea Congo results. We are going to remove the TEST history and then go back to the Crimea Congo Ref Genome history to share it.
+Now we can check out the previous history, with all the Crimea Congo results. We are going to remove the TEST history and go back to the Crimea Congo Ref Genome history to share it.
 1. Select the dropdown icon :warning: be sure to select the dropdown in the history you want to delete, not in the good one.
 2. Select **Delete**
 3. Press *Switch to* in the Crimea Congo history
@@ -314,7 +315,7 @@ Now we can see out previous history with all the Crimea Congo results. We are go
 
 <img src="images/remove_swithc_hist.png" alt="remove_swithc_hist" width="700"/>
 
-Once we have finished, we can save our history in order to access this results later or to share them with other lab members. To do this we are going to:
+Once we are finished, we can save our history in order to access this results later, or to share them with other lab members. To do this, we are going to:
 1. Select the engine icon in the history
 2. Select **Share or publish**
 3. Select the option **Make History accessible**
@@ -325,11 +326,11 @@ Once we have finished, we can save our history in order to access this results l
 
 Now everyone with the link can access the history.
 
-## 9. workflows
-### Create
+## 9. Workflows
+### Creating workflows
 Now we are going to create a workflow so every time we input three fasta files with crimea congo fragments to this workflow, it will concatenate them into a unique fasta file and generate stats of them:
 1. Select the engine icon in the history
-2. Select **Extraer flujo de trabajo**
+2. Select **Extract workflow**
 3. Check if every step is correct
 4. Rename the workflow to: **Create Crimea Congo Reference Genome**
 5. Select **Create workflow**
@@ -338,11 +339,11 @@ Now we are going to create a workflow so every time we input three fasta files w
 
 <img src="images/creatw_workflow_2.png" alt="creatw_workflow_2" width="700"/>
 
-Now your workflow has been created so go to the workflow manager, werwe you can se the list of all your workflows.
+Now your workflow has been created so go to the workflow manager, where you can se the list of all your workflows.
 
 <img src="images/workflow_manager.png" alt="workflow_manager" width="700"/>
 
-### Edit
+### Editing workflows
 Now we are going to have a look to the workflow we created:
 1. Select the name of the workflow **Create Crimea Congo Reference Genome**
 2. Select **Edit**
@@ -354,7 +355,7 @@ Now we are going to have a look to the workflow we created:
 <img src="images/edit_workflow_2.png" alt="edit_workflow_2" width="700"/>
 <img src="images/edit_workflow_3.png" alt="edit_workflow_3" width="700"/>
 
-### Share
+### Sharing workflows
 Now we are going to share our workflow:
 1. Select the name of the workflow **Create Crimea Congo Reference Genome**
 2. Select **Share**
@@ -366,8 +367,8 @@ Now we are going to share our workflow:
 <img src="images/share_wf_2.png" alt="share_wf_2" width="700"/>
 <img src="images/share_wf_3.png" alt="share_wf_3" width="700"/>
 
-### Import
-Now we are going to import a Galaxy wokflow. Remember that you would not be able to import your own workflow from your user, if you already have it. So copy my own workflow or one of your colleague's:
+### Importing workflows
+Now we are going to import a Galaxy wokflow. Remember that you cannot import your own workflow from your user, if you already have it. So copy my own workflow or one of your colleague's:
 
 ```
 https://usegalaxy.eu/u/svarona/w/concat-frags-reference-genome
@@ -383,8 +384,8 @@ https://usegalaxy.eu/u/svarona/w/concat-frags-reference-genome
 <img src="images/import_1.png" alt="import_1" width="700"/>
 <img src="images/import_2.png" alt="import_2" width="700"/>
 
-### Running
-Now we are going to learn how to run a workflow with new data. Crimea congo's genome we already have is the one for the strain Kosovo Hoti. Now we are going to obtain the Reference genome for isolate Ast199, where:
+### Running workflows
+Now we are going to learn how to run a workflow with new data. Crimea Congo's genome we already have is the one for the Kosovo Hoti strain. Now, we are going to obtain the Reference genome for isolate Ast199, with the following codes for their sequences:
 
 - S segment: KX056052
 - M segment: KX056051
@@ -401,9 +402,9 @@ https://raw.githubusercontent.com/BU-ISCIII/galaxy_virologist_training/one_week_
 https://raw.githubusercontent.com/BU-ISCIII/galaxy_virologist_training/one_week_4day_format/exercises/data/M_KX056051.fasta
 https://raw.githubusercontent.com/BU-ISCIII/galaxy_virologist_training/one_week_4day_format/exercises/data/L_KX056050.fasta
 ```
-
     - Select **Start**
     - When everything is green in the screen, select *Cancel*
+    
 4. Select browse datasets in the :folder: like icon for the S fragment
 5. Select the S fragment from the list
 6. Repeat steps 4 and 5 for fragments L and M so the resulting window is like the one in the picture.
