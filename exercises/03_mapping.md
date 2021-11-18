@@ -1,4 +1,4 @@
-# Galaxy for virologist training Exercise 3: Mapping 101
+# Galaxy for virologist training Exercise 3: Illumina Mapping 101
 
 <div class="tables-start"></div>
 
