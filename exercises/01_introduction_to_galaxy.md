@@ -79,7 +79,7 @@ https://raw.githubusercontent.com/BU-ISCIII/galaxy_virologist_training/one_week_
 
 4. Now, in the **Download data from the web by entering URLs (one per line) or directly paste content.** square, paste the text you copied before
 5. Select **Start**
-6. When everython is green in the screen, select *Close*
+6. When everything is green in the screen, select *Close*
 
 <img src="images/Upload_1.png" alt="Upload 1" width="700"/>
 <img src="images/Upload_2.png" alt="Upload 2" width="700"/>
@@ -165,22 +165,22 @@ Now we are going to use the fasta files uploaded to Galaxy to run tools. To run 
 When we select the tool we are going to see the tool's options in the center panel. We are going to see different information about the tool we want to run. :warning: These options are tool specific. This means each tool has its own options.
 1. Tool name, version and options to save and share the tool
 2. The input dataset options:
-  - We can select data from the history
-  - Upload data from a collection
-  - Upload a dataset (the upload dataset pop up will appear)
-  - Brows a dataset (you can brows dataset from the history)
+    - We can select data from the history
+    - Upload data from a collection
+    - Upload a dataset (the upload dataset pop up will appear)
+    - Brows a dataset (you can brows dataset from the history)
 3. Insert new dataset blocks (no need in our case)
 4. Execute button
 5. Tool information:
-  - :warning:
-  - What it does
-  - Examples
-  - Citaiton
+    - :warning:
+    - What it does
+    - Examples
+    - Citaiton
 
 To concatenate the samples, we will follow the wollowing steps:
 1. In *Datasets to concatenate*:
-  - Press *Ctrl* key in your keyboard
-  - Select the three fasta files without leaving *Ctrl* key
+    - Press *Ctrl* key in your keyboard
+    - Select the three fasta files without leaving *Ctrl* key
 2. Press execute
 
 <img src="images/select_samples.png" alt="select_samples" width="700"/>
@@ -325,7 +325,8 @@ Once we have finished, we can save our history in order to access this results l
 
 Now everyone with the link can access the history.
 
-## 9. Create a workflow
+## 9. workflows
+### Create
 Now we are going to create a workflow so every time we input three fasta files with crimea congo fragments to this workflow, it will concatenate them into a unique fasta file and generate stats of them:
 1. Select the engine icon in the history
 2. Select **Extraer flujo de trabajo**
@@ -341,6 +342,7 @@ Now your workflow has been created so go to the workflow manager, werwe you can 
 
 <img src="images/workflow_manager.png" alt="workflow_manager" width="700"/>
 
+### Edit
 Now we are going to have a look to the workflow we created:
 1. Select the name of the workflow **Create Crimea Congo Reference Genome**
 2. Select **Edit**
@@ -352,6 +354,7 @@ Now we are going to have a look to the workflow we created:
 <img src="images/edit_workflow_2.png" alt="edit_workflow_2" width="700"/>
 <img src="images/edit_workflow_3.png" alt="edit_workflow_3" width="700"/>
 
+### Share
 Now we are going to share our workflow:
 1. Select the name of the workflow **Create Crimea Congo Reference Genome**
 2. Select **Share**
@@ -363,17 +366,51 @@ Now we are going to share our workflow:
 <img src="images/share_wf_2.png" alt="share_wf_2" width="700"/>
 <img src="images/share_wf_3.png" alt="share_wf_3" width="700"/>
 
+### Running
 Now we are going to learn how to run a workflow with new data. Crimea congo's genome we already have is the one for the strain Kosovo Hoti. Now we are going to obtain the Reference genome for isolate Ast199, where:
 
 - S segment: KX056052
 - M segment: KX056051
 - L segment: KX056050
 
+1. Create a new history (as previously explained) named "Isolate Adt199"
+2. Select the run icon in the workflow you want to run.
+3. Now we have to upload the new fasta fragments. We are going to select the **Upload Data** icon and the pop-up seen before to upload data will appear:
+    - In the new panel select **Paste/Fetch Data**
+    - Now, in the **Download data from the web by entering URLs (one per line) or directly paste content.** square, paste the text you copied before:
 
-
+```
 https://raw.githubusercontent.com/BU-ISCIII/galaxy_virologist_training/one_week_4day_format/exercises/data/S_KX056052.fasta
 https://raw.githubusercontent.com/BU-ISCIII/galaxy_virologist_training/one_week_4day_format/exercises/data/M_KX056051.fasta
 https://raw.githubusercontent.com/BU-ISCIII/galaxy_virologist_training/one_week_4day_format/exercises/data/L_KX056050.fasta
+```
+
+    - Select **Start**
+    - When everything is green in the screen, select *Cancel*
+4. Select browse datasets in the :folder: like icon for the S fragment
+5. Select the S fragment from the list
+6. Repeat steps 4 and 5 for fragments L and M so the resulting window is like the one in the picture.
+7. Select **Run Workflow**.
+
+<img src="images/run_wf_1.png" alt="run_wf_1" width="700"/>
+<img src="images/run_wf_2.png" alt="run_wf_2" width="700"/>
+<img src="images/run_wf_3.png" alt="run_wf_3" width="700"/>
+<img src="images/run_wf_4.png" alt="run_wf_4" width="700"/>
+<img src="images/run_wf_5.png" alt="run_wf_5" width="700"/>
+<img src="images/run_wf_6.png" alt="run_wf_6" width="700"/>
+<img src="images/run_wf_7.png" alt="run_wf_7" width="700"/>
+
+Now our workflow is running, so we have to wait until every step is done to see the results.
+
+<img src="images/run_wf_8.png" alt="run_wf_8" width="700"/>
+
+Once the workflows is finished we would see a window like this one, were all the datasets on the history are in green finished. Also, you can select the input and output dropdowns to see what has been run.
+
+<img src="images/run_wf_9.png" alt="run_wf_9" width="700"/>
+
+Also Galaxy allows you to download a report in PDF that looks like this:
+
+<img src="images/run_wf_report.png" alt="run_wf_report" width="700"/>
 
 
 **Note:**
