@@ -14,7 +14,7 @@
 ## 1. Description
 When we don't have a reference genome to map against it, or when we don't want to have any bias in the genome reconstruction what we need to do is a de novo assembly. This type of analysis tries to reconstruct the original genome without any template using only the reads. 
 Some considerations:
-- When we assembly as longer the reads and as longer the size of the library fragments the easier it gets for the assembler. That's why pacbio or nanopore are recommended for assembly.
+- When we assemble as longer the reads and as longer the size of the library fragments the easier it gets for the assembler. That's why pacbio or nanopore are recommended for assembly.
 - It's almost imposible to reconstruct the entire genome of a large microorganism with only one sequencing, although it can be done for small viruses.
 - Assembly is not recommended for amplicon based libraries due to the depth of coverage uneveness and the amplicons intrinsic bias.
 
