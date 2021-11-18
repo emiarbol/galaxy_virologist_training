@@ -366,6 +366,23 @@ Now we are going to share our workflow:
 <img src="images/share_wf_2.png" alt="share_wf_2" width="700"/>
 <img src="images/share_wf_3.png" alt="share_wf_3" width="700"/>
 
+### Import
+Now we are going to import a Galaxy wokflow. Remember that you would not be able to import your own workflow from your user, if you already have it. So copy my own workflow or one of your colleague's:
+
+```
+https://usegalaxy.eu/u/svarona/w/concat-frags-reference-genome
+```
+
+1. Now paste the link in your browser's URL
+2. There you have a summary of the workflow.
+3. In the right side you have two buttons:
+    - Left one to download the workflow
+    - Right one (**+**) to import the workflow.
+4. Go back to the Workflow manager and check if it is there.
+
+<img src="images/import_1.png" alt="import_1" width="700"/>
+<img src="images/import_2.png" alt="import_2" width="700"/>
+
 ### Running
 Now we are going to learn how to run a workflow with new data. Crimea congo's genome we already have is the one for the strain Kosovo Hoti. Now we are going to obtain the Reference genome for isolate Ast199, where:
 
@@ -412,7 +429,8 @@ Also Galaxy allows you to download a report in PDF that looks like this:
 
 <img src="images/run_wf_report.png" alt="run_wf_report" width="700"/>
 
+Finally we can have a look the the resulting stats in this history.
 
 **Note:**
 - This hands-on history URL: https://usegalaxy.eu/u/svarona/h/crimea-congo-reference-genome
-- This hands-in workflow URL: https://usegalaxy.eu/u/svarona/w/create-crimea-congo-reference-genome
+- This hands-in workflow URL: https://usegalaxy.eu/u/svarona/w/concat-frags-reference-genome
