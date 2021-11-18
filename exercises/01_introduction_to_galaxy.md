@@ -181,7 +181,7 @@ When we select the tool we are going to see the tool's options in the center pan
 To concatenate the samples, we will follow the wollowing steps:
 1. In *Datasets to concatenate*:
     - Press *Ctrl* key in your keyboard
-    - Select the three fasta files <span style="color: red">while still pressing the *Ctrl* key</span>.
+    - Select the three fasta files **while still pressing the *Ctrl* key**.
 2. Press execute
 
 <img src="images/select_samples.png" alt="select_samples" width="700"/>
@@ -397,11 +397,11 @@ Now we are going to learn how to run a workflow with new data. Crimea Congo's ge
     - In the new panel select **Paste/Fetch Data**
     - Now, in the **Download data from the web by entering URLs (one per line) or directly paste content.** square, paste the text you copied before:
 
-```
-https://raw.githubusercontent.com/BU-ISCIII/galaxy_virologist_training/one_week_4day_format/exercises/data/S_KX056052.fasta
-https://raw.githubusercontent.com/BU-ISCIII/galaxy_virologist_training/one_week_4day_format/exercises/data/M_KX056051.fasta
-https://raw.githubusercontent.com/BU-ISCIII/galaxy_virologist_training/one_week_4day_format/exercises/data/L_KX056050.fasta
-```
+        ```
+        https://raw.githubusercontent.com/BU-ISCIII/galaxy_virologist_training/one_week_4day_format/exercises/data/S_KX056052.fasta
+        https://raw.githubusercontent.com/BU-ISCIII/galaxy_virologist_training/one_week_4day_format/exercises/data/M_KX056051.fasta
+        https://raw.githubusercontent.com/BU-ISCIII/galaxy_virologist_training/one_week_4day_format/exercises/data/L_KX056050.fasta
+        ```
     - Select **Start**
     - When everything is green in the screen, select *Cancel*
     
@@ -422,11 +422,11 @@ Now our workflow is running, so we have to wait until every step is done to see 
 
 <img src="images/run_wf_8.png" alt="run_wf_8" width="700"/>
 
-Once the workflows is finished we would see a window like this one, were all the datasets on the history are in green finished. Also, you can select the input and output dropdowns to see what has been run.
+Once the workflow is finished, we will see a window like this one, were all the datasets on the history are in green finished. Also, you can select the input and output dropdowns to see what has been run.
 
 <img src="images/run_wf_9.png" alt="run_wf_9" width="700"/>
 
-Also Galaxy allows you to download a report in PDF that looks like this:
+Galaxy also allows you to download a report in PDF format that looks like this:
 
 <img src="images/run_wf_report.png" alt="run_wf_report" width="700"/>
 
