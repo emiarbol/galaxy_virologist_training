@@ -37,7 +37,7 @@ In this tutorial we are going to see an example of how to assemble long reads fr
     4. Click in Start.
     5. Wait until the job finishes (green in history)
     6. Do the same for the remaining files.
-<p align="center"><img src="images/upload_data_assemblyNanopore.png" alt="Upload data mapping" width="900"></p>
+<p align="center"><img src="images/upload_data_assemblyNanopore.png" alt="Upload data mapping" width="700"></p>
 
 - Rename files.
     1. Click in the ✏️ in the history for all the files
@@ -53,7 +53,7 @@ In this tutorial we are going to see an example of how to assemble long reads fr
 1. Search `Concatenate datasets` using the search toolbox.
 2. Select all three fastq files keeping **Cntrl key** clicked.
 3. Click execute and wait.
-<p align="center"><img src="images/concatenate_params.png" alt="Concatenate" width="900"></p>
+<p align="center"><img src="images/concatenate_params.png" alt="Concatenate" width="700"></p>
 
 ### Mapping with Minimap2
 1. Search `minimap2` using the search toolbox.
@@ -82,13 +82,13 @@ In this tutorial we are going to see an example of how to assemble long reads fr
 1. Search Flye assembler using the search toolbox.
 2. Input reads: Concatenate datasets.
 3. Click execute and wait.
-<p align="center"><img src="images/flye_params.png" alt="Concatenate" width="900"></p>
+<p align="center"><img src="images/flye_params.png" alt="Concatenate" width="700"></p>
 
 > ⚠️As mentioned in the illumina tutorial amplicon-based sequencing is not prepared for de novo assembly.
 
 4. When the job ends we see that it finished with an error, we can click in the 🐛 icon and see the error description:
-<p align="center"><img src="images/flye_error1.png" alt="Concatenate" width="900"></p>
-<p align="center"><img src="images/flye_error2.png" alt="Concatenate" width="900"></p>
+<p align="center"><img src="images/flye_error1.png" alt="Concatenate" width="300"></p>
+<p align="center"><img src="images/flye_error2.png" alt="Concatenate" width="700"></p>
 
 5. If we search [the error in google](https://github.com/fenderglass/Flye/issues/128) the flye developer suggests some possible fixes that we've tried and they don't work, but points to uneven depth of coverage as a probable source.
 6. So we can't do a de novo assembly using this data. 
