@@ -1,4 +1,4 @@
-# Galaxy for virologist training Exercise 4: Illumina Assembly 101
+# Galaxy for virologist training Exercise 4: Nanopore mapping and Assembly 101
 
 <div class="tables-start"></div>
 
@@ -50,10 +50,33 @@ In this tutorial we are going to see an example of how to assemble long reads fr
     2. Change the name to `MN908947.3`
 
 ### Concatenate reads.
-1. Search Concatenate datasets using the search toolbox.
+1. Search `Concatenate datasets` using the search toolbox.
 2. Select all three fastq files keeping **Cntrl key** clicked.
 3. Click execute and wait.
 <p align="center"><img src="images/concatenate_params.png" alt="Concatenate" width="900"></p>
+
+### Mapping with Minimap2
+1. Search `minimap2` using the search toolbox.
+2. Will you select a reference genome from your history or use a built-in index?: Use a genome from history and index. Select MN908947.3
+3. Select fastq dataset: Concatenated fastqs. ⚠️ The tool is not properly configured so you can't select directly the fastq, you need to use the folder icon and force the selection of the concatenated fastq dataset.
+4. Click execute and wait.
+
+### Mapping stats with samtools
+1. Search `samtools flagstat` using the search toolbox.
+2. Bam file to convert: Minimap2 bam output.
+3. Click execute and wait.
+4. Click in the 👁️ and see the bam stats.
+
+<details>
+    <summary> Which is the mapping rate?</summary>
+    </br>
+    99.87%
+</details>
+<details>
+    <summary>How many reads do we have in our dataset?</summary>
+    3042
+    </br>
+</details>
 
 ### Assemble reads with Flye
 1. Search Flye assembler using the search toolbox.
@@ -61,29 +84,13 @@ In this tutorial we are going to see an example of how to assemble long reads fr
 3. Click execute and wait.
 <p align="center"><img src="images/flye_params.png" alt="Concatenate" width="900"></p>
 
-### Quality control with quast
-1. Follow [this](https://github.com/BU-ISCIII/galaxy_virologist_training/blob/one_week_4day_format/exercises/04_assembly_illumina.md#assembly-quality-control-with-quast) same instructions.
+> ⚠️As mentioned in the illumina tutorial amplicon-based sequencing is not prepared for de novo assembly.
 
- <details>
-    <summary>How much of or reference genome have we reconstructed?</summary>
-    </br>
-    Genome fraction: 83.979%
-    </details>
-    <details>
-    <summary>How many contigs do we have greater than 1000 pb?</summary>
-    </br>
-    5
-    </details>
-    <details>
-    <summary>How long is the largest contig in the assembly?</summary>
-    </br>
-    3029
-    </details>
-    <details>
-    <summary>Which is the N50?</summary
-    </br>
-        1836
-    </details>
+4. When the job ends we see that it finished with an error, we can click in the 🐛 icon and see the error description:
+<p align="center"><img src="images/flye_error1.png" alt="Concatenate" width="900"></p>
+<p align="center"><img src="images/flye_error2.png" alt="Concatenate" width="900"></p>
 
+5. If we search [the error in google](https://github.com/fenderglass/Flye/issues/128) the flye developer suggests some possible fixes that we've tried and they don't work, but points to uneven depth of coverage as a probable source.
+6. So we can't do a de novo assembly using this data. 
     
 > Note: Nanopore data is known to have more error than short sequencing reads. This is why assembly post-processing is strongly recommended, usually using combined sequencing aproximation with both nanopore and illumina reads. 
