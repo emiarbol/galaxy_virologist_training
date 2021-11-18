@@ -61,6 +61,8 @@ In this tutorial we are going to see an example of how to assemble long reads fr
 3. Select fastq dataset: Concatenated fastqs. ⚠️ The tool is not properly configured so you can't select directly the fastq, you need to use the folder icon and force the selection of the concatenated fastq dataset.
 4. Click execute and wait.
 
+<p align="center"><img src="images/minimap2_params.png" alt="Concatenate" width="700"></p>
+
 ### Mapping stats with samtools
 1. Search `samtools flagstat` using the search toolbox.
 2. Bam file to convert: Minimap2 bam output.
