@@ -79,11 +79,10 @@ https://raw.githubusercontent.com/BU-ISCIII/galaxy_virologist_training/one_week_
 
 4. Now, in the **Download data from the web by entering URLs (one per line) or directly paste content.** square, paste the text you copied before
 5. Select **Start**
+6. When everython is green in the screen, select *Close*
 
 <img src="images/Upload_1.png" alt="Upload 1" width="700"/>
 <img src="images/Upload_2.png" alt="Upload 2" width="700"/>
-<img src="images/Upload_3.png" alt="Upload 3" width="700"/>
-<img src="images/Upload_2.png" alt="Upload 4" width="700"/>
 
 
 Now our data is loading into galaxy. You can see that each job receives a different number, so you can keep track of the order of your jobs by the numbers.
