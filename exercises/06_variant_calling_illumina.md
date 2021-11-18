@@ -71,8 +71,29 @@ Follow instructions [here](https://github.com/BU-ISCIII/galaxy_virologist_traini
 
 9. Click the :eye: icon and inspect the vcf file.
 
+### VCF stats
+1. Search `bcftools stats` in the search toolbox.
+2. VCF/BCF Data: varscan vcf output.
+3. Choose a reference genome: use genome/reference from history. Select NC_009942.1.
+4. Click execute and wait.
+5. Click the :eye: icon and inspect the stats.
+
+<details>
+  <summary>How may variants do we have in our vcf file?</summary>
+  </br>
+  number of SNPs:	463
+</details>
+
 ## 6. Consensus genome
 
 ### Bcftools consensus
+1. Search `bcftools consensus` in the search toolbox.
+2. VCF/BCF Data: varscan vcf output.
+3. Choose a reference genome: use genome/reference from history. Select NC_009942.1.
+4. Click execute and wait.
+
+<p align="center"><img src="images/bcftools_consensus_params.png" alt="varscan" width="500"></p>
+
+> Note: for this example we are not going to mask any position with low coverage, this will be addressed in the exercise 8 where a real example will be performed.
 
 
