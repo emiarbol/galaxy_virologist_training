@@ -86,7 +86,7 @@ In this tutorial we are going to see an example of how to assemble long reads fr
 3. Click execute and wait.
 <p align="center"><img src="images/flye_params.png" alt="Concatenate" width="700"></p>
 
-> ⚠️As mentioned in the illumina tutorial amplicon-based sequencing is not prepared for de novo assembly.
+> ⚠️As mentioned in the illumina tutorial amplicon-based sequencing is not prepared for de novo assembly. Also this dataset is downsampled for time and performance issues so the depth of coverage is very limited.
 
 4. When the job ends we see that it finished with an error, we can click in the 🐛 icon and see the error description:
 <p align="center"><img src="images/flye_error1.png" alt="Concatenate" width="300"></p>
