@@ -20,9 +20,9 @@ In this tutorial we are going to see an example of how to assemble long reads fr
 ### Training dataset
 - Experiment info: [sequencing summary](https://github.com/nf-core/test-datasets/blob/viralrecon/nanopore/minion/sequencing_summary.txt)
 - fastq: 
-    - [fastq1](https://github.com/nf-core/test-datasets/blob/viralrecon/nanopore/minion/fastq_pass/barcode01/FAO93606_pass_barcode01_7650855b_0.fastq)
-    - [fastq2](https://github.com/nf-core/test-datasets/blob/viralrecon/nanopore/minion/fastq_pass/barcode01/FAO93606_pass_barcode01_7650855b_1.fastq)
-    - [fastq3](https://github.com/nf-core/test-datasets/blob/viralrecon/nanopore/minion/fastq_pass/barcode01/FAO93606_pass_barcode01_7650855b_2.fastq)
+    - [fastq1](https://raw.githubusercontent.com/nf-core/test-datasets/viralrecon/nanopore/minion/fastq_pass/barcode01/FAO93606_pass_barcode01_7650855b_0.fastq)
+    - [fastq2](https://raw.githubusercontent.com/nf-core/test-datasets/viralrecon/nanopore/minion/fastq_pass/barcode01/FAO93606_pass_barcode01_7650855b_1.fastq)
+    - [fastq3](https://raw.githubusercontent.com/nf-core/test-datasets/viralrecon/nanopore/minion/fastq_pass/barcode01/FAO93606_pass_barcode01_7650855b_2.fastq)
 - Reference genome MN908947.3 : [fasta](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/009/858/895/GCA_009858895.3_ASM985889v3/GCA_009858895.3_ASM985889v3_genomic.fna.gz) --- [gff](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/009/858/895/GCA_009858895.3_ASM985889v3/GCA_009858895.3_ASM985889v3_genomic.gff.gz)
 
 ### Create new history
@@ -49,4 +49,41 @@ In this tutorial we are going to see an example of how to assemble long reads fr
     1. Click the ✏️ for the reference file in the history.
     2. Change the name to `MN908947.3`
 
-### Assemble reads with flye
+### Concatenate reads.
+1. Search Concatenate datasets using the search toolbox.
+2. Select all three fastq files keeping **Cntrl key** clicked.
+3. Click execute and wait.
+<p align="center"><img src="images/concatenate_params.png" alt="Concatenate" width="900"></p>
+
+### Assemble reads with Flye
+1. Search Flye assembler using the search toolbox.
+2. Input reads: Concatenate datasets.
+3. Click execute and wait.
+<p align="center"><img src="images/flye_params.png" alt="Concatenate" width="900"></p>
+
+### Quality control with quast
+1. Follow [this](https://github.com/BU-ISCIII/galaxy_virologist_training/blob/one_week_4day_format/exercises/04_assembly_illumina.md#assembly-quality-control-with-quast) same instructions.
+
+ <details>
+    <summary>How much of or reference genome have we reconstructed?</summary>
+    </br>
+    Genome fraction: 83.979%
+    </details>
+    <details>
+    <summary>How many contigs do we have greater than 1000 pb?</summary>
+    </br>
+    5
+    </details>
+    <details>
+    <summary>How long is the largest contig in the assembly?</summary>
+    </br>
+    3029
+    </details>
+    <details>
+    <summary>Which is the N50?</summary
+    </br>
+        1836
+    </details>
+
+    
+> Note: Nanopore data is known to have more error than short sequencing reads. This is why assembly post-processing is strongly recommended, usually using combined sequencing aproximation with both nanopore and illumina reads. 
