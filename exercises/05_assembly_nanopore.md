@@ -5,15 +5,15 @@
 |**Title**| Galaxy |
 |---------|-------------------------------------------|
 |**Training dataset:**|  Nanopore Sequencing of a SARS-Cov-2 
-|**Questions:**| <ul><li>How nanopore reads are differently assembled from illumina?</li></ul>|
-|**Objectives**:|<ul><li>Understand assembly concept</li><li>Learn how to interpret assembly quality control metrics</li></ul>|
+|**Questions:**| <ul><li>How Nanopore reads are differently assembled from Illumina?</li></ul>|
+|**Objectives**:|<ul><li>Understand the concept of assembly</li><li>Learn how to interpret assembly quality control metrics</li></ul>|
 |**Estimated time**:| 40 min |
 
 <div class="tables-end"></div>
 
 ## 1. Description
-Nanopore techology is a third generation sequencing technique which allows to get longer sequences but with reduce sequence quality. Different technologies have different formats, qualities, and specific known biases which make the analysis different among them. 
-In this tutorial we are going to see an example of how to assemble long reads from a Nanopore sequencing run.
+Nanopore techology is a third generation sequencing technique which allows to get longer sequences, but with reduced sequence quality. Different technologies have different formats, qualities, and specific known biases which make the analysis different among them. 
+In this tutorial, we are going to see an example of how to assemble long reads from a Nanopore sequencing run.
 
 ## 2. Upload data to galaxy
 
@@ -88,11 +88,11 @@ In this tutorial we are going to see an example of how to assemble long reads fr
 
 > ⚠️As mentioned in the illumina tutorial amplicon-based sequencing is not prepared for de novo assembly. Also this dataset is downsampled for time and performance issues so the depth of coverage is very limited.
 
-4. When the job ends we see that it finished with an error, we can click in the 🐛 icon and see the error description:
+4. When the job ends, we see that it finished with an error, we can click in the 🐛 icon and see the error description:
 <p align="center"><img src="images/flye_error1.png" alt="Concatenate" width="300"></p>
 <p align="center"><img src="images/flye_error2.png" alt="Concatenate" width="700"></p>
 
 5. If we search [the error in google](https://github.com/fenderglass/Flye/issues/128) the flye developer suggests some possible fixes that we've tried and they don't work, but points to uneven depth of coverage as a probable source.
-6. So we can't do a de novo assembly using this data. 
+6. In conclusion, we can't do a de novo assembly in Galaxy using this data. 
     
-> Note: Nanopore data is known to have more error than short sequencing reads. This is why assembly post-processing is strongly recommended, usually using combined sequencing aproximation with both nanopore and illumina reads. 
+> Note: Nanopore data is known to have more error than short sequencing reads. This is why assembly post-processing is strongly recommended, usually using combined sequencing aproximation with both Nanopore and Illumina reads. 
