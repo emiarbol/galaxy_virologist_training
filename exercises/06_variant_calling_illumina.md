@@ -126,10 +126,22 @@ Follow instructions [here](https://github.com/BU-ISCIII/galaxy_virologist_traini
 1. Search `upSeq diagram` in the search toolbox. 
 2. Select input files for which to produce intersections: select vcf from varscan, vcf from lofreq filter and vcf from ivar variants. 
 3. Click execute and wait.
+4. Click the :eye: icon and check the diagram. 
+
+<details>
+  <summary>How many variants differ among the vcfs?</summary>
+  </br>
+  There are up to 10 variants more in VarScan than the other callers.
+</details>
 
 ### Intersect vcfs.
-
-
+1. Search `vcf-vcfintersect` in the search toolbox. 
+2. First VCF: ivar vcf
+3. Second VCF: varscan mpileup vcf
+4. Choose the source for the reference genome: History. NC_009942.1
+5. Invert selection?: Yes (we want to extract the differences)
+6. Click execute and wait.
+7. Click the :eye: icon and inspect the results.
 
 ## 7. Consensus genome
 
@@ -143,4 +155,9 @@ Follow instructions [here](https://github.com/BU-ISCIII/galaxy_virologist_traini
 
 > Note: for this example we are not going to mask any position with low coverage, this will be addressed in the exercise 8 where a real example will be performed.
 
+### Ivar Consensus
+1. Search `ivar consensus` in the search toolbox.
+2. Bam file: bowtie bam output.
+3. Use N instead of - for regions with less than minimum coverage: Yes
 
+<p align="center"><img src="images/ivar_consensus_params1.png" alt="varscan" width="500"></p>
