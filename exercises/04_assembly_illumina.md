@@ -4,7 +4,7 @@
 
 |**Title**| Galaxy |
 |---------|-------------------------------------------|
-|**Training dataset:**|  PRJEB43037 - In August 2020 an outbreak of West Nile Virus affected 71 people with meningoencephalitis in Andalusia and 6 more cases in Extremadura (south-west of Spain), causing a total of eight deaths. The virus belonged to the lineage 1 and was relatively similar to previous outbreaks occurred in the Mediterranean region. Here we present a detailed analysis of the outbreak, including an extensive phylogenetic study. This is one of the outbreak samples.
+|**Training dataset:**|  PRJEB43037 - In August 2020, an outbreak of West Nile Virus affected 71 people with meningoencephalitis in Andalusia and 6 more cases in Extremadura (south-west of Spain), causing a total of eight deaths. The virus belonged to the lineage 1 and was relatively similar to previous outbreaks occurred in the Mediterranean region. Here, we present a detailed analysis of the outbreak, including an extensive phylogenetic study. This is one of the outbreak samples.
 |**Questions:**| <ul><li>What is assembly?</li><li>How can I evaluate my assembly?</li></ul>|
 |**Objectives**:|<ul><li>Understand assembly concept</li><li>Learn how to interpret assembly quality control metrics</li></ul>|
 |**Estimated time**:| 40 min |
@@ -12,10 +12,10 @@
 <div class="tables-end"></div>
 
 ## 1. Description
-When we don't have a reference genome to map against it, or when we don't want to have any bias in the genome reconstruction what we need to do is a de novo assembly. This type of analysis tries to reconstruct the original genome without any template using only the reads. 
+Sometimes, we don't have a reference genome to map against, or we want to reconstruct a genome without any bias caused by a reference. In such cases, we need to do a _de novo assembly_. This type of analysis tries to reconstruct the original genome without any template, using only the reads. 
 Some considerations:
-- When we assemble as longer the reads and as longer the size of the library fragments the easier it gets for the assembler. That's why pacbio or nanopore are recommended for assembly.
-- It's almost imposible to reconstruct the entire genome of a large microorganism with only one sequencing, although it can be done for small viruses.
+- When we assemble, the longer the reads are and the longer the size of the library fragments the easier it gets for the assembler. That's why pacbio or nanopore are recommended for assembly. Think of it like a puzzle, the bigger the pieces, the easier it is to form the image.
+- It's almost imposible to reconstruct the entire genome of a large-genome microorganism with only one sequencing, although it can be done for smaller ones, like viruses.
 - Assembly is not recommended for amplicon based libraries due to the depth of coverage uneveness and the amplicons intrinsic bias.
 
 ## 2. Upload data to galaxy
