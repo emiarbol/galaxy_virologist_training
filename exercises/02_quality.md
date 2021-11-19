@@ -50,14 +50,14 @@ https://raw.githubusercontent.com/nf-core/test-datasets/viralrecon/nanopore/mini
     - In the *files* part, use *Ctrl* to select the three fastq files.
     - Select **Execute**
 
-<p align="center"><img src="images/preproc_nanopore_nanoplot_run.jpg" alt="preproc_nanopore_nanoplot_run" width="900"></p>
+<p align="center"><img src="images/preproc_nanopore_nanoplot_run.png" alt="preproc_nanopore_nanoplot_run" width="900"></p>
 
 Now we are going to have a look to the results.
 
 1. Select the :eye: icon in the **NanoPlot on data 3, data 2, and data 1: HTML report** result.
 2. Have a look to the stats.
 
-<p align="center"><img src="images/nanoplot_results.jpg" alt="nanoplot_results" width="900"></p>
+<p align="center"><img src="images/nanoplot_results.png" alt="nanoplot_results" width="900"></p>
 
 As you can see, the Mean read length is around 500 nt, which makes sense because we are using amplicon sequencing data.
 
