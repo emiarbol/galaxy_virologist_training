@@ -2,7 +2,7 @@
 
 Despite the improvement of sequencing methods, there is no error-free technique. A correct measuring of the sequencing quality is essential for identifying problems in the sequencing, thus, this must be the first step in every sequencing analysis. Once the quality control is finished, it's important to remove those low quality reads, or short reads, for which a trimming step is mandatory. After the trimming step it is recommended to perform a new quality control step to be sure that trimming worked.
 
-#1. Illumina Quality control and trimming
+# 1. Illumina Quality control and trimming
 
 <div class="tables-start"></div>
 
@@ -54,7 +54,7 @@ Using FastQC
 
 Once we have perform the variant quality control we have to perform the quality and read length trimming:
 
-1. Search for fastp in the tools and select **fastp - fast all-in-one preprocessing for FASTQ files**
+1. Search for **fastp** in the tools and select **fastp - fast all-in-one preprocessing for FASTQ files**
 2. Select custom parameters:
     - Single-end or paired reads > Paired
         - Input 1 > Browse datasets (right folder icon) > Select ERR5310322_1.fastq.gz
@@ -80,7 +80,7 @@ Once we have perform the variant quality control we have to perform the quality 
 
 To see the trimming stats, have a look to the **fastp on data 2 and data 1: HTML report** file. You should see something like that.
 
-<p align="center"><img src="images/fastp_results.png" alt="fastp_results" width="900"></p>
+<p align="center"><img src="images/fastp_results.png" alt="fastp_results" width="700"></p>
 
 <details>
 <summary>How many reads have we lost?</summary>
@@ -88,7 +88,30 @@ To see the trimming stats, have a look to the **fastp on data 2 and data 1: HTML
 98664 reads
 </details>
 
-**First question**
+### Other trimming tools
+1. Search for **trimmomatic** in the tools and select **Trimmomatic flexible read trimming tool for Illumina NGS data**
+2. Select custom parameters:
+    - Single-end or paired-end reads? = Paired-end (two separated files)
+    - Input FASTQ file (R1/first of pair) = ERR5310322_1.fastq.gz
+    - Input FASTQ file (R2/second of pair) = ERR5310322_2.fastq.gz
+    - Insert Trimmomatic Operation:
+        - Select Trimmomatic operation to perform: **MINLEN**
+        - Minimum length of reads to be kept = 50
+3. Select **Execute**
+
+<p align="center"><img src="images/trimmomatic_1.png" alt="trimmomatic_1" width="900"></p>
+<p align="center"><img src="images/trimmomatic_2.png" alt="trimmomatic_2" width="900"></p>
+
+Trimmomatic does not perform statistics over trimmed reads, so we need to perform FastQC again over trimmomatic results.
+
+<details>
+<summary>Try to do it by your own.</summary>
+<br>
+<p align="center"><img src="images/fastqc_trimmomatic.png" alt="fastqc_trimmomatic" width="900"></p>
+<p align="center"><img src="images/fasqc_trimming_res.png" alt="fasqc_trimming_res" width="900"></p>
+</details>
+
+**Second question**
 <details>
 <summary>How can I improve my data quality?</summary>
 <br>
