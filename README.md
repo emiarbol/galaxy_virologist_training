@@ -49,8 +49,6 @@ The material includes slides with theory concepts and a bunch of practical exerc
 
 - **Talk 5:** [Alineamiento frente a genoma de referencia y llamada a variantes: identificación de SNPs y obtención de secuencia consenso](slides/XXX.pdf)
 - [**Exercise 6**](exercises/06_variant_calling_illumina.md) -- [Download pdf](exercises/06_variant_calling_illumina.pdf)
-- [**Exercise 7**](exercises/07_variant_calling_nanopore.md) -- [Download pdf](exercises/07_variant_calling_nanopore.pdf)
-
 
 ### Day 4
 
