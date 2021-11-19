@@ -6,7 +6,7 @@
 |**Training dataset:**|  PRJEB43037 - In August 2020 an outbreak of West Nile Virus affected 71 people with meningoencephalitis in Andalusia and 6 more cases in Extremadura (south-west of Spain), causing a total of eight deaths. The virus belonged to the lineage 1 and was relatively similar to previous outbreaks occurred in the Mediterranean region. Here we present a detailed analysis of the outbreak, including an extensive phylogenetic study. This is one of the outbreak samples.
 |**Questions:**| <ul><li>What is variant calling?</li><li>What is a vcf file?</li><li>How can I inspect a variant in a bam file to look for false positives?</li><li>How can I make a consensus genome based on a variant calling process?</li></ul>|
 |**Objectives**:|<ul><li>Understand variant calling concept</li><li>Learn how to interpret a vcf file</li><li>Learn how to make a reference consensus genome.</li><li>Learn how to visualize mapping and variant calling results</li></ul>|
-|**Estimated time**:| 1h |
+|**Estimated time**:| 2h |
 
 <div class="tables-end"></div>
 
@@ -84,7 +84,54 @@ Follow instructions [here](https://github.com/BU-ISCIII/galaxy_virologist_traini
   number of SNPs:	463
 </details>
 
-## 6. Consensus genome
+### Ivar variants
+1. Search `ivar variants` in the search toolbox.
+2. Samtools pileup dataset: samtools mpileup output.
+3. Bam file: bowtie bam output
+4. Reference:  NC_009942.1
+5. Minimum quality score threshold to count base: 20
+6. Minimum frequency threshold: 0.8
+7. Output format: Both tabular and vcf
+8. Click execute and wait.
+
+<p align="center"><img src="images/ivar_params1.png" alt="ivar" width="500"></p>
+
+### Lofreq 
+#### Insert indel qualities
+1. Search `lofreq` in the search toolbox. Select Insert indel qualities with lofreq.
+2. Reads: bowtie2 bam output.
+3. Click execute and wait.
+
+<p align="center"><img src="images/indel_qualities_params1.png" alt="lofreq indel qualities" width="500"></p>
+
+#### Call variants
+1. Search `lofreq` in the search toolbox. Select Call variants with lofreq.
+2. Input reads in BAM format: indel qualities bam output.
+3. Choose the source for the reference genome: History. NC_009942.1
+4. Types of variants to call: SNVs and INDELs
+5. Variant calling parameters: Configure settings
+6. Minimal coverage: 10
+7. Minimum baseQ: 20
+8. Minimum baseQ for alternate bases: 20
+9. Click execute and wait.
+
+
+<p align="center"><img src="images/lofreq_call_variants_params1.png" alt="lofreq call" width="500"></p>
+<p align="center"><img src="images/lofreq_call_variants_params2.png" alt="lofreq call" width="500"></p>
+<p align="center"><img src="images/lofreq_call_variants_params3.png" alt="lofreq call" width="500"></p>
+
+## Compare vcfs among callers
+
+### Visualize datasets.
+1. Search `upSeq diagram` in the search toolbox. 
+2. Select input files for which to produce intersections: select vcf from varscan, vcf from lofreq filter and vcf from ivar variants. 
+3. Click execute and wait.
+
+### Intersect vcfs.
+
+
+
+## 7. Consensus genome
 
 ### Bcftools consensus
 1. Search `bcftools consensus` in the search toolbox.
