@@ -4,16 +4,16 @@
 
 |**Title**| Galaxy |
 |---------|-------------------------------------------|
-|**Training dataset:**|  PRJEB43037 - In August 2020 an outbreak of West Nile Virus affected 71 people with meningoencephalitis in Andalusia and 6 more cases in Extremadura (south-west of Spain), causing a total of eight deaths. The virus belonged to the lineage 1 and was relatively similar to previous outbreaks occurred in the Mediterranean region. Here we present a detailed analysis of the outbreak, including an extensive phylogenetic study. This is one of the outbreak samples.
+|**Training dataset:**|  PRJEB43037 - In August 2020, an outbreak of West Nile Virus affected 71 people with meningoencephalitis in Andalusia and 6 more cases in Extremadura (south-west of Spain), causing a total of eight deaths. The virus belonged to the lineage 1 and was relatively similar to previous outbreaks occurred in the Mediterranean region. Here we present a detailed analysis of the outbreak, including an extensive phylogenetic study. This is one of the outbreak samples.
 |**Questions:**| <ul><li>What is mapping?</li><li>What is a BAM file?</li><li>Which metrics are important to check after mapping?</ul>|
-|**Objectives**:|<ul><li>Understand mapping concept</li><li>Learn how to interpret mapping metrics</li><li>Learn how to visualize mapping mapping results</li></ul>|
+|**Objectives**:|<ul><li>Understand the concept of mapping</li><li>Learn how to interpret mapping metrics</li><li>Learn how to visualize mapping results</li></ul>|
 |**Estimated time**:| 40 min |
 
 <div class="tables-end"></div>
 
 ## 1. Description
-One of the most common experiments using massive sequencing are re-sequencing experiments. This type of experiments sequence already known microorganisms where our goal is to discover variation between a aready assembled and known reference and our reads. Mapping is a mandatory step for this kind of experiments, where we need sort all our short sequences(reads) we have in our fastq file without any genomic context.
-After the mapping step we are going to transform our fastq file in a bam file where we are going to have information about where a read came from, meaning we are going to have the coordinates where each read is placed in our reference genome.
+One of the most common experiments using massive sequencing are re-sequencing experiments. This type of experiments sequence already known microorganisms, with the goal to discover variation between an already assembled and known reference, and our reads. Mapping is a mandatory step for this kind of experiments, where we need to sort all the short sequences (reads) we have in our fastq file, lacking any genomic context.
+After the mapping step, we will transform our fastq file into a bam file that contains information about where a read came from, meaning we are going to have the coordinates where each read is placed inside our reference genome.
 
 ## 2. Upload data to galaxy
 
@@ -79,7 +79,7 @@ After the mapping step we are going to transform our fastq file in a bam file wh
 
 <p align="center"><img src="images/view_bamfile.png" alt="view bam file" width="200"></p>
 
-2. Interpret the columns in the bam format according to theory class.
+2. Interpret the columns in the bam format according to the theory from class.
 
 3. Visualize mapping metrics
     - Click on the eye icon on Bowtie2 mapping stats history.
@@ -100,9 +100,9 @@ After the mapping step we are going to transform our fastq file in a bam file wh
 
 
 ### Visualize bam file using IGV
-In order to visualize our mapping we will use IGV (Integrative Genomics Viewer). This is an open source and freely available lightweight visualization tool that enables intuitive real-time exploration of diverse, large-scale genomic data sets on standard desktop computers. It supports flexible integration of a wide range of genomic data types including aligned sequence reads, mutations, copy number, RNA interference screens, gene expression, methylation and genomic annotations.
+In order to visualize our mapping we will use IGV (Integrative Genomics Viewer). This is an open source, freely available and lightweight visualization tool that enables intuitive real-time exploration of diverse, large-scale genomic data sets on standard desktop computers. It supports flexible integration of a wide range of genomic data types including aligned sequence reads, mutations, copy number, RNA interference screens, gene expression, methylation and genomic annotations.
 
-Navigation through a data set is similar to that of Google Maps, allowing the user to zoom and pan seamlessly across the genome at any level of detail from whole genome to base pair. Data sets can be loaded from local or remote sources, including cloud-based resources, enabling investigators to view their own genomic data sets alongside publicly available data.
+Navigation through a data set is similar to that of Google Maps, allowing the user to zoom and pan seamlessly across the genome at any level of detail, from whole genome to base pair. Data sets can be loaded from either local or remote sources, including cloud-based resources, enabling investigators to view their own genomic data sets alongside publicly available data.
 
 1. Install [IGV](https://software.broadinstitute.org/software/igv/download)
 2. Launch IGV on your computer
