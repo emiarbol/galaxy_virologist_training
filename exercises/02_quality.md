@@ -64,4 +64,19 @@ As you can see, the Mean read length is around 500 nt, which makes sense because
 ## 2. Trimming
 When Nanopore reads are being sequenced, the MinKnown software splits Fast5 reads into quality pass and quality fail. As we will select only Fast5 pass reads, we won't need to perform a quality trimming, so even if we see that the reads have a bad Phred score, we know that the ONT software trait the reads as good quality.
 
-Then we will only be performing a read length trimming. As we are using amplicon sequencing data, we won't be expecting reads smaller than 300 nucleotides nor higher than 700, which would be obviously chimeric reads.
+Then we will only be performing a read length trimming. As we are using amplicon sequencing data, we won't be expecting reads smaller than 300 nucleotides nor higher than 600, which would be obviously chimeric reads.
+
+1. Search for **artic** tool
+2. Select **ARTIC guppyplex Filter Nanopore reads by read length and (optionally) quality**
+3. Using *Ctrl* select the three samples
+4. Remove reads longer than = 600
+5. Remove reads shorter than = 400
+6. Do not filter on quality score (speeds up processing) = Yes (we had already select pass reads)
+
+<p align="center"><img src="images/nanofilt_run.png" alt="nanofilt_run" width="900"></p>
+
+We will encounter one error in this job:
+
+<p align="center"><img src="images/artic_error.png" alt="artic_error" width="200"></p>
+
+This happens because Galaxy does not have the software to filter SARS-CoV-2 amplicon data properly installed in their server, which is something typical that we can find in Galaxy.
