@@ -118,6 +118,9 @@ Trimmomatic does not perform statistics over trimmed reads, so we need to perfor
 Using a trimming software such as fastp or trimmomatic.
 </details>
 
+- This hands-on history URL: https://usegalaxy.eu/u/svarona/h/llumina-preprocessing
+
+
 # 2. Nanopore Quality control and trimming
 
 <div class="tables-start"></div>
@@ -190,3 +193,5 @@ We will encounter one error in this job:
 <p align="center"><img src="images/artic_error.png" alt="artic_error" width="200"></p>
 
 This happens because Galaxy does not have the software to filter SARS-CoV-2 amplicon data properly installed in their server, which is something typical that we can find in Galaxy.
+
+- This hands-on history URL: https://usegalaxy.eu/u/svarona/h/nanopore-quality
