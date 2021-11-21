@@ -38,7 +38,8 @@ The material includes slides with theory concepts and a bunch of practical exerc
 ### Day 2
 
 - **Talk 3:** [Análisis de calidad y preprocesamiento de los datos genómicos](slides/Day2/03_quality_preprocessing.pdf)
-- **Talk 4:** [Ensamblado de genomas y mapping](slides/Day2/XXXXX.pdf)
+- **Talk 4:** [Fase de mapping](slides/curso_ViralGalaxy_session_Mapping.pdf)
+- **Talk 5:** [Ensamblado de genomas](slides/XX.pdf)
 - [**Exercise 2**](exercises/02_quality.md) -- [Download pdf](exercises/02_quality.pdf)
 - [**Exercise 3**](exercises/03_mapping.md) -- [Download pdf](exercises/03_mapping.pdf)
 - [**Exercise 4**](exercises/04_assembly_illumina.md) -- [Download pdf](exercises/04_assembly_illumina.pdf)
@@ -47,10 +48,10 @@ The material includes slides with theory concepts and a bunch of practical exerc
 
 ### Day 3
 
-- **Talk 5:** [Alineamiento frente a genoma de referencia y llamada a variantes: identificación de SNPs y obtención de secuencia consenso](slides/XXX.pdf)
+- **Talk 6:** [Alineamiento frente a genoma de referencia y llamada a variantes: identificación de SNPs y obtención de secuencia consenso](slides/XXX.pdf)
 - [**Exercise 6**](exercises/06_variant_calling_illumina.md) -- [Download pdf](exercises/06_variant_calling_illumina.pdf)
 
 ### Day 4
 
-- **Talk 6:** [Viralrecon](slides/viralrecon.pdf)
+- **Talk 7:** [Viralrecon](slides/viralrecon.pdf)
 - [**Exercise 8**](exercises/04_viralrecon.md) -- [Download pdf](exercises/04_viralrecon.pdf)
