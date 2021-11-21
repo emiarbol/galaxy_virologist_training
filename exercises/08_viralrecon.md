@@ -36,6 +36,12 @@ We are going to upload files using these URLS [as seen in the Galaxy tutorial fi
 TODO
 ````
 
+Prior to any analysis, we have to download the fasta reference genome using the following URL:
+
+```
+https://github.com/nf-core/test-datasets/raw/viralrecon/genome/NC_045512.2/GCF_009858895.2_ASM985889v3_genomic.200409.fna.gz_
+```
+
 ## Quality
 
 ### Quality Analysis (FastQC)
@@ -129,9 +135,6 @@ In order to call for variants between the samples and the reference, it's mandat
 
 ### Reference genome for mapping
 
-Prior to any analysis, we have to download the fasta reference genome, and we are going to do it in a new way we didn't see in the previous steps, using the following URL:
-
-_https://github.com/nf-core/test-datasets/raw/viralrecon/genome/NC_045512.2/GCF_009858895.2_ASM985889v3_genomic.200409.fna.gz_
 
 So you have to copy the URL direction, and do then select "_Download from web or upload from disk_", the select "_Paste/Fetch data_" and in the new window that appears you should paste the URL above and finally select "_Start_". Now the fasta file of the reference is download.
 
