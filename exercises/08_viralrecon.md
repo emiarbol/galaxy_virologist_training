@@ -91,13 +91,10 @@ Finally, click on "_Execute_"
 ![fastp3](../docs/images/fastp3.png)
 ![fastp4](../docs/images/fastp4.png)
 
-A message like this one will appear, which means that 4 results will be generated:
+A message will appear, which means that 3 results will be generated:
   1. One with the R1 trimmed reads
   2. Another one with the R2 trimmed reads
   3. Another one with the HTML results
-  4. A last one with the JSON results
-
-![fastp_message](../docs/images/fastp_message.png)
 
 **Repeat these steps for the second sample**
 
