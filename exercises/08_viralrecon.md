@@ -220,8 +220,10 @@ After mapping the reads to the reference genome, we are interested in removing t
 
 ### Download amplicon bed file
 
-First you will download the bed file of the amplicon primers, which contains the positions in the reference genome of each of the amplicon primers. You have to click in "_Download from URL or upload files from disk_", then select "_Paste/Fetch data_" and then paste this URL in the window:
+First you will download the bed file of the amplicon primers, which contains the positions in the reference genome of each of the amplicon primers. Use this URL in the window:
+```
 https://raw.githubusercontent.com/nf-core/test-datasets/viralrecon/genome/NC_045512.2/amplicon/nCoV-2019.artic.V3.scheme.bed
+```
 
 Finally, press "_Start_".
 
@@ -248,8 +250,9 @@ Once we have the alingment statistics and files with amplicon primers trimmed, w
 
 ### Mpileup
 
-The first step in variant calling is generated a pileup file. For that you just have to search for "_mpileup_" in the search bar and select "_samtools mpileup multi-way pileup of variants_". Then select the following parameters:
-
+1. The first step in variant calling is generated a pileup file. For that you just have to search for "_mpileup_" in the search bar and select "_samtools mpileup multi-way pileup of variants_".
+2. Due to a problem with the last version of mpileup installed in galaxy we need to downgrade to v.2.1.4.
+3. Click on Version box in the grey box
 3. Choose the source for the reference genome > Use a genome from the history.
 4. BAM file(s) > Select the ivar bam file
 5. Using reference genome > Select the reference fasta file.
