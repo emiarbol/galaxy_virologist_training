@@ -39,21 +39,12 @@ TODO
 ## Quality
 
 ### Quality Analysis (FastQC)
-Once we have the raw data, an important step is to analyze the quality of the reads, to know if the reads are worth it. To do this, we have to look for the program "_FastQC_" in the search bar, then select the program in the list and a new panel for FastQC will appear.
+Once we have the raw data, an important step is to analyze the quality of the reads, to know if the reads are worth it. To do this, we have to look for the program "_FastQC_" in the search bar, then select **FastQC Read Quality reports** and set the following parameters:
+    - Select multiple file data set and select the fastq files R1 and R2 for both samples
+    - With *Ctrl* select the two datasets
+    - Then go down and select **Execute**
 
-In the panel we will have to select the fastq files R1 and R2 for both samples. To do this, in the "_Short read data from your current history_" header, we will click on "_Multiple datasets_"
-
-![fastqc](../docs/images/fastqc.png)
-
-and then in the new window select from our jobs the ones of the samples we want:
-
-![fastqc_samples](../docs/images/fastqc_samples.png)
-
-**This is for the case that you used two samples instead of one like in this training"***
-
-This program will generate a message like this one, were we can read that, each .fastq file is going to generate two different jobs, one for the Raw Data and another one for the .HTML report.
-
-![fastqc_message](../docs/images/fastqc_message.png)
+<p align="center"><img src="images/fastqc_run.png" alt="fastqc_run" width="900"></p>
 
 ### FastQC results visualization
 To visualize the information coming from FastQC we just have to select the job of interest. In this case we are interested in the "_Web page results_" so for the sample we want to see the results we have to click in the _eye_ to visualize galaxy results:
@@ -68,7 +59,7 @@ So the central panel with the results we want to visualize will bee better seen.
 
 ![bottom_arrows_2](../docs/images/bottom_arrows_2.png)
 
-**_For more information about FastQC output visit [FastQC website](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/3%20Analysis%20Modules/)_**
+**_For more information about FastQC output visit [FasxstQC website](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/3%20Analysis%20Modules/)_**
 
 ## Trimming
 
@@ -76,8 +67,8 @@ So the central panel with the results we want to visualize will bee better seen.
 Once we have check the quality of our reads, it's important to trim low quality nucleotides from those reads, for which we will use _Fastp_. So, in the search bar you look for fastp and then select "_fastp - fast all-in-one preprocessing for FASTQ files_". There, we will have to change some parameters ensure the trimming accuracy for this amplicon data. First of all we are going to do the analysis for the sample we gave to you (201569). These are the field we will have to change:
 
 3. Single-end or paired reads > Paired
-4. Input 1 > Browse datasets (right folder icon) > Select 201569_S59_R1_001.fastq.gz
-    Input 2 > Browse datasets > Select 201569_S59_R2_001.fastq.gz
+4. Input 1 > Browse datasets (right folder icon) > Select R1 for the first sample
+    Input 2 > Browse datasets > Select R2 for the first sample
 6. Display Filter Options
   6. Quality Filtering options
     7. Qualified Quality Phred = 30
@@ -92,7 +83,6 @@ Once we have check the quality of our reads, it's important to trim low quality 
     16. Cutting mean quality = 30
 17. Output options
   18. Output HTML report > Yes
-  19. Output JSON report > Yes
 
 Finally, click on "_Execute_"
 
@@ -108,6 +98,8 @@ A message like this one will appear, which means that 4 results will be generate
   4. A last one with the JSON results
 
 ![fastp_message](../docs/images/fastp_message.png)
+
+**Repeat these steps for the second sample**
 
 ### Fastp results
 
