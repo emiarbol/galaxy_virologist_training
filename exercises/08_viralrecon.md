@@ -42,6 +42,16 @@ Prior to any analysis, we have to download the fasta reference genome using the 
 https://github.com/nf-core/test-datasets/raw/viralrecon/genome/NC_045512.2/GCF_009858895.2_ASM985889v3_genomic.200409.fna.gz_
 ```
 
+Also, you will download the bed file of the amplicon primers, which contains the positions in the reference genome of each of the amplicon primers. Use this URL in the window:
+```
+https://raw.githubusercontent.com/nf-core/test-datasets/viralrecon/genome/NC_045512.2/amplicon/nCoV-2019.artic.V3.scheme.bed
+```
+
+Finally, press "_Start_".
+
+![primer_fasta_download](../docs/images/primer_fasta_download.png)
+
+
 ## Quality
 
 ### Quality Analysis (FastQC)
@@ -127,6 +137,8 @@ Among the most relevant results, you have the:
     - After filtering: read1: quality: Plot with the evolution of R1 quality over read position. Usually it decays in the last nucleotides.
     - After filtering: read2: quality: Same plot for R2.
 
+**Repeat these steps for the second sample**
+
 **_For more information about FastQC output visit [Fastp github](https://github.com/OpenGene/fastp)_**
 
 ## Mapping
@@ -152,6 +164,8 @@ Now we can start with the main mapping process. The first thing we have to do is
 ![bowtie2](../docs/images/bowtie2.png)
 ![bowtie3](../docs/images/bowtie3.png)
 
+**Repeat these steps for the second sample**
+
 ### Mapping results
 
 Now we can see the mapping results for the samples. The bowtie2 resulting file is a .bam file, which is not easy to read by humans. This .bam file can be downloaded by clicking in the alignment file and then into download. Then, the resulting .gz file will contain the alignment .bam file that can be introduced in a software such as [IGV](http://software.broadinstitute.org/software/igv/) with the reference genome fasta file.
@@ -171,6 +185,8 @@ The previously shown files give few human readable information, because mapping 
 The first program is Samtools, from which we will use the module samtools flagstat. To do this, we have to look in the search bar for "_samtools flagstat_" and then select "_Samtools flagstat tabulate descriptive stats for BAM datset_". There, we just have to select the samples we want to perform the mapping stats (in the example there are two samples, you just have to use one): _Bowtie2 on data X, data X and data X: alingment_. You can select the samples from the list in _Multiple datasets_ or select the folder icon (_Browse datasets_) to select the file from the history. Finally, select _Execute_
 
 ![samtools_flagstat_1](../docs/images/samtools_flagstat_1.png)
+
+**Repeat these steps for the second sample**
 
 ### Samtools results
 
@@ -202,6 +218,8 @@ This process will generate one output file per .bam alignment file selected as i
 
 ![picard_wgsmetrics_message](../docs/images/picard_wgsmetrics_message.png)
 
+**Repeat these steps for the second sample**
+
 ### Picard results
 
 Picard results consist in quite long files, so the best is to download those results and visualize them in your computer. Yo you have to click in the CollectWgsMetrics job you want to download, and then click in the save button:
@@ -218,17 +236,6 @@ So in the results table you can see that the "Mean Coverage" is around 200, whic
 
 After mapping the reads to the reference genome, we are interested in removing the sequences of the amplicon primers. To do that you will use a program called iVar, and you will need a bed file with the positions of those amplicon primers.
 
-### Download amplicon bed file
-
-First you will download the bed file of the amplicon primers, which contains the positions in the reference genome of each of the amplicon primers. Use this URL in the window:
-```
-https://raw.githubusercontent.com/nf-core/test-datasets/viralrecon/genome/NC_045512.2/amplicon/nCoV-2019.artic.V3.scheme.bed
-```
-
-Finally, press "_Start_".
-
-![primer_fasta_download](../docs/images/primer_fasta_download.png)
-
 ### Trim amplicon sequences
 
 Once you have the bed file, you just have to search for "_ivar trim_" in the search bar and select "_ivar trim Trim reads in aligned BAM_". Then follow these steps:
@@ -239,6 +246,8 @@ Once you have the bed file, you just have to search for "_ivar trim_" in the sea
 6. Include reads with no primers > Yes.
 
 ![ivar_trim1](../docs/images/ivar_trim1.png)
+
+**Repeat these steps for the second sample**
 
 ### iVar results
 
@@ -268,6 +277,8 @@ Once we have the alingment statistics and files with amplicon primers trimmed, w
 ![samtools_mpileup2](../docs/images/samtools_mpileup2.png)
 ![samtools_mpileup3](../docs/images/samtools_mpileup3.png)
 
+**Repeat these steps for the second sample**
+
 ### VarScan
 
 Now, with the mpileup file you can start the variant calling process. You will use a program called VarScan, so you have to search for "_varscan_" in the search bar and select "_VarScan for variant detection_". Then select the following parameters:
@@ -278,6 +289,8 @@ Now, with the mpileup file you can start the variant calling process. You will u
 6. Minimum base quality at a position to count a read = 20
 
 ![varscan1](../docs/images/varscan1.png)
+
+**Repeat these steps for the second sample**
 
 ### VarScan results
 
@@ -299,6 +312,8 @@ To filter the variants called by VarScan you will use a program called bcftools.
 
 ![bcftools_filter](../docs/images/bcftools_filter.png)
 
+**Repeat these steps for the second sample**
+
 ### Bcftools filter results
 
 The main difference between the VCF file from VarScan and the VCF from Bcftools is that this last one is shorter because it will only contain those variants with an allele frequency higher than 80%.
@@ -313,6 +328,8 @@ Once we have the variants called, it's interesting to annotate those variants, f
 4. Create CSV report, useful for downstream analysis (-csvStats) > Yes
 
 ![snpeff](../docs/images/snpeff.png)
+
+**Repeat these steps for the second sample**
 
 ### SnpEff results
 
