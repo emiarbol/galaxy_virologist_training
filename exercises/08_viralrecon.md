@@ -413,4 +413,6 @@ You can download this fasta file and use it to upload it to any public repositor
 
 If you have any problem following this training and you want to visualize the resulting file you can access them through this URL:
 
-https://usegalaxy.org/u/svarona/h/sarscov-2training
+``
+TODO
+``
