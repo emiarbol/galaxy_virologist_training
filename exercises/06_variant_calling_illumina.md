@@ -161,3 +161,41 @@ Follow instructions [here](https://github.com/BU-ISCIII/galaxy_virologist_traini
 3. Use N instead of - for regions with less than minimum coverage: Yes
 
 <p align="center"><img src="images/ivar_consensus_params1.png" alt="varscan" width="500"></p>
+
+## 8. Variants annotation
+### Load annotation file for West Nile genome.
+1. Load gff file
+2. Upload file
+3. Paste/Fetch data: [gff](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/875/385/GCF_000875385.1_ViralProj30293/GCF_000875385.1_ViralProj30293_genomic.gff.gz)
+4. Rename dataset: NC_009942.1.
+
+### Snpeff build
+1. Search `snpeff build` in the search toolbox.
+2. Name of the database: WestNile.
+3. Input annotations are in: GFF
+4. GFF dataset to build database from: NC_009942.1 gff
+5. Choose the source of the reference genome: History. NC_009942.1 fasta.
+6. Click execute and wait.
+
+<p align="center"><img src="images/snpeff_build_params1.png" alt="snpeff build" width="500"></p>
+
+### Snpeff eff
+1. Search `snpeff eff` in the search toolbox.
+2. Sequence changes (SNPs, MNPs, InDels): ivar vcf file
+3. Genome source: Custom snpEff database in your history. Snpeff build output.
+4. Create CSV report, useful for downstream analysis (-csvStats): Yes.
+5. Click execute and wait.
+
+<p align="center"><img src="images/snpeff_eff_params1.png" alt="snpeff eff" width="500"></p>
+
+6. Click the :eye: icon in the SnpEff html output and check the results.
+
+### SnpSift: transfrom vcf snpeff to table.
+1.  Search `SnpSift ExtractFields` in the search toolbox.
+2.  Variant input file in VCF format: snpeff eff vcf output.
+3.  Fields to extract: CHROM POS ID REF ALT FILTER ANN[*].EFFECT ANN[*].GENE ANN[*].FEATURE ANN[*].HGVS_C ANN[*].HGVS_P
+4.  One effect per line: Yes.
+5.  Click execute and wait.
+6.  Click the :eye: icon in the snpsift output and check the results.
+
+<p align="center"><img src="images/snpsift_params1.png" alt="snpsift" width="500"></p>
