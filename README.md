@@ -46,7 +46,9 @@ The material includes slides with theory concepts and a bunch of practical exerc
 - [**Exercise 3**](exercises/03_mapping.md) -- [Download pdf](exercises/03_mapping.pdf)
 - [**Exercise 4**](exercises/04_assembly_illumina.md) -- [Download pdf](exercises/04_assembly_illumina.pdf)
 - [**Exercise 5**](exercises/05_assembly_nanopore.md) -- [Download pdf](exercises/05_assembly_nanopore.pdf)
-
+- Schemas:
+    - [Mapping](slides/io_workflow_mapping.pdf)
+    - [Assembly](slides/io_workflow_assembly.pdf)
 
 ### Day 3
 
@@ -57,3 +59,5 @@ The material includes slides with theory concepts and a bunch of practical exerc
 
 - **Talk 7:** [Viralrecon](slides/viralrecon.pdf)
 - [**Exercise 8**](exercises/04_viralrecon.md) -- [Download pdf](exercises/04_viralrecon.pdf)
+- Schemas:
+    - [ARTIC](slides/io_workflow_ARTIC.pdf)
