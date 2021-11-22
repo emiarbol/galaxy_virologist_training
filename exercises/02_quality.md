@@ -8,8 +8,8 @@ Despite the improvement of sequencing methods, there is no error-free technique.
 
 |**Title**| Pre-processing |
 |---------|-------------------------------------------|
-|**Training dataset:**|  PRJEB43037 - In August 2020 an outbreak of West Nile Virus affected 71 people with meningoencephalitis in Andalusia and 6 more cases in Extremadura (south-west of Spain), causing a total of eight deaths. The virus belonged to the lineage 1 and was relatively similar to previous outbreaks occurred in the Mediterranean region. Here we present a detailed analysis of the outbreak, including an extensive phylogenetic study. This is one of the outbreak samples.
-|**Questions:**| <ul><li>How do I know if my data was correctly sequenced?</li>li>How can I improve my data quality?</li></ul>|
+|**Training dataset:**|  PRJEB43037 - In August 2020, an outbreak of West Nile Virus affected 71 people with meningoencephalitis in Andalusia and 6 more cases in Extremadura (south-west of Spain), causing a total of eight deaths. The virus belonged to the lineage 1 and was relatively similar to previous outbreaks occurred in the Mediterranean region. Here, we present a detailed analysis of the outbreak, including an extensive phylogenetic study. This is one of the outbreak samples.
+|**Questions:**| <ul><li>How do I check whether my Illumina data was correctly sequenced?</li><li>How can I improve the quality of my data?</li></ul>|
 |**Objectives**:|<ul><li>Perform a quality control in raw Illumina reads</li><li>Perform a quality trimming in raw Illumina reads</li><li>Perform a quality control in trimmed Illumina reads</li></ul>|
 |**Estimated time**:| 25 min |
 
@@ -18,7 +18,7 @@ Despite the improvement of sequencing methods, there is no error-free technique.
 ## 1. Quality control
 
 To run the quality control over the samples, follow these steps:
-1. [Create a new history has explained yesterday](https://github.com/BU-ISCIII/galaxy_virologist_training/blob/one_week_4day_format/exercises/01_introduction_to_galaxy.md#2-galaxys-history) named **Illumina preprocessing**
+1. [Create a new history, as we explained yesterday](https://github.com/BU-ISCIII/galaxy_virologist_training/blob/one_week_4day_format/exercises/01_introduction_to_galaxy.md#2-galaxys-history) named **Illumina preprocessing**
 2. [Upload data as seen yesterday](https://github.com/BU-ISCIII/galaxy_virologist_training/blob/one_week_4day_format/exercises/01_introduction_to_galaxy.md#3-loading-data), copy and paste the following URLs:
 ```
 ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR531/002/ERR5310322/ERR5310322_1.fastq.gz
@@ -26,7 +26,7 @@ ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR531/002/ERR5310322/ERR5310322_2.fastq.gz
 ```
 3. Search for the **fastqc** tool and select **FastQC Read Quality reports** and set the following parameters:
     - Select multiple file data set in Raw read data from your current history
-    - With *Ctrl* select the two datasets
+    - With the *Ctrl* key pressed, select the two datasets
     - Then go down and select **Execute**
 
 <p align="center"><img src="images/fastqc_run.png" alt="fastqc_run" width="900"></p>
@@ -35,24 +35,24 @@ To see the results we are going to open the jobs with **Web page** in their name
 
 <p align="center"><img src="images/fastqc_results_r1r2.png" alt="fastqc_results_r1r2" width="1000"></p>
 
-You can see the number of reads in each file, to longest and shorter read length, and the quality plots for both R1 and R2. They seem to be quite good, but we are going to run trimming over the samples.
+Here, you can see the number of reads in each file, the maximum and minimum length of all reads in the sample, and the quality plots for both R1 and R2. They look quite good, but we are going to run trimming over the samples.
 
 <details>
-<summary>How many reads have the samples?</summary>
+<summary>How many reads do the samples have?</summary>
 <br>
 265989
 </details>
 
 **First question**
 <details>
-<summary>How do I know if my data was correctly sequenced?</summary>
+<summary>How do I check whether my Illumina data was correctly sequenced?</summary>
 <br>
 Using FastQC
 </details>
 
 ## 2. Trimming
 
-Once we have perform the variant quality control we have to perform the quality and read length trimming:
+Once we have performed the quality control, we have to perform the quality and read length trimming:
 
 1. Search for **fastp** in the tools and select **fastp - fast all-in-one preprocessing for FASTQ files**
 2. Select custom parameters:
@@ -78,7 +78,7 @@ Once we have perform the variant quality control we have to perform the quality 
 <p align="center"><img src="images/fastp_3.png" alt="fastp_3" width="900"></p>
 <p align="center"><img src="images/fastp_4.png" alt="fastp_4" width="900"></p>
 
-To see the trimming stats, have a look to the **fastp on data 2 and data 1: HTML report** file. You should see something like that.
+To see the trimming stats, have a look at the **fastp on data 2 and data 1: HTML report** file. You should see something like that.
 
 <p align="center"><img src="images/fastp_results.png" alt="fastp_results" width="700"></p>
 
@@ -102,10 +102,10 @@ To see the trimming stats, have a look to the **fastp on data 2 and data 1: HTML
 <p align="center"><img src="images/trimmomatic_1.png" alt="trimmomatic_1" width="900"></p>
 <p align="center"><img src="images/trimmomatic_2.png" alt="trimmomatic_2" width="900"></p>
 
-Trimmomatic does not perform statistics over trimmed reads, so we need to perform FastQC again over trimmomatic results.
+Trimmomatic does not perform statistics over trimmed reads, so we need to perform FastQC again over the Trimmomatic results.
 
 <details>
-<summary>Try to do it by your own.</summary>
+<summary>Try to do it on your own.</summary>
 <br>
 <p align="center"><img src="images/fastqc_trimmomatic.png" alt="fastqc_trimmomatic" width="900"></p>
 <p align="center"><img src="images/fasqc_trimming_res.png" alt="fasqc_trimming_res" width="900"></p>
@@ -113,9 +113,9 @@ Trimmomatic does not perform statistics over trimmed reads, so we need to perfor
 
 **Second question**
 <details>
-<summary>How can I improve my data quality?</summary>
+<summary>How can I improve the quality of my data?</summary>
 <br>
-Using a trimming software such as fastp or trimmomatic.
+Using a trimming software, such as fastp or trimmomatic.
 </details>
 
 - This hands-on history URL: https://usegalaxy.eu/u/svarona/h/llumina-preprocessing
@@ -127,9 +127,9 @@ Using a trimming software such as fastp or trimmomatic.
 
 |**Title**| Galaxy |
 |---------|-------------------------------------------|
-|**Training dataset:**|  The data we are going to manage correspond to Nanopore amplicon sequencing data using ARTIC network primers por SARS-CoV-2 genome. From the Fast5 files generated by the ONT software, we are going to select the pass reads, so they are already filtered by quality.
-|**Questions:**| <ul><li>How do I know if my data was correctly sequenced?</li></ul>|
-|**Objectives**:|<ul><li>Perform a quality control in raw Illumina reads</li><li>Perform a quality trimming in raw Illumina reads</li><li>Perform a quality control in trimmed Illumina reads</li></ul>|
+|**Training dataset:**|  The data we are going to manage corresponds to Nanopore amplicon sequencing data using ARTIC network primers por SARS-CoV-2 genome. From the Fast5 files generated by the ONT software, we are going to select the pass reads, so they are already filtered by quality.
+|**Questions:**| <ul><li>How do I know if my Nanopore data was correctly sequenced?</li></ul>|
+|**Objectives**:|<ul><li>Perform a quality control in raw Illumina reads</li><li>Perform a quality trimming in raw Nanopore reads</li><li>Perform a quality control in trimmed Nanopore reads</li></ul>|
 |**Estimated time**:| 15 min |
 
 <div class="tables-end"></div>
@@ -162,33 +162,33 @@ Now we are going to have a look to the results.
 As you can see, the Mean read length is around 500 nt, which makes sense because we are using amplicon sequencing data.
 
 <details>
-<summary>How many reads have the samples?</summary>
+<summary>How many reads do the samples have?</summary>
 <br>
 3K reads
 </details>
 
 **First question**
 <details>
-<summary>How do I know if my data was correctly sequenced?</summary>
+<summary>How do I check whether my Nanopore data was correctly sequenced?</summary>
 <br>
 Using NanoPlot and having a look to the main read length.
 </details>
 
 ## 2. Trimming
-When Nanopore reads are being sequenced, the MinKnown software splits Fast5 reads into quality pass and quality fail. As we will select only Fast5 pass reads, we won't need to perform a quality trimming, so even if we see that the reads have a bad Phred score, we know that the ONT software trait the reads as good quality.
+When Nanopore reads are being sequenced, the MinKnown software splits Fast5 reads into quality pass and quality fail. As we will select only Fast5 pass reads, we won't need to perform a quality trimming, so even if we see that the reads have a bad Phred score, we know that the ONT software considered the reads as "good quality".
 
-Then we will only be performing a read length trimming. As we are using amplicon sequencing data, we won't be expecting reads smaller than 300 nucleotides nor higher than 600, which would be obviously chimeric reads.
+Then we will only be performing a read length trimming. As we are using amplicon sequencing data, we won't be expecting reads smaller than 400 nucleotides, nor higher than 600, which would obviously correspond to chimeric reads.
 
 1. Search for **artic** tool
 2. Select **ARTIC guppyplex Filter Nanopore reads by read length and (optionally) quality**
-3. Using *Ctrl* select the three samples
+3. While pressing the *Ctrl* key, select the three samples
 4. Remove reads longer than = 600
 5. Remove reads shorter than = 400
 6. Do not filter on quality score (speeds up processing) = Yes (we had already select pass reads)
 
 <p align="center"><img src="images/nanofilt_run.png" alt="nanofilt_run" width="900"></p>
 
-We will encounter one error in this job:
+We will come across one error in this job:
 
 <p align="center"><img src="images/artic_error.png" alt="artic_error" width="200"></p>
 
