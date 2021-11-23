@@ -22,10 +22,10 @@ The material includes slides with theory concepts and a bunch of practical exerc
     - Reference genome MN908947.3 : [fasta](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/009/858/895/GCA_009858895.3_ASM985889v3/GCA_009858895.3_ASM985889v3_genomic.fna.gz) --- [gff](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/009/858/895/GCA_009858895.3_ASM985889v3/GCA_009858895.3_ASM985889v3_genomic.gff.gz)
 
 - SARS-Cov2 Illumina:
-    - Description:
-    - Experiment info:
-    - Fastq R1:
-    - Fastq R2:
+    - Description: Data from sars-cov-2 virus sequencing using Articv3 amplicons.
+    - Experiment info: Illumina NextSeq 2x150
+    - [Fastq R1](https://zenodo.org/record/5718923/files/SARSCOV2-1_R1.fastq?download=1)
+    - [Fastq R2](https://zenodo.org/record/5718923/files/SARSCOV2-1_R2.fastq?download=1)
     - Reference genome MN908947.3 : [fasta](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/009/858/895/GCA_009858895.3_ASM985889v3/GCA_009858895.3_ASM985889v3_genomic.fna.gz) --- [gff](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/009/858/895/GCA_009858895.3_ASM985889v3/GCA_009858895.3_ASM985889v3_genomic.gff.gz)
 
 ## Slides
