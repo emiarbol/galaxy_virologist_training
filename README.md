@@ -22,10 +22,10 @@ The material includes slides with theory concepts and a bunch of practical exerc
     - Reference genome MN908947.3 : [fasta](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/009/858/895/GCA_009858895.3_ASM985889v3/GCA_009858895.3_ASM985889v3_genomic.fna.gz) --- [gff](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/009/858/895/GCA_009858895.3_ASM985889v3/GCA_009858895.3_ASM985889v3_genomic.gff.gz)
 
 - SARS-Cov2 Illumina:
-    - Description:
-    - Experiment info:
-    - Fastq R1:
-    - Fastq R2:
+    - Description: Data from sars-cov-2 virus sequencing using Articv3 amplicons.
+    - Experiment info: Illumina NextSeq 2x150
+    - [Fastq R1](https://zenodo.org/record/5718923/files/SARSCOV2-1_R1.fastq?download=1)
+    - [Fastq R2](https://zenodo.org/record/5718923/files/SARSCOV2-1_R2.fastq?download=1)
     - Reference genome MN908947.3 : [fasta](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/009/858/895/GCA_009858895.3_ASM985889v3/GCA_009858895.3_ASM985889v3_genomic.fna.gz) --- [gff](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/009/858/895/GCA_009858895.3_ASM985889v3/GCA_009858895.3_ASM985889v3_genomic.gff.gz)
 
 ## Slides
@@ -41,7 +41,7 @@ The material includes slides with theory concepts and a bunch of practical exerc
 
 - **Talk 3:** [Análisis de calidad y preprocesamiento de los datos genómicos](slides/03_quality_preprocessing.pdf)
 - **Talk 4:** [Fase de mapping](slides/curso_ViralGalaxy_session_Mapping.pdf)
-- **Talk 5:** [Ensamblado de genomas](slides/XX.pdf)
+- **Talk 5:** [Ensamblado de genomas](slides/20211123_1ED_curso_galaxy.virus_session2.3_assembly_ICuesta.pdf)
 - [**Exercise 2**](exercises/02_quality.md) -- [Download pdf](exercises/02_quality.pdf)
 - [**Exercise 3**](exercises/03_mapping.md) -- [Download pdf](exercises/03_mapping.pdf)
 - [**Exercise 4**](exercises/04_assembly_illumina.md) -- [Download pdf](exercises/04_assembly_illumina.pdf)
