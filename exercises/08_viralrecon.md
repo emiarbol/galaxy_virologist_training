@@ -49,9 +49,6 @@ https://raw.githubusercontent.com/nf-core/test-datasets/viralrecon/genome/NC_045
 
 Finally, press "_Start_".
 
-![primer_fasta_download](../docs/images/primer_fasta_download.png)
-
-
 ## Quality
 
 ### Quality Analysis (FastQC)
