@@ -432,5 +432,4 @@ If you have any problem following this training and you want to visualize the re
 https://usegalaxy.org/u/svarona/h/viralrecon2021
 
 And viralrecon workflfow in:
-
-https://usegalaxy.org/u/svarona/w/viralrecon-emulator 
+https://usegalaxy.eu/u/svarona/w/viralrecon-emulator-imported-from-uploaded-file
