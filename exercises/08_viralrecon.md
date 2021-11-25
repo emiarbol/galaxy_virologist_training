@@ -33,7 +33,10 @@ During this training we will following these steps:
 We are going to upload files using these URLS [as seen in the Galaxy tutorial first day](https://github.com/BU-ISCIII/galaxy_virologist_training/blob/one_week_4day_format/exercises/01_introduction_to_galaxy.md#sign-uplogin)
 
 ```
-TODO
+https://zenodo.org/record/5724464/files/SARSCOV2-1_R1.fastq.gz?download=1
+https://zenodo.org/record/5724464/files/SARSCOV2-1_R2.fastq.gz?download=1
+https://zenodo.org/record/5724464/files/SARSCOV2-2_R1.fastq.gz?download=1
+https://zenodo.org/record/5724464/files/SARSCOV2-2_R2.fastq.gz?download=1
 ````
 
 Prior to any analysis, we have to download the fasta reference genome using the following URL:
@@ -151,7 +154,7 @@ Now we can start with the main mapping process. The first thing we have to do is
 5. Fasta/Q file #2: **fastp on data 2 and data 1: Read 2 output**
 6. Will you select a reference genome from your history or use a built-in index? > Use a genome from the history and create index
   - **This is very important because we haven't previously created the SARS-Cov2 genome index, si bowtie 2 will generate it automatically.**
-7. Select reference genome > https://github.com/nf-core/test-datasets/raw/viralrecon/genome/NC_045512.2/GCF_009858895.2_ASM985889v3_genomic.200409.fna.gz
+7. Select reference genome > GCF_009858895.2_ASM985889v3_genomic.200409.fna.gz
   - It's important to select the file we downloaded from URL.
 8. Do you want to use presets? > Very sensitive local
 9. Save the bowtie2 mapping statistics to the history > Yes
@@ -204,7 +207,7 @@ In "_Select SAM/BAM dataset or dataset collection_" you can select more than one
 The you have to change the following parameters:
 
 6. Load reference genome from > History
-7. Select the fasta file we uploaded with the reference genome (https://github.com/nf-core/test-datasets/raw/viralrecon/genome/NC_045512.2GCF_009858895.2_ASM985889v3_genomic.200409.fna.gz).
+7. Select the fasta file we uploaded with the reference genome (GCF_009858895.2_ASM985889v3_genomic.200409.fna.gz).
 8. Treat bases with coverage exceeding this value as if they had coverage at this value = 1000000
 9. Select validation stringency > Lenient
 10. Execute.
@@ -238,7 +241,7 @@ After mapping the reads to the reference genome, we are interested in removing t
 Once you have the bed file, you just have to search for "_ivar trim_" in the search bar and select "_ivar trim Trim reads in aligned BAM_". Then follow these steps:
 
 3. Bam file > Select the aligment bam file generated with Bowtie2.
-4. BED file with primer sequences and positions > Select the bed file you just upload.
+4. BED file with primer sequences and positions > Select the bed file you uploaded at the beggining.
 5. Minimum length of read to retain after trimming = 20
 6. Include reads with no primers > Yes.
 
@@ -406,10 +409,29 @@ You can download this fasta file and use it to upload it to any public repositor
 
 ![bedtools_maskfasta_download](images/bedtools_maskfasta_download.png)
 
+## Lineage
+Now we are going to determine the lineage of the samples. We will use a software called pangolin. We are going to use the masked consensus genomes generated in the previous steps as follows:
+
+1. Search for the **pangolin** tool
+2. Select **Pangolin Phylogenetic Assignment of Outbreak Lineages** and set the following parameters:
+3. Select the *bedtools MaskFasta* generated in the previous step as input fasta file.
+4. Set maximum proportion of Ns allowed to 0.3. This will filter all the consensus with more than 30% of Ns.
+5. **Execute**
+
+<p align="center"><img src="../docs/images/pangolin.png" alt="pangolin" width="900"></p>
+
+Now we are going to have a look to the results from pangolin:
+
+<p align="center"><img src="../docs/images/pangolin_results.png" alt="pangolin_results" width="900"></p>
+
+As you can see, results are in table format, where you have in first place the reference genome and then de lineage assingned.
+
 ## All results
 
 If you have any problem following this training and you want to visualize the resulting file you can access them through this URL:
 
-``
-TODO
-``
+https://usegalaxy.org/u/svarona/h/viralrecon2021
+
+And viralrecon workflfow in:
+
+https://usegalaxy.org/u/svarona/w/viralrecon-emulator 
