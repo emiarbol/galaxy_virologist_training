@@ -57,7 +57,7 @@ The material includes slides with theory concepts and a bunch of practical exerc
 
 ### Day 4
 
-- **Talk 7:** [Viralrecon](slides/viralrecon.pdf)
+- **Talk 7:** [Viralrecon](slides/08_viralrecon.pdf)
 - [**Exercise 8**](exercises/08_viralrecon.md) -- [Download pdf](exercises/08_viralrecon.pdf)
 - Schemas:
     - [ARTIC](slides/io_workflow_ARTIC.pdf)
