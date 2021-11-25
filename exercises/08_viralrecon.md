@@ -417,11 +417,11 @@ Now we are going to determine the lineage of the samples. We will use a software
 4. Set maximum proportion of Ns allowed to 0.3. This will filter all the consensus with more than 30% of Ns.
 5. **Execute**
 
-<p align="center"><img src="../docs/images/pangolin.png" alt="pangolin" width="900"></p>
+<p align="center"><img src="images/pangolin.png" alt="pangolin" width="900"></p>
 
 Now we are going to have a look to the results from pangolin:
 
-<p align="center"><img src="../docs/images/pangolin_results.png" alt="pangolin_results" width="900"></p>
+<p align="center"><img src="images/pangolin_results.png" alt="pangolin_results" width="900"></p>
 
 As you can see, results are in table format, where you have in first place the reference genome and then de lineage assingned.
 
