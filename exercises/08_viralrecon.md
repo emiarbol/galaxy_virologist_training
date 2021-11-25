@@ -217,8 +217,6 @@ The you have to change the following parameters:
 
 This process will generate one output file per .bam alignment file selected as input.
 
-![picard_wgsmetrics_message](images/picard_wgsmetrics_message.png)
-
 **Repeat these steps for the second sample**
 
 ### Picard results
