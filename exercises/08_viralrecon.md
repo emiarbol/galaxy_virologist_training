@@ -42,12 +42,12 @@ https://zenodo.org/record/5724464/files/SARSCOV2-2_R2.fastq.gz?download=1
 Prior to any analysis, we have to download the fasta reference genome using the following URL:
 
 ```
-https://github.com/nf-core/test-datasets/raw/viralrecon/genome/NC_045512.2/GCF_009858895.2_ASM985889v3_genomic.200409.fna.gz_
+https://zenodo.org/record/5724970/files/GCF_009858895.2_ASM985889v3_genomic.200409.fna.gz?download=1
 ```
 
 Also, you will download the bed file of the amplicon primers, which contains the positions in the reference genome of each of the amplicon primers. Use this URL in the window:
 ```
-https://raw.githubusercontent.com/nf-core/test-datasets/viralrecon/genome/NC_045512.2/amplicon/nCoV-2019.artic.V3.scheme.bed
+https://zenodo.org/record/5724970/files/nCoV-2019.artic.V3.scheme.bed.txt?download=1
 ```
 
 Finally, press "_Start_".
