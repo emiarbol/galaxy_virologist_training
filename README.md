@@ -40,24 +40,28 @@ The material includes slides with theory concepts and a bunch of practical exerc
 ### Day 2
 
 - **Talk 3:** [Análisis de calidad y preprocesamiento de los datos genómicos](slides/03_quality_preprocessing.pdf)
-- **Talk 4:** [Fase de mapping](slides/curso_ViralGalaxy_session_Mapping.pdf)
-- **Talk 5:** [Ensamblado de genomas](slides/20211123_1ED_curso_galaxy.virus_session2.3_assembly_ICuesta.pdf)
+- **Talk 4:** [Ensamblado de genomas](slides/20211123_1ED_curso_galaxy.virus_session2.3_assembly_ICuesta.pdf)
 - [**Exercise 2**](exercises/02_quality.md) -- [Download pdf](exercises/02_quality.pdf)
-- [**Exercise 3**](exercises/03_mapping.md) -- [Download pdf](exercises/03_mapping.pdf)
-- [**Exercise 4**](exercises/04_assembly_illumina.md) -- [Download pdf](exercises/04_assembly_illumina.pdf)
-- [**Exercise 5**](exercises/05_assembly_nanopore.md) -- [Download pdf](exercises/05_assembly_nanopore.pdf)
+- [**Exercise 3**](exercises/04_assembly_illumina.md) -- [Download pdf](exercises/04_assembly_illumina.pdf)
+- [**Exercise 4**](exercises/05_assembly_nanopore.md) -- [Download pdf](exercises/05_assembly_nanopore.pdf)
 - Schemas:
     - [Mapping](slides/io_workflow_mapping.pdf)
     - [Assembly](slides/io_workflow_assembly.pdf)
 
 ### Day 3
 
+- **Talk 5:** [Fase de mapping](slides/curso_ViralGalaxy_session_Mapping.pdf)
 - **Talk 6:** [Llamada a variantes: identificación de SNPs y obtención de secuencia consenso](slides/curso_ViralGalaxy_session_VariantCallingConsensus.pdf)
+- [**Exercise 5**](exercises/03_mapping.md) -- [Download pdf](exercises/03_mapping.pdf)
 - [**Exercise 6**](exercises/06_variant_calling_illumina.md) -- [Download pdf](exercises/06_variant_calling_illumina.pdf)
 
 ### Day 4
+- **Talk 7:** [Anotación](slides/)
+- **Talk 8:** [Viralrecon](slides/08_viralrecon.pdf)
+- [**Exercise 7**](exercises/07_anotation.md) -- [Download pdf](exercises/07_anotation.pdf)
 
-- **Talk 7:** [Viralrecon](slides/08_viralrecon.pdf)
+
+### Day 5
 - [**Exercise 8**](exercises/08_viralrecon.md) -- [Download pdf](exercises/08_viralrecon.pdf)
 - Schemas:
     - [ARTIC](slides/io_workflow_ARTIC.pdf)
