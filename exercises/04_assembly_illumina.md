@@ -1,4 +1,4 @@
-# Galaxy for virologist training Exercise 4: Illumina Assembly 101
+# Galaxy for virologist training Exercise 3: Illumina Assembly 101
 
 <div class="tables-start"></div>
 
