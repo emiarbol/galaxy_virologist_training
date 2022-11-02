@@ -190,7 +190,7 @@ To concatenate the samples, we will follow the wollowing steps:
 Once we have pressed **Execute**, a new central panel window will appear and our job will be in queue process:
 1. In the top of the panel (blue) you have a summary of what we've just run. In our case 3 input datasets have are involved in a single process, with a unique output.
 2. In the foot of the panel (red) you have some recommendations from Galaxy on how to process your data after the process we have just run.
-3. In the history (yellow) we have now a new entry, which is the number 4, with the results of our job.
+3. In the history (yellow) we have now a new entry, which is the number 4, with the results of our job. Galaxy names jobs according to the used tool and the input dataset.
 
 <img src="images/job_output.png" alt="job_output" width="700"/>
 
