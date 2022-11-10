@@ -3,6 +3,8 @@ In this training course you will find theory and practice material for introduci
 
 The material includes slides with theory concepts and a bunch of practical exercises, focusing on the interpretation of results.
 
+[Here](slides/programa_virus-galaxy-ISCIII_2022_1week.docx.pdf) you can find the agenda.
+
 ## Data
 
 - West Nile:
