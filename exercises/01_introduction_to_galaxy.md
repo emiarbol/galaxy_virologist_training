@@ -405,7 +405,7 @@ Now we are going to learn how to run a workflow with new data. Crimea Congo's ge
     - Select **Start**
     - When everything is green in the screen, select *Cancel*
     
-4. Select browse datasets in the :folder: like icon for the S fragment
+4. Select browse datasets in the 📂 like icon for the S fragment
 5. Select the S fragment from the list
 6. Repeat steps 4 and 5 for fragments L and M so the resulting window is like the one in the picture.
 7. Select **Run Workflow**.
