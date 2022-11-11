@@ -151,6 +151,7 @@ https://raw.githubusercontent.com/nf-core/test-datasets/viralrecon/nanopore/mini
     - Select **Execute**
 
 <p align="center"><img src="images/preproc_nanopore_nanoplot_run.png" alt="preproc_nanopore_nanoplot_run" width="900"></p>
+<p align="center"><img src="images/preproc_nanopore_nanoplot_run_2.png" alt="preproc_nanopore_nanoplot_run" width="900"></p>
 
 Now we are going to have a look to the results.
 
