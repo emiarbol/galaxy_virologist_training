@@ -172,13 +172,6 @@ As you can see, the Mean read length is around 500 nt, which makes sense because
 3K reads
 </details>
 
-**First question**
-<details>
-<summary>How do I check whether my Nanopore data was correctly sequenced?</summary>
-<br>
-Using NanoPlot and having a look to the main read length.
-</details>
-
 ### 1.2. PycoQC
 
 To use PycoQC we need to use the `sequencing_summary.txt` provided by de Nanopore sequencing machine.
@@ -242,6 +235,12 @@ This plot shows the number of reads per barcode, which means de number of reads 
 <b>Channel activity over time:</b>
 <p align="center"><img src="images/pycoqc_output_8.png" alt="pycoqc_output_8" width="900"></p>
 It gives an overview of available pores, pore usage during the experiment, inactive pores and shows if the loading of the flow cell is good (almost all pores are used). In this case, the vast majority of channels/pores are inactive (white) after the 6h of experiment, so the run should have been dinished at that time. You would hope for a plot that it is dark near the X-axis, and with higher Y-values (increasing time) doesn’t get too light/white. Depending if you chose “Reads” or “Bases” on the left the colour indicates either number of bases or reads per time interval.
+</details>
+
+<details>
+<summary>How do I check whether my Nanopore data was correctly sequenced?</summary>
+<br>
+Using NanoPlot or PycoQC and having a look to the statistic values.
 </details>
 
 ## 2. Trimming
