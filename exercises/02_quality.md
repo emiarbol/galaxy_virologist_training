@@ -148,6 +148,9 @@ https://raw.githubusercontent.com/nf-core/test-datasets/viralrecon/nanopore/mini
 4. Run the tool as follows:
     - In *Select multifile mode*: **Combined** (as we are working with 3 different fastq files for the same sample, we can analyze them in batch)
     - In the *files* part, use *Ctrl* to select the three fastq files.
+    - Display **Options for customizing the plots created**:
+        - **Specify the bivariate format of the plots** > _Select all_
+        - **Show the N50 mark in the read length histogram** > _Yes_
     - Select **Execute**
 
 <p align="center"><img src="images/preproc_nanopore_nanoplot_run.png" alt="preproc_nanopore_nanoplot_run" width="900"></p>
