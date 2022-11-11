@@ -62,17 +62,10 @@ Some considerations:
 1. Search `Spades` in the search tool box and select _rnaviralSPAdes de novo assembler for transcriptomes, metatranscriptomes and metaviromes_
 2. Single-end or paired-end short-reads > Paired-end: individual datasets
 3. _FASTQ RNA-seq file(s): forward reads_: ERR5310322_1; _FASTQ RNA-seq file(s): reverse reads_: ERR5310322_2
-4. Click execute and wait.
+4. Select optional output file(s) > Scaffolds stats
+5. Click execute and wait.
 
 <p align="center"><img src="images/spades_params.png" alt="Spades params" width="900"></p>
-
-5. Click the :eye: icon in the history: Spades Contigs stats.
-    <details>
-    <summary>How many contigs has been assembled?</summary>
-    </br>
-    93
-    </details>
-6. Click the :eye: icon in the history: Spades scaffolds.
 
 .
 
@@ -80,6 +73,19 @@ Some considerations:
 
 > :coffee::fork_and_knife::clock330: **Assembly takes time!**
 > There is no such thing as Assembly in real time. It can take anywhere between 90 minutes and two hours.
+
+.
+
+**Questions:**
+
+Click the :eye: icon in the history: Spades Contigs stats.
+    <details>
+    <summary>How many contigs has been assembled?</summary>
+    </br>
+    93
+    </details>
+
+Click the :eye: icon in the history: Spades scaffolds.
 
 ### Assembly quality control with Quast
 1. Search Quast in the search tool box.
