@@ -64,7 +64,7 @@ Some considerations:
 3. _FASTQ RNA-seq file(s): forward reads_: ERR5310322_1; _FASTQ RNA-seq file(s): reverse reads_: ERR5310322_2
 4. Click execute and wait.
 
-<p align="center"><img src="images/spades_params.png" alt="Spades params" width="400"></p>
+<p align="center"><img src="images/spades_params.png" alt="Spades params" width="900"></p>
 
 5. Click the :eye: icon in the history: Spades Contigs stats.
     <details>
