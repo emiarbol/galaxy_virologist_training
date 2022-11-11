@@ -59,11 +59,13 @@ Some considerations:
 
 ### Assemble reads with Spades
 
-1. Search Spades in the search tool box.
-2. Automatically choose k-mer values: Yes
-3. Select File format: Separate input reads. Forward reads: ERR5310322_1, Reverse Reads: ERR5310322_2
+1. Search `Spades` in the search tool box and select _rnaviralSPAdes de novo assembler for transcriptomes, metatranscriptomes and metaviromes_
+2. Single-end or paired-end short-reads > Paired-end: individual datasets
+3. _FASTQ RNA-seq file(s): forward reads_: ERR5310322_1; _FASTQ RNA-seq file(s): reverse reads_: ERR5310322_2
 4. Click execute and wait.
+
 <p align="center"><img src="images/spades_params.png" alt="Spades params" width="400"></p>
+
 5. Click the :eye: icon in the history: Spades Contigs stats.
     <details>
     <summary>How many contigs has been assembled?</summary>
