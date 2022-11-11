@@ -47,11 +47,11 @@ Some considerations:
     
 <p align="center"><img src="images/changename1.png" alt="Change name 1" width="900"></p>    
 
-- Import the reference genome.
+- Import the reference genome and GFF file.
     
 <p align="center"><img src="images/upload_data_mapping2.png" alt="Upload data mapping 2" width="900"></p>
 
-- Rename the reference genome.
+- Rename the reference genome and gff file.
     1. Click the ✏️ for the reference file in the history.
     2. Change the name to `NC_009942.1`
 
@@ -90,8 +90,9 @@ Click the :eye: icon in the history: Spades scaffolds.
 
 ### Assembly quality control with Quast
 1. Search Quast in the search tool box.
-2. Contigs/Scaffolds file: Spades scaffolds
+2. rnaviralSpades Scaffolds
 3. Use a reference genome: Yes. Select the NC_009942.1 fasta file previously loaded.
+4. Genomic feature positions in the reference genome > NC_009942. gff file previously loaded.
 
 <p align="center"><img src="images/quast_params1.png" alt="quast params" width="400"></p>
 <p align="center"><img src="images/quast_params2.png" alt="quast params" width="400"></p>
