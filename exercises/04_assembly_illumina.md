@@ -94,8 +94,8 @@ Click the :eye: icon in the history: Spades scaffolds.
 3. Use a reference genome: Yes. Select the NC_009942.1 fasta file previously loaded.
 4. Genomic feature positions in the reference genome > NC_009942. gff file previously loaded.
 
-<p align="center"><img src="images/quast_params1.png" alt="quast params" width="400"></p>
-<p align="center"><img src="images/quast_params2.png" alt="quast params" width="400"></p>
+<p align="center"><img src="images/quast_params1.png" alt="quast params" width="900"></p>
+<p align="center"><img src="images/quast_params2.png" alt="quast params" width="900"></p>
 
 4. Click the :eye: icon Quast HTML report.
     <details>
