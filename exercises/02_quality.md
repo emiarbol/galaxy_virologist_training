@@ -187,15 +187,35 @@ Then we will only be performing a read length trimming. As we are using amplicon
 2. Select **ARTIC guppyplex Filter Nanopore reads by read length and (optionally) quality**
 3. While pressing the *Ctrl* key, select the three samples
 4. Remove reads longer than = 600
-5. Remove reads shorter than = 400
+5. Remove reads shorter than = 300
 6. Do not filter on quality score (speeds up processing) = Yes (we had already select pass reads)
 
-<p align="center"><img src="images/nanofilt_run.png" alt="nanofilt_run" width="900"></p>
+<p align="center"><img src="images/artic_filter.png" alt="nanofilt_run" width="900"></p>
 
-We will come across one error in this job:
+Now we are going to repeat NanoPlot on filtered data:
 
-<p align="center"><img src="images/artic_error.png" alt="artic_error" width="200"></p>
+1. Search for the **Nanoplot** tool and select **NanoPlot Plotting suite for Oxford Nanopore sequencing data and alignments**
+2. Run the tool as follows:
+    - In the *files* part, select ARTIC output file.
+    - Display **Options for customizing the plots created**:
+        - **Specify the bivariate format of the plots** > _Select all_
+        - **Show the N50 mark in the read length histogram** > _Yes_
+    - Select **Execute**
 
-This happens because Galaxy does not have the software to filter SARS-CoV-2 amplicon data properly installed in their server, which is something typical that we can find in Galaxy.
+<p align="center"><img src="images/nanoplot_filtered_1.png" alt="nanoplot_filtered_1" width="900"></p>
+<p align="center"><img src="images/nanoplot_filtered_2.png" alt="nanoplot_filtered_2" width="900"></p>
+
+**Questions**
+<details>
+<summary>Did our data length and quality improve?</summary>
+<br>
+Yes, now we hace reads in the length and quality specified.
+</details>
+
+<details>
+<summary>How many reads did we lost during trimming step?</summary>
+<br>
+137 reads
+</details>
 
 - This hands-on history URL: https://usegalaxy.eu/u/svarona/h/nanopore-quality
