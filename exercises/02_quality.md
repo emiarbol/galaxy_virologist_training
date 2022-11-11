@@ -218,4 +218,4 @@ Yes, now we hace reads in the length and quality specified.
 137 reads
 </details>
 
-- This hands-on history URL: https://usegalaxy.eu/u/svarona/h/nanopore-quality
+- This hands-on history URL: [https://usegalaxy.eu/u/svarona/h/nanopore-quality](https://usegalaxy.eu/u/s.varona/h/nanopore-quality)
