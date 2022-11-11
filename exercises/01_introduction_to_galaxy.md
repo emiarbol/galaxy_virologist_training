@@ -47,6 +47,8 @@ The first thing we would do is to sign up, so you can save your history. To do t
 
 <p align="center"><img src="images/login_3.PNG" alt="Login 3" width="900"></p>
 
+> **Optional**: Loging into TiaaS server: https://usegalaxy.eu/join-training/virologist_isciii
+
 ## 2. Galaxy's history
 
 Now select the [Home](https://usegalaxy.eu/) button and return to the home page. We are going to learn how to manage the history, which is in the right panel. To do this, we will follow these steps:
