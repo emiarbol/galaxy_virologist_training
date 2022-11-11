@@ -72,6 +72,13 @@ Some considerations:
     </details>
 6. Click the :eye: icon in the history: Spades scaffolds.
 
+.
+
+> **Warning**
+
+> :coffee::fork_and_knife::clock330: **Assembly takes time!**
+> There is no such thing as Assembly in real time. It can take anywhere between 90 minutes and two hours.
+
 ### Assembly quality control with Quast
 1. Search Quast in the search tool box.
 2. Contigs/Scaffolds file: Spades scaffolds
