@@ -118,7 +118,7 @@ Trimmomatic does not perform statistics over trimmed reads, so we need to perfor
 Using a trimming software, such as fastp or trimmomatic.
 </details>
 
-- This hands-on history URL: https://usegalaxy.eu/u/svarona/h/llumina-preprocessing
+- This hands-on history URL: https://usegalaxy.eu/u/s.varona/h/illumina-preprocessing
 
 
 # 2. Nanopore Quality control and trimming
