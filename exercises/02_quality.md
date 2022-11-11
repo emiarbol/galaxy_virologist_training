@@ -219,3 +219,6 @@ Yes, now we hace reads in the length and quality specified.
 </details>
 
 - This hands-on history URL: [https://usegalaxy.eu/u/svarona/h/nanopore-quality](https://usegalaxy.eu/u/s.varona/h/nanopore-quality)
+
+> **_NOTE:_**  We can't use PycoQC because it needs MinION `sequencing_summary.txt` file which we don't have.
+> **_NOTE:_**  We can't use nanofilt because it is not installed in Galaxy
