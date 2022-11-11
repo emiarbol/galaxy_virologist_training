@@ -200,6 +200,48 @@ Then inspect the resulting output report:
 <p align="center"><img src="images/pycoqc_output_1.png" alt="pycoqc_output_1" width="900"></p>
 
 
+**Question**
+<details>
+<summary>Do you understand all the plots?</summary>
+<br>
+<b>Basecalled reads length</b>
+<p align="center"><img src="images/pycoqc_output_2.png" alt="pycoqc_output_2" width="900"></p>
+This plot shows the distribution of fragment sizes in the file that was analyzed. Long reads have a variable length and this will show the relative amounts of each different size of sequence fragment. In this example, the distribution of read length is quite dispersed with a minimum read length for the passed reads around XXX and a maximum length ~XXbp.
+<br>
+<br>
+<b>Basecalled reads PHRED quality:</b>
+<p align="center"><img src="images/pycoqc_output_3.png" alt="pycoqc_output_3" width="900"></p>
+This plot shows the distribution of the Qscores (Q) for each read. This score aims to give a global quality score for each read. The exact definition of Qscores is: the average per-base error probability, expressed on the log (Phred) scale. In case of Nanopore data, the distribution is generally centered around 10 or 12. For old runs, the distribution can be lower, as basecalling models are less precise than recent models.
+<br>
+<br>
+<b>Basecalled reads length vs reads PHRED quality:</b>
+<p align="center"><img src="images/pycoqc_output_4.png" alt="pycoqc_output_4" width="900"></p>
+This representation give a 2D visualisation of read Qscore according to the length.
+<br>
+<br>
+<b>Output over experiment time:</b>
+<p align="center"><img src="images/pycoqc_output_5.png" alt="pycoqc_output_5" width="900"></p>
+This representation gives information about sequenced reads over the time for a single run:
+- Each pic indicates a new loading of the flow cell (3 + the first load).
+- The contribution in total reads for each “refuel”.
+- The production of reads is decreasing over time:
+    - Most of the material (DNA/RNA) is sequenced
+    - Saturation of pores
+    - Material/pores degradation
+      …
+In this example, the contribution of each refueling is very low XXXXX, and it can be considered as a bad run XXXXX. The “Cummulative” plot area (light blue) indicates that 50% XXXX of all reads and almost 50% XXXX of all bases were produced in the first 5h XXXX of the 25h XXXX experiment. Although it is normal that yield decreases over time a decrease like this is not a good sign.
+<br>
+<br>
+<b>Read length over experiment time:</b>
+<p align="center"><img src="images/pycoqc_output_6.png" alt="pycoqc_output_6" width="900"></p>
+The read length over experiment time should be stable. It can slightly increase over the time as short fragments tend to be over-sequenced at the beginning and are less present over the time.
+<br>
+<br>
+<b>Channel activity over time:</b>
+<p align="center"><img src="images/pycoqc_output_7.png" alt="pycoqc_output_7" width="900"></p>
+It gives an overview of available pores, pore usage during the experiment, inactive pores and shows if the loading of the flow cell is good (almost all pores are used). In this case, the vast majority of channels/pores are inactive (white) throughout the sequencing run, so the run can be considered as bad. You would hope for a plot that it is dark near the X-axis, and with higher Y-values (increasing time) doesn’t get too light/white. Depending if you chose “Reads” or “Bases” on the left the colour indicates either number of bases or reads per time interval
+</details>
+
 ## 2. Trimming
 When Nanopore reads are being sequenced, the MinKnown software splits Fast5 reads into quality pass and quality fail. As we will select only Fast5 pass reads, we won't need to perform a quality trimming, so even if we see that the reads have a bad Phred score, we know that the ONT software considered the reads as "good quality".
 
