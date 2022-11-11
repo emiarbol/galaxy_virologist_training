@@ -135,6 +135,7 @@ Using a trimming software, such as fastp or trimmomatic.
 <div class="tables-end"></div>
 
 ## 1. Quality control
+### 1.1. Nanoplot
 
 To run the quality control over the samples, follow these steps:
 1. [Create a new history has explained yesterday](https://github.com/BU-ISCIII/galaxy_virologist_training/blob/one_week_4day_format/exercises/01_introduction_to_galaxy.md#2-galaxys-history) named **Nanopore quality**
@@ -177,6 +178,27 @@ As you can see, the Mean read length is around 500 nt, which makes sense because
 <br>
 Using NanoPlot and having a look to the main read length.
 </details>
+
+### 1.2. PycoQC
+
+To use PycoQC we need to use the `sequencing_summary.txt` provided by de Nanopore sequencing machine.
+
+1. [Upload data as seen yesterday](https://github.com/BU-ISCIII/galaxy_virologist_training/blob/one_week_4day_format/exercises/01_introduction_to_galaxy.md#3-loading-data), copy and paste the following URL:
+```
+https://raw.githubusercontent.com/nf-core/test-datasets/viralrecon/nanopore/minion/sequencing_summary.txt
+```
+2. Search for the **Pycoqc** tool and select it.
+4. Run the tool as follows:
+    - In *A sequencing_summary file*: Select the `sequencing_summary.txt` we just uploaded
+    - Leave the rest as defaults
+    - Select **Execute**
+
+<p align="center"><img src="images/pycoqc.png" alt="pycoqc_run" width="900"></p>
+
+Then inspect the resulting output report:
+
+<p align="center"><img src="images/pycoqc_output_1.png" alt="pycoqc_output_1" width="900"></p>
+
 
 ## 2. Trimming
 When Nanopore reads are being sequenced, the MinKnown software splits Fast5 reads into quality pass and quality fail. As we will select only Fast5 pass reads, we won't need to perform a quality trimming, so even if we see that the reads have a bad Phred score, we know that the ONT software considered the reads as "good quality".
