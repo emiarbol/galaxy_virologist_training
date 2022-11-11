@@ -127,3 +127,5 @@ Click the :eye: icon in the history: Spades scaffolds.
  </br>
  6
 </details>
+
+> This training history is available at: https://usegalaxy.eu/u/s.varona/h/illumina-assembly-101-tutorial
