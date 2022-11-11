@@ -66,6 +66,7 @@ Some considerations:
 5. Click execute and wait.
 
 <p align="center"><img src="images/spades_params.png" alt="Spades params" width="900"></p>
+<p align="center"><img src="images/spades_params_2.png" alt="Spades params 2" width="900"></p>
 
 .
 
