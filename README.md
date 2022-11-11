@@ -31,7 +31,7 @@ The material includes slides with theory concepts and a bunch of practical exerc
     - Reference genome MN908947.3 : [fasta](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/009/858/895/GCA_009858895.3_ASM985889v3/GCA_009858895.3_ASM985889v3_genomic.fna.gz) --- [gff](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/009/858/895/GCA_009858895.3_ASM985889v3/GCA_009858895.3_ASM985889v3_genomic.gff.gz)
 
 ## Slides
-[Program](programa_virus-galaxy-ISCIII_2021_1week.pdf)
+[Program](slides/programa_virus-galaxy-ISCIII_2022_1week.docx.pdf)
 
 ### Day 1
 
