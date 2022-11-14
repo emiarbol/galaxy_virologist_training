@@ -61,7 +61,9 @@ https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/009/858/895/GCA_009858895.3_ASM9858
 
 - Rename the reference genome.
     1. Click the ✏️ for the reference file in the history.
-    2. Change the name to `MN908947.3`
+    2. Change the name to `MN908947.3` fasta or gff respectively
+
+<p align="center"><img src="images/rename_nanopore.png" alt="rename_nanopore" width="300"></p>
 
 ### Concatenate reads.
 1. Search `Concatenate datasets` using the search toolbox.
