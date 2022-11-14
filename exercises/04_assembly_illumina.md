@@ -106,22 +106,22 @@ Click the :eye: icon in the history: Spades scaffolds.
     <details>
     <summary>How much of or reference genome have we reconstructed?</summary>
     </br>
-    Genome fraction: 83.979%
+    Genome fraction: 98.576%
     </details>
     <details>
     <summary>How many contigs do we have greater than 1000 pb?</summary>
     </br>
-    5
+    1
     </details>
     <details>
     <summary>How long is the largest contig in the assembly?</summary>
     </br>
-    3029
+    11615 (only one contig)
     </details>
     <details>
     <summary>Which is the N50?</summary
     </br>
-        1836
+        11615
     </details>
 
 5. Open the Icarus viewer in the quast report.
@@ -129,9 +129,9 @@ Click the :eye: icon in the history: Spades scaffolds.
 <p align="center"><img src="images/icarus.png" alt="quast params" width="400"></p>
 
 <details>
- <summary>How many contigs align against our reference genome?</summary>
+ <summary>How did the contig align against our reference genome?</summary>
  </br>
- 6
+ unchecked misassembled blocks
 </details>
 
 > This training history is available at: https://usegalaxy.eu/u/s.varona/h/illumina-assembly-101-tutorial
