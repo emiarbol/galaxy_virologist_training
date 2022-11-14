@@ -50,9 +50,15 @@ https://raw.githubusercontent.com/nf-core/test-datasets/viralrecon/nanopore/mini
 - Rename files.
     1. Click in the ✏️ in the history for all the files
     2. Change the name to `fastq_X`
-    
-- Import the reference genome.
-    
+
+- Import the reference genome and gff file
+
+```
+https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/009/858/895/GCA_009858895.3_ASM985889v3/GCA_009858895.3_ASM985889v3_genomic.fna.gz
+https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/009/858/895/GCA_009858895.3_ASM985889v3/GCA_009858895.3_ASM985889v3_genomic.gff.gz
+```
+<p align="center"><img src="images/upload_data_mapping2.png" alt="upload_data_mapping2" width="700"></p>
+
 - Rename the reference genome.
     1. Click the ✏️ for the reference file in the history.
     2. Change the name to `MN908947.3`
