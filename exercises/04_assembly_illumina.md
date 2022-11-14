@@ -48,7 +48,12 @@ Some considerations:
 <p align="center"><img src="images/changename1.png" alt="Change name 1" width="900"></p>    
 
 - Import the reference genome and GFF file.
-    
+
+```
+https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/009/858/895/GCA_009858895.3_ASM985889v3/GCA_009858895.3_ASM985889v3_genomic.fna.gz
+https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/009/858/895/GCA_009858895.3_ASM985889v3/GCA_009858895.3_ASM985889v3_genomic.gff.gz
+```
+
 <p align="center"><img src="images/upload_data_mapping2.png" alt="Upload data mapping 2" width="900"></p>
 
 - Rename the reference genome and gff file.
