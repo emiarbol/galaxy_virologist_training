@@ -33,10 +33,17 @@ In this tutorial, we are going to see an example of how to assemble long reads f
 > Note: Nanopore reads are commonly splitted in several files that we need to concatenate prior further analysis depending on the software we are going to use.
     1. Click in upload data.
     2. Click in paste/fetch data
-    3. Copy url for fastq R1 (select and Ctrl+C) and paste (Ctrl+V).
-    4. Click in Start.
-    5. Wait until the job finishes (green in history)
-    6. Do the same for the remaining files.
+    3. Copy url for fastq fies (select and Ctrl+C) and paste (Ctrl+V).
+
+```
+https://raw.githubusercontent.com/nf-core/test-datasets/viralrecon/nanopore/minion/fastq_pass/barcode01/FAO93606_pass_barcode01_7650855b_0.fastq
+https://raw.githubusercontent.com/nf-core/test-datasets/viralrecon/nanopore/minion/fastq_pass/barcode01/FAO93606_pass_barcode01_7650855b_1.fastq
+https://raw.githubusercontent.com/nf-core/test-datasets/viralrecon/nanopore/minion/fastq_pass/barcode01/FAO93606_pass_barcode01_7650855b_2.fastq
+```
+
+    5. Click in Start.
+    6. Wait until the job finishes (green in history)
+    7. Do the same for the remaining files.
 <p align="center"><img src="images/upload_data_assemblyNanopore.png" alt="Upload data mapping" width="700"></p>
 
 - Rename files.
