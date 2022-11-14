@@ -51,20 +51,6 @@ https://raw.githubusercontent.com/nf-core/test-datasets/viralrecon/nanopore/mini
     1. Click in the ✏️ in the history for all the files
     2. Change the name to `fastq_X`
 
-- Import the reference genome and gff file
-
-```
-https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/009/858/895/GCA_009858895.3_ASM985889v3/GCA_009858895.3_ASM985889v3_genomic.fna.gz
-https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/009/858/895/GCA_009858895.3_ASM985889v3/GCA_009858895.3_ASM985889v3_genomic.gff.gz
-```
-<p align="center"><img src="images/upload_data_mapping2.png" alt="upload_data_mapping2" width="700"></p>
-
-- Rename the reference genome.
-    1. Click the ✏️ for the reference file in the history.
-    2. Change the name to `MN908947.3` fasta or gff respectively
-
-<p align="center"><img src="images/rename_nanopore.png" alt="rename_nanopore" width="300"></p>
-
 ### Concatenate reads.
 1. Search `Concatenate datasets` using the search toolbox.
 2. Select all three fastq files keeping **Cntrl key** clicked.
@@ -72,10 +58,11 @@ https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/009/858/895/GCA_009858895.3_ASM9858
 <p align="center"><img src="images/concatenate_params.png" alt="Concatenate" width="700"></p>
 
 ### Mapping with Minimap2
-1. Search `minimap2` using the search toolbox.
-2. Will you select a reference genome from your history or use a built-in index?: Use a genome from history and index. Select MN908947.3
-3. Select fastq dataset: Concatenated fastqs. ⚠️ The tool is not properly configured so you can't select directly the fastq, you need to use the folder icon and force the selection of the concatenated fastq dataset.
-4. Click execute and wait.
+1. Search `minimap2` using the search toolbox and select `Map with minimap2 A fast pairwise aligner for genomic and spliced nucleotide sequences` 
+2. Will you select a reference genome from your history or use a built-in index?: Use a built-in index
+3. Using reference genome > SARS-CoV-2 isolate Wuhan-Hu-1, complete genome (NC_045512)
+4. Select fastq dataset: Concatenated fastqs. ⚠️ The tool is not properly configured so you can't select directly the fastq, you need to use the folder icon and force the selection of the concatenated fastq dataset.
+5. Click execute and wait.
 
 <p align="center"><img src="images/minimap2_params.png" alt="Concatenate" width="700"></p>
 
