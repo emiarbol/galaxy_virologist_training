@@ -93,7 +93,7 @@ Using SRA and NCBI API downloads data as hidden so we are going to unhidde this 
     <details>
     <summary>How much of or reference genome have we reconstructed?</summary>
     </br>
-    Genome fraction: XX
+    Genome fraction: 98.25
     </details>
     <details>
     <summary>How many contigs do we have greater than 1000 pb?</summary>
@@ -116,9 +116,9 @@ Using SRA and NCBI API downloads data as hidden so we are going to unhidde this 
 <p align="center"><img src="images/icarus.png" alt="quast params" width="400"></p>
 
 <details>
- <summary>How did the contig align against our reference genome?</summary>
+ <summary>Which contig align against our reference genome?</summary>
  </br>
- XXX
+ Contig 12 aligned correctly.
 </details>
 
 > This training history is available at: https://usegalaxy.eu/u/s.varona/h/illumina-assembly-101-tutorial
