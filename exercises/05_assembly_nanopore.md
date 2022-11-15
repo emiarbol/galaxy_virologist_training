@@ -45,8 +45,7 @@ Using SRA and NCBI API downloads data as hidden so we are going to unhidde this 
 2. Select the strikethrough for ERR10297654 and NC_063383.1 datas.
 3. Then select the location icon (show active)
 
-<p align="center"><img src="images/unhide_1.png" alt="unhide_1" width="400"></p>
-<p align="center"><img src="images/unhide_2.png" alt="unhide_2" width="400"></p>
+<img src="images/unhide_1.png" alt="unhide_1" width="200"><img src="images/unhide_2.png" alt="unhide_2" width="200">
 
 ### Mapping with Minimap2
 1. Search `minimap2` using the search toolbox and select `Map with minimap2 A fast pairwise aligner for genomic and spliced nucleotide sequences` 
