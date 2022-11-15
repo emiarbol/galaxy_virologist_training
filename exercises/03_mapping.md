@@ -55,7 +55,7 @@ https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/009/858/895/GCA_009858895.3_ASM9858
 
 - Rename the reference genome and gff file.
     1. Click the ✏️ for the reference file in the history.
-    2. Change the name to `NC_009942.1`
+    2. Change the name to `MN908947.3`
 
 <p align="center"><img src="images/changename2.png" alt="Change name 2" width="900"></p>    
 
