@@ -98,17 +98,17 @@ Using SRA and NCBI API downloads data as hidden so we are going to unhidde this 
     <details>
     <summary>How many contigs do we have greater than 1000 pb?</summary>
     </br>
-    X
+    13
     </details>
     <details>
     <summary>How long is the largest contig in the assembly?</summary>
     </br>
-    XX
+    194018
     </details>
     <details>
     <summary>Which is the N50?</summary
     </br>
-        XX
+    194018
     </details>
 
 5. Open the Icarus viewer in the quast report.
