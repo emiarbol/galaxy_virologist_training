@@ -68,11 +68,11 @@ Using SRA and NCBI API downloads data as hidden so we are going to unhidde this 
 <details>
     <summary> Which is the mapping rate?</summary>
     </br>
-    99.87%
+    5.30%
 </details>
 <details>
     <summary>How many reads do we have in our dataset?</summary>
-    3042
+    21868
     </br>
 </details>
 
