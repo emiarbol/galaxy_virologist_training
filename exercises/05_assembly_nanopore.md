@@ -29,7 +29,7 @@ In this tutorial, we are going to see an example of how to assemble long reads f
 2. Accession = `ERR10297654`
 3. Execute
 
-<p align="center"><img src="images/SRA_download.png" alt="SRA_download" width="900"></p>
+<p align="center"><img src="images/upload_sra_err.png" alt="upload_sra_err" width="900"></p>
 
 ### Load reference file from NCBI
 1. Search `NCBI` using the search toolbox and select `NCBI Accession Download Download sequences from GenBank/RefSeq by accession through the NCBI ENTREZ API`
