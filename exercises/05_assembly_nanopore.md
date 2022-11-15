@@ -88,7 +88,7 @@ Using SRA and NCBI API downloads data as hidden so we are going to unhidde this 
 2. Contigs/scaffolds file > Flye results
 3. Use a reference genome: Yes. Select the NC_063383.1 fasta file previously loaded.
 
-<p align="center"><img src="images/quast_params_flye1.png" alt="quast_params_flye1" width="900"></p>
+<p align="center"><img src="images/quast_flye.png" alt="quast_flye" width="900"></p>
 
 4. Click the :eye: icon Quast HTML report.
     <details>
