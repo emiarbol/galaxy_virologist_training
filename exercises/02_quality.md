@@ -135,44 +135,8 @@ Using a trimming software, such as fastp or trimmomatic.
 <div class="tables-end"></div>
 
 ## 1. Quality control
-### 1.1. Nanoplot
 
-To run the quality control over the samples, follow these steps:
-1. [Create a new history has explained yesterday](https://github.com/BU-ISCIII/galaxy_virologist_training/blob/one_week_4day_format/exercises/01_introduction_to_galaxy.md#2-galaxys-history) named **Nanopore quality**
-2. [Upload data as seen yesterday](https://github.com/BU-ISCIII/galaxy_virologist_training/blob/one_week_4day_format/exercises/01_introduction_to_galaxy.md#3-loading-data), copy and paste the following URLs:
-```
-https://raw.githubusercontent.com/nf-core/test-datasets/viralrecon/nanopore/minion/fastq_pass/barcode01/FAO93606_pass_barcode01_7650855b_0.fastq
-https://raw.githubusercontent.com/nf-core/test-datasets/viralrecon/nanopore/minion/fastq_pass/barcode01/FAO93606_pass_barcode01_7650855b_1.fastq
-https://raw.githubusercontent.com/nf-core/test-datasets/viralrecon/nanopore/minion/fastq_pass/barcode01/FAO93606_pass_barcode01_7650855b_2.fastq
-```
-3. Search for the **Nanoplot** tool and select **NanoPlot Plotting suite for Oxford Nanopore sequencing data and alignments**
-4. Run the tool as follows:
-    - In *Select multifile mode*: **Combined** (as we are working with 3 different fastq files for the same sample, we can analyze them in batch)
-    - In the *files* part, use *Ctrl* to select the three fastq files.
-    - Display **Options for customizing the plots created**:
-        - **Specify the bivariate format of the plots** > _Select all_
-        - **Show the N50 mark in the read length histogram** > _Yes_
-    - Select **Execute**
-
-<p align="center"><img src="images/preproc_nanopore_nanoplot_run.png" alt="preproc_nanopore_nanoplot_run" width="900"></p>
-<p align="center"><img src="images/preproc_nanopore_nanoplot_run_2.png" alt="preproc_nanopore_nanoplot_run" width="900"></p>
-
-Now we are going to have a look to the results.
-
-1. Select the :eye: icon in the **NanoPlot on data 3, data 2, and data 1: HTML report** result.
-2. Have a look to the stats.
-
-<p align="center"><img src="images/nanoplot_results.png" alt="nanoplot_results" width="900"></p>
-
-As you can see, the Mean read length is around 500 nt, which makes sense because we are using amplicon sequencing data.
-
-<details>
-<summary>How many reads do the samples have?</summary>
-<br>
-3K reads
-</details>
-
-### 1.2. PycoQC
+### 1.1. PycoQC
 
 To use PycoQC we need to use the `sequencing_summary.txt` provided by de Nanopore sequencing machine.
 
@@ -193,6 +157,12 @@ Then inspect the resulting PycoQC HTML Report:
 <p align="center"><img src="images/pycoqc_output_1.png" alt="pycoqc_output_1" width="900"></p>
 
 **Question**
+<details>
+<summary>How many reads do the samples have?</summary>
+<br>
+3K reads
+</details>
+
 <details>
 <summary>Do you understand all the plots?</summary>
 <br>
