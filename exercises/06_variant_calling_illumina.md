@@ -72,9 +72,10 @@ Follow:
 4. Set advanced options: Advanced
 5. Disable read-pair overlap detection: Yes
 6. Disable BAQ (per-Base Alignment Quality), see below: Yes
-7. max per-file depth; avoids excessive memory usage: 0
-8. Minimum base quality for a base to be considered: 20
-9. Click execute and wait.
+7.  Do not discard anomalous read pairs: Yes
+8. max per-file depth; avoids excessive memory usage: 0
+9. Minimum base quality for a base to be considered: 20
+10. Click execute and wait.
 
 <p align="center"><img src="images/samtools_mpileup_params1.png" alt="samtools mpileup" width="500"></p>
 <p align="center"><img src="images/samtools_mpileup_params2.png" alt="samtools mpileup" width="500"></p>
