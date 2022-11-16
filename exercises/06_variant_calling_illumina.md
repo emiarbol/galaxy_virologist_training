@@ -124,7 +124,7 @@ Follow:
 
 ### Lofreq 
 #### Insert indel qualities
-1. Search `lofreq` in the search toolbox. Select Insert indel qualities with lofreq.
+1. Search `Insert indel qualities` in the search toolbox. Select Insert indel qualities with lofreq.
 2. Reads: bowtie2 bam output.
 3. Click execute and wait.
 
