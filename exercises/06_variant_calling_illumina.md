@@ -100,7 +100,6 @@ Follow:
 ### VCF stats
 1. Search `bcftools stats` in the search toolbox.
 2. VCF/BCF Data: varscan vcf output.
-3. Choose a reference genome: use genome/reference from history. Select NC_009942.1.
 4. Click execute and wait.
 5. Click the :eye: icon and inspect the stats.
 
