@@ -74,3 +74,5 @@ Follow instructions [here](https://github.com/BU-ISCIII/galaxy_virologist_traini
 6.  Click the :eye: icon in the snpsift output and check the results.
 
 <p align="center"><img src="images/snpsift_params1.png" alt="snpsift" width="500"></p>
+
+> Galaxy history for this exercise: [https://usegalaxy.eu/u/smonzon/h/variant-calling-101-tutorial](https://usegalaxy.eu/u/smonzon/h/variant-calling-101-tutorial)
