@@ -46,10 +46,10 @@ Rename the data as follows:
 <p align="center"><img src="images/rename_data.png" alt="rename_data" width="300"></p>
 
 ## 3. Preprocess our reads.
-Follow instructions [here]()
+Follow instructions [here](02_quality.md#2-trimming)
 
 ## 4. Map our reads against our reference genome.
-Follow instructions [here](https://github.com/BU-ISCIII/galaxy_virologist_training/blob/one_week_4day_format/exercises/03_mapping.md#map-reads-using-bowtie2)
+Follow instructions [here](03_mapping.md#map-reads-using-bowtie2)
 
 ## 5. Variant Calling.
 ### Samtools mpileup
