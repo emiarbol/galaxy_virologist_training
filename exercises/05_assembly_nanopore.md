@@ -98,17 +98,17 @@ Using SRA and NCBI API downloads data as hidden so we are going to unhidde this 
     <details>
     <summary>How many contigs do we have greater than 1000 pb?</summary>
     </br>
-    13
+    12 (this may vary +-1 contig)
     </details>
     <details>
     <summary>How long is the largest contig in the assembly?</summary>
     </br>
-    194018
+    194020 (this can vary +-10 nucleotides)
     </details>
     <details>
     <summary>Which is the N50?</summary
     </br>
-    194018
+    194020 (length of the largest contig in this case)
     </details>
 
 5. Open the Icarus viewer in the quast report.
@@ -118,7 +118,8 @@ Using SRA and NCBI API downloads data as hidden so we are going to unhidde this 
 <details>
  <summary>Which contig align against our reference genome?</summary>
  </br>
- Contig 12 aligned correctly.
+ Contig 13 aligned correctly (this can vary, it should correspond to the number of the largest contig)
+ <p align="center"><img src="images/flye_icarus.png" alt="flye_icarus" width="900"></p>
 </details>
 
 > This training history is available at: https://usegalaxy.eu/u/s.varona/h/illumina-assembly-101-tutorial
