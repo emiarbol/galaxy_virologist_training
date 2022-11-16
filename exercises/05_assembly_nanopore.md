@@ -122,6 +122,6 @@ Using SRA and NCBI API downloads data as hidden so we are going to unhidde this 
  <p align="center"><img src="images/flye_icarus.png" alt="flye_icarus" width="900"></p>
 </details>
 
-> This training history is available at: https://usegalaxy.eu/u/s.varona/h/illumina-assembly-101-tutorial
+> This training history is available at: https://usegalaxy.eu/u/s.varona/h/nanopore-assembly-101-tutorial
 
 > Note: Nanopore data is known to have more error than short sequencing reads. This is why assembly post-processing is strongly recommended, usually using combined sequencing aproximation with both Nanopore and Illumina reads.
