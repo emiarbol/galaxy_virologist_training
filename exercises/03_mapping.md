@@ -98,7 +98,7 @@ https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/875/385/GCF_000875385.1_ViralPr
     - Load reference genome from: History and select reference genome fasta file.
     - Treat bases with coverage exceeding this value as if they had coverage at this value: 10000
 
-<p align="center"><img src="images/collect_metrics.png" alt="view bam file" width="200"></p>
+<p align="center"><img src="images/collect_metrics.png" alt="view bam file" width="500"></p>
 
 5. Click execute and wait.
 
