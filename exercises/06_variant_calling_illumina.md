@@ -116,7 +116,7 @@ Follow:
 3. Bam file: bowtie bam output
 4. Reference:  NC_009942.1
 5. Minimum quality score threshold to count base: 20
-6. Minimum frequency threshold: 0.8
+6. Minimum frequency threshold: 0.75
 7. Output format: Both tabular and vcf
 8. Click execute and wait.
 
