@@ -157,17 +157,9 @@ Follow:
 <details>
   <summary>How many variants differ among the vcfs?</summary>
   </br>
-  There are up to 10 variants more in VarScan than the other callers.
+  There are up to 3 variants more in VarScan than the other callers.
 </details>
 
-### Intersect vcfs.
-1. Search `vcf-vcfintersect` in the search toolbox. 
-2. First VCF: ivar vcf
-3. Second VCF: varscan mpileup vcf
-4. Choose the source for the reference genome: History. NC_009942.1
-5. Invert selection?: Yes (we want to extract the differences)
-6. Click execute and wait.
-7. Click the :eye: icon and inspect the results.
 
 ## 7. Consensus genome
 
