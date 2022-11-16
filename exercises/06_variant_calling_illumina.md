@@ -24,11 +24,26 @@ We are going to address this type of analysis in this tutorial.
 - Reference genome NC_009942.1: [fasta](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/875/385/GCF_000875385.1_ViralProj30293/GCF_000875385.1_ViralProj30293_genomic.fna.gz) -- [gff](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/875/385/GCF_000875385.1_ViralProj30293/GCF_000875385.1_ViralProj30293_genomic.gff.gz)
 
 ### Create new history
-- Click the `+` icon at the top of the history panel and create a new history with the name `mapping 101 tutorial` as explained [here](https://github.com/BU-ISCIII/galaxy_virologist_training/blob/one_week_4day_format/exercises/01_introduction_to_galaxy.md#2-galaxys-history)
+- Click the `+` icon at the top of the history panel and create a new history with the name `variant calling 101 tutorial` as explained [here](https://github.com/BU-ISCIII/galaxy_virologist_training/blob/one_week_4day_format/exercises/01_introduction_to_galaxy.md#2-galaxys-history)
 
 
 ### Upload data
 Follow the same instructions [here](https://github.com/BU-ISCIII/galaxy_virologist_training/blob/one_week_4day_format/exercises/03_mapping.md#2-upload-data-to-galaxy)
+
+```
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR531/002/ERR5310322/ERR5310322_1.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR531/002/ERR5310322/ERR5310322_2.fastq.gz
+https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/875/385/GCF_000875385.1_ViralProj30293/GCF_000875385.1_ViralProj30293_genomic.fna.gz
+https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/875/385/GCF_000875385.1_ViralProj30293/GCF_000875385.1_ViralProj30293_genomic.gff.gz
+```
+
+Rename the data as follows:
+- `ERR5310322_1.fastq.gz` to `ERR5310322_1` with tag `#forward`
+- `ERR5310322_2.fastq.gz` to `ERR5310322_2` with tag `#reverse`
+- `GCF_000875385.1_ViralProj30293_genomic.fna.gz` to `NC_009942.1 fasta` with tag `#fastaref`
+- `GCF_000875385.1_ViralProj30293_genomic.gff.gz` to `NC_009942.1 gff` with tag `#gffref`
+
+<p align="center"><img src="images/rename_data.png" alt="rename_data" width="300"></p>
 
 ## 3. Preprocess our reads.
 Follow instructions [here]()
