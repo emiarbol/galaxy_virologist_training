@@ -180,4 +180,4 @@ Follow:
 
 <p align="center"><img src="images/ivar_consensus_params1.png" alt="varscan" width="500"></p>
 
-> Here is the galaxy history for this exercise: [https://usegalaxy.eu/u/smonzon/h/variant-calling-101-tutorial](https://usegalaxy.eu/u/smonzon/h/variant-calling-101-tutorial)
+> Here is the galaxy history for this exercise: [https://usegalaxy.eu/u/smonzon/h/variant-calling-101-tutorial-1](https://usegalaxy.eu/u/smonzon/h/variant-calling-101-tutorial-1)
