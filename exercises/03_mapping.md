@@ -114,3 +114,5 @@ Navigation through a data set is similar to that of Google Maps, allowing the us
 3. Expand the param-file output of Bowtie2 tool
 4. Click on the local in display with IGV to load the reads into the IGV browser
 5. [Here](https://training.galaxyproject.org/training-material/topics/introduction/tutorials/igv-introduction/tutorial.html) you have a galaxy training document for IGV usage.
+
+> This history is available at: https://usegalaxy.eu/u/s.varona/h/mapping-101-tutorial
