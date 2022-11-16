@@ -88,7 +88,7 @@ https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/875/385/GCF_000875385.1_ViralPr
     <details>
     <summary> Which is the mapping rate?</summary>
     <br>
-    92,61%
+    96.59%
     </details>
     
 4. Calculate depth of coverage metrics using picard collectWGSMetrics.
