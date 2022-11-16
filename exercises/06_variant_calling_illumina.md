@@ -120,7 +120,7 @@ Follow:
 7. Output format: Both tabular and vcf
 8. Click execute and wait.
 
-<p align="center"><img src="images/ivar_params1.png" alt="ivar" width="500"></p>
+<p align="center"><img src="images/ivar_params1.png" alt="ivar" width="900"></p>
 
 ### Lofreq 
 #### Insert indel qualities
