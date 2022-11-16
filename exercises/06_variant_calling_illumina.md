@@ -61,8 +61,8 @@ Follow:
 5. Do you want to use presets? : Very sensitive local. This setting will hugly affect the mapping results, depending on the dataset/experiment must be tweaked (read [bowtie2 manual](http://bowtie-bio.sourceforge.net/bowtie2/manual.shtml))
     - Save the bowtie2 mapping statistics to the history
 
-<p align="center"><img src="images/bowtie_vc1.png" alt="bowtie2_vc1" width="900"></p>
-<p align="center"><img src="images/bowtie_vc2.png" alt="bowtie2_vc2" width="900"></p>
+<p align="center"><img src="images/bowtie2_vc1.png" alt="bowtie2_vc1" width="900"></p>
+<p align="center"><img src="images/bowtie2_vc2.png" alt="bowtie2_vc2" width="900"></p>
 
 ## 5. Variant Calling.
 ### Samtools mpileup
