@@ -48,8 +48,21 @@ Rename the data as follows:
 ## 3. Preprocess our reads.
 Follow instructions [here](02_quality.md#2-trimming)
 
-## 4. Map our reads against our reference genome.
-Follow instructions [here](03_mapping.md#map-reads-using-bowtie2)
+Then, fix fastp tags on the output data to be as follows:
+
+<p align="center"><img src="images/fastp_tags.png" alt="fastp_tags" width="300"></p>
+
+## 4. Map trimmed reads against the reference genome.
+Follow:
+1. Is this single or paired library: paired.
+2. FASTA/Q file #1 : fastp Read 1 output #forward
+3. FASTA/Q file #2 : fastp Read 2 output #reverse
+4. Will you select a reference genome from your history or use a built-in index? : Use a genome from the history and build index.
+5. Do you want to use presets? : Very sensitive local. This setting will hugly affect the mapping results, depending on the dataset/experiment must be tweaked (read [bowtie2 manual](http://bowtie-bio.sourceforge.net/bowtie2/manual.shtml))
+    - Save the bowtie2 mapping statistics to the history
+
+<p align="center"><img src="images/bowtie_vc1.png" alt="bowtie_vc1" width="900"></p>
+<p align="center"><img src="images/bowtie_vc2.png" alt="bowtie_vc2" width="900"></p>
 
 ## 5. Variant Calling.
 ### Samtools mpileup
