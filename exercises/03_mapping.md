@@ -102,7 +102,16 @@ https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/875/385/GCF_000875385.1_ViralPr
 
 5. Click execute and wait.
 
-
+    <details>
+    <summary> Which is mean depth of coverage?</summary>
+    <br>
+    2770
+    </details>
+    <details>
+    <summary> Which is genome coverage > 10x?</summary>
+    <br>
+    0.961193
+    </details>
 ### Visualize bam file using IGV
 In order to visualize our mapping we will use IGV (Integrative Genomics Viewer). This is an open source, freely available and lightweight visualization tool that enables intuitive real-time exploration of diverse, large-scale genomic data sets on standard desktop computers. It supports flexible integration of a wide range of genomic data types including aligned sequence reads, mutations, copy number, RNA interference screens, gene expression, methylation and genomic annotations.
 
