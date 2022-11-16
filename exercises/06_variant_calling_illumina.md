@@ -106,7 +106,7 @@ Follow:
 <details>
   <summary>How may variants do we have in our vcf file?</summary>
   </br>
-  number of SNPs:	463
+  number of SNPs:	464
 </details>
 
 ### Ivar variants
