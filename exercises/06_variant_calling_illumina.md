@@ -67,15 +67,14 @@ Follow:
 ## 5. Variant Calling.
 ### Samtools mpileup
 1. Search samtools mpileup in the search toolbox, scroll down and select `Samtools mpileup multi-way pileup of variants`
-2. Click on Version box in the grey box 
-3. Bam files: Bowtie2 bam file
-4. Use reference: Use reference/genome from history. NC_009942.1.
-5. Set advanced options: Advanced
-6. Disable read-pair overlap detection: Yes
-7. Disable BAQ (per-Base Alignment Quality), see below: Yes
-8. max per-file depth; avoids excessive memory usage: 0
-9. Minimum base quality for a base to be considered: 20
-10. Click execute and wait.
+2. Bam files: Bowtie2 bam file
+3. Use reference: Use reference/genome from history. NC_009942.1.
+4. Set advanced options: Advanced
+5. Disable read-pair overlap detection: Yes
+6. Disable BAQ (per-Base Alignment Quality), see below: Yes
+7. max per-file depth; avoids excessive memory usage: 0
+8. Minimum base quality for a base to be considered: 20
+9. Click execute and wait.
 
 <p align="center"><img src="images/samtools_mpileup_params1.png" alt="samtools mpileup" width="500"></p>
 <p align="center"><img src="images/samtools_mpileup_params2.png" alt="samtools mpileup" width="500"></p>
