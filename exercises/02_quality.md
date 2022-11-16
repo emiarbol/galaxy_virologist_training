@@ -229,10 +229,11 @@ Then we will only be performing a read length trimming. As we are using amplicon
 
 1. Search for **artic** tool
 2. Select **ARTIC guppyplex Filter Nanopore reads by read length and (optionally) quality**
-3. While pressing the *Ctrl* key, select the three samples
-4. Remove reads longer than = 600
-5. Remove reads shorter than = 300
-6. Do not filter on quality score (speeds up processing) = Yes (we had already select pass reads)
+3. Structure of your input data: Multiple input datasets per sample
+4. While pressing the *Ctrl* key, select the three samples
+5. Remove reads longer than = 600
+6. Remove reads shorter than = 300
+7. Do not filter on quality score (speeds up processing) = Yes (we had already select pass reads)
 
 <p align="center"><img src="images/artic_filter.png" alt="nanofilt_run" width="900"></p>
 
