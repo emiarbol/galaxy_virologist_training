@@ -44,18 +44,15 @@ After the mapping step, we will transform our fastq file into a bam file that co
     
 <p align="center"><img src="images/changename1.png" alt="Change name 1" width="900"></p>    
 
-- Import the reference genome and GFF file.
+- Import the reference genome:
 
 ```
-https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/009/858/895/GCA_009858895.3_ASM985889v3/GCA_009858895.3_ASM985889v3_genomic.fna.gz
-https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/009/858/895/GCA_009858895.3_ASM985889v3/GCA_009858895.3_ASM985889v3_genomic.gff.gz
+https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/875/385/GCF_000875385.1_ViralProj30293/GCF_000875385.1_ViralProj30293_genomic.fna.gz
 ```
-
-<p align="center"><img src="images/upload_data_mapping2.png" alt="Upload data mapping 2" width="900"></p>
 
 - Rename the reference genome and gff file.
     1. Click the ✏️ for the reference file in the history.
-    2. Change the name to `MN908947.3`
+    2. Change the name to `NC_009942.1`
 
 <p align="center"><img src="images/changename2.png" alt="Change name 2" width="900"></p>    
 
