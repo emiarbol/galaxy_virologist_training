@@ -86,11 +86,11 @@ Follow:
 ### VarScan
 1. Search `VarScan Mpileup` in the search toolbox.
 2. Samtools pileup dataset: samtools mpileup output
-3. Minimum coverage: 10
+3. Minimum read depth: 10
 4. Minimum supporting reads: 5
-5. Minimum base quality: 20
-6. Minimum variant allele frequency: 0.8
-7. Default p-value threshold for calling variants: 0.05
+5. Minimum base quality at a position to count a read: 20
+6. Minimum variant allele frequency threshold: 0,75
+7. Default p-value threshold for calling variants: 0,05
 8. Click execute and wait
 
 <p align="center"><img src="images/varscan_params1.png" alt="varscan" width="500"></p>
