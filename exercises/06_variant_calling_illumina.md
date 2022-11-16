@@ -149,7 +149,7 @@ Follow:
 ## Compare vcfs among callers
 
 ### Visualize datasets.
-1. Search `upSeq diagram` in the search toolbox. 
+1. Search `upSet diagram` in the search toolbox. 
 2. Select input files for which to produce intersections: select vcf from varscan, vcf from lofreq filter and vcf from ivar variants. 
 3. Click execute and wait.
 4. Click the :eye: icon and check the diagram. 
