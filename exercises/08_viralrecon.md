@@ -358,7 +358,6 @@ The SnpEff gives three different results, from which the most interesting ones a
 
 2. Snpeff eff CSV stats: This file is a CSV file that contains statistics about the variant annotation process, such as the percentage of variants annotated, the percentage of variants that are MISSENSE or SILENT, the percentage that have HIGH, MODERATE or LOW effect, and so on.
 
-
 **Question**
 <details>
 <summary>How many missense variants has sample1?</summary>
@@ -386,32 +385,32 @@ Once we have the most relevant variants that can be considered to include in the
 
 ### Bcftools consensus
 
-The final step consist in including the called variants into the reference genome, masking the regions with coverage lower than 10X, for which you will search for "_bcftools consensus_" in the search bar and then select "_bcftools consensus Create consensus sequence by applying VCF variants to a reference fasta file_". In this module you have to select:
+The first step consist in including the called variants into the reference genome, for which you will search for "_bcftools consensus_" in the search bar and then select "_bcftools consensus Create consensus sequence by applying VCF variants to a reference fasta file_". In this module you have to select:
 
-1. VCF/BCF Data > VCF resulting from iVar variants.
-2. Reference genome > Fasta file uploaded at the begining.
-3. Mask: Select the text formatting outputs for both samples
+1. VCF/BCF Data > VCF resulting from iVar variants for both samples
+2. Choose the source for the reference genome > Use a genome from the history
+3. Reference genome > Fasta file uploaded at the begining.
 4. Execute
 
 ![bcftools_consensus](images/viralrecon_bcftoolsconsensus.png)
 
-This will generate a fasta file identical to the reference one, except for those nucleotides that are variants from the VCF file.
+This will just generate a fasta file identical to the reference one, except for those nucleotides that are variants from the VCF file.
 
 ### Genome coverage calculation
 
-At this point, we know that we have filtered the variants based on the coverage, selecting only those that had a coverage depth higher than 10X. So we cannot ensure that the consensus genome doesn't have any variant that we have filter in those regions with a coverage lower than 10X. So the next step is to determine which regions of the reference genome have a coverage lower than 10X.
+At this point, we have the consensus viral genome, but we know that we have filtered the variants based on the coverage, selecting only those that had a coverage depth higher than 10X. So we cannot ensure that the consensus genome doesn't have any variant that we have filter in those regions with a coverage lower than 10X. So the next step is to determine which regions of the reference genome have a coverage lower than 10X.
 
 To do that you will search for "_bedtools genomecov_" in the search bar and select "_bedtools Genome Coverage compute the coverage over an entire genome_", the you will have to select the following files:
 
 1. Input type > BAM
-2. BAM file > iVar output bam file
+2. BAM file > iVar trim output bam files for both samples
 3. Output type > BedGraph coverage file
 4. Report regions with zero coverage > Yes
 5. Execute
 
 ![bedtools_genomecov](images/viralrecon_bedtoolsgenomecov.png)
 
-This process will generate a BED file where each genomic position range of the reference genome has the coverage calculated. In this **example** you can see that for the positions of the reference genome from the nucleotide 55 to 63 they have a coverage of 20X.
+This process will generate a BED file where each genomic position range of the reference genome has the coverage calculated. In this example you can see that for the positions of the reference genome from the nucleotide 2 to 54 they have a coverage of 2X and then will be masked.
 
 ![bedtools_genomecov_result](images/bedtools_genomecov_result.png)
 
@@ -428,23 +427,52 @@ From this resulting file from betdools genomecoverage you are going to select th
 
 The resulting file is exactly the same as the one in Bedtools genomecoverage but only containing those lines with the genomic region coverage lower than 10X.
 
+### Masking the consensus genome
+
+Now that you have the consensus genome and the regions with a sequencing depth lower than 10X, you are going to "mask" those regions in the consensus genome replacing the nucleotides in those regions with "N"s. You have to search for "_bedtools maskfasta_", select "_bedtools MaskFastaBed use intervals to mask sequences from a FASTA file_" and then select the following parameters:
+
+3. BED/bedGraph/GFF/VCF/EncodePeak file > Select the BED files resulting from AWK text filter for both samples
+4. FASTA file > Select the consensus genome fasta file generated with Bcftools consensus, for both samples
+5. Execute
+
+![bedtools_maskfasta](images/viralrecon_bedtoolsmaskfasta.png)
+
+The resulting file is the consensus genome generated previously but now only contains Ns instead of A, T, G or C in the regions with less than 10X depth of coverage
+
+![bedtools_maskfasta_result](images/bedtools_maskfasta_result.png)
+
+You can download this fasta file and use it to upload it to any public repository such as [ENA](https://www.ebi.ac.uk/ena/browser/home) or [GiSaid](https://gisaid.org/). Also you can use it to perform phylogenetic trees or whatever else you want to do with the SARS-CoV-2 consensus fasta file.
+
 ## Lineage
 Now we are going to determine the lineage of the samples. We will use a software called pangolin. We are going to use the masked consensus genomes generated in the previous steps as follows:
 
 1. Search for the **pangolin** tool
 2. Select **Pangolin Phylogenetic Assignment of Outbreak Lineages** and set the following parameters:
-3. Select the *bcftools consensus* generated in the previous step as input fasta file for both samples
+3. Select the *bedtools MaskFastaBed* generated in the previous step as input fasta file for both samples
 4. **Execute**
 
 <p align="center"><img src="images/viralrecon_pangolin.png" alt="pangolin" width="900"></p>
 
 Now we are going to have a look to the results from pangolin. As you can see, results are in table format, where you have in first place the reference genome and then de lineage assingned.
 
+**Question**
+<details>
+<summary> Which is the lineage of sample1?</summary>
+<br>
+B.1.1.7 (Alpha)
+</details>
+<details>
+<summary> And the lineage of sample2?</summary>
+<br>
+AY.33 (Delta)
+</details>
+
 ## All results
 
 If you have any problem following this training and you want to visualize the resulting file you can access them through this URL:
 
-https://usegalaxy.org/u/svarona/h/viralrecon2021
+https://usegalaxy.eu/u/s.varona/h/viralrecon
 
 And viralrecon workflfow in:
-https://usegalaxy.eu/u/svarona/w/viralrecon-emulator-imported-from-uploaded-file
+
+https://usegalaxy.eu/u/s.varona/w/viralrecon2022
