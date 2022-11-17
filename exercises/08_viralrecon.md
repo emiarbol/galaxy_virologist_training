@@ -451,7 +451,7 @@ Now we are going to determine the lineage of the samples. We will use a software
 3. Select the *bedtools MaskFastaBed* generated in the previous step as input fasta file for both samples
 4. **Execute**
 
-<p align="center"><img src="images/viralrecon_pangolin.png" alt="pangolin" width="900"></p>
+<p align="center"><img src="images/viralrecon_pangolin.PNG" alt="pangolin" width="900"></p>
 
 Now we are going to have a look to the results from pangolin. As you can see, results are in table format, where you have in first place the reference genome and then de lineage assingned.
 
