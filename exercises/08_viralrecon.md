@@ -392,7 +392,7 @@ The first step consist in including the called variants into the reference genom
 3. Reference genome > Fasta file uploaded at the begining.
 4. Execute
 
-![bcftools_consensus](images/viralrecon_bcftoolsconsensus.png)
+![bcftools_consensus](images/viralrecon_bcftoolsconsensus.PNG)
 
 This will just generate a fasta file identical to the reference one, except for those nucleotides that are variants from the VCF file.
 
@@ -435,7 +435,7 @@ Now that you have the consensus genome and the regions with a sequencing depth l
 4. FASTA file > Select the consensus genome fasta file generated with Bcftools consensus, for both samples
 5. Execute
 
-![bedtools_maskfasta](images/viralrecon_bedtoolsmaskfasta.png)
+![bedtools_maskfasta](images/viralrecon_bedtoolsmaskfasta.PNG)
 
 The resulting file is the consensus genome generated previously but now only contains Ns instead of A, T, G or C in the regions with less than 10X depth of coverage
 
