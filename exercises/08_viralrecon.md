@@ -412,7 +412,7 @@ To do that you will search for "_bedtools genomecov_" in the search bar and sele
 
 This process will generate a BED file where each genomic position range of the reference genome has the coverage calculated. In this example you can see that for the positions of the reference genome from the nucleotide 2 to 54 they have a coverage of 2X and then will be masked.
 
-![bedtools_genomecov_result](images/bedtools_genomecov_result.png)
+![bedtools_genomecov_result](images/bedtools_genomecov_result.PNG)
 
 ### Regions filtering
 
@@ -439,7 +439,7 @@ Now that you have the consensus genome and the regions with a sequencing depth l
 
 The resulting file is the consensus genome generated previously but now only contains Ns instead of A, T, G or C in the regions with less than 10X depth of coverage
 
-![bedtools_maskfasta_result](images/bedtools_maskfasta_result.png)
+![bedtools_maskfasta_result](images/bedtools_maskfasta_result.PNG)
 
 You can download this fasta file and use it to upload it to any public repository such as [ENA](https://www.ebi.ac.uk/ena/browser/home) or [GiSaid](https://gisaid.org/). Also you can use it to perform phylogenetic trees or whatever else you want to do with the SARS-CoV-2 consensus fasta file.
 
