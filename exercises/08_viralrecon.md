@@ -127,12 +127,10 @@ Once we have check the quality of our reads, it's important to trim low quality 
 ![fastp3](images/viralrecon_fastp3.png)
 ![fastp4](images/viralrecon_fastp4.png)
 
-A message will appear, which means that 3 results will be generated:
+A message will appear, which means that 6 results will be generated:
   1. Two, one with the R1 trimmed reads, for each sample
   2. Another two, one with the R2 trimmed reads, for each sample
   3. Two, one with the HTML results, for each sample
-
-**Repeat these steps for the second sample**
 
 ### Fastp results
 
@@ -252,7 +250,7 @@ You have to change the following parameters:
 1. Select SAM/BAM dataset or dataset collection > Dataset collection > Select both bam files at once
 2. Load reference genome from > History
 3. Select the fasta file we uploaded with the reference genome (NC_045512.2).
-8. Treat bases with coverage exceeding this value as if they had coverage at this value = 1000000
+8. Treat bases with coverage exceeding this value as if they had coverage at this value = 1000
 9. Select validation stringency > Lenient
 10. Execute.
 
