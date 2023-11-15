@@ -57,7 +57,7 @@ The material includes slides with theory concepts and a bunch of practical exerc
 - [**Exercise 6**](exercises/06_variant_calling_illumina.md) -- [Download pdf](exercises/06_variant_calling_illumina.pdf)
 
 ### Day 4
-- **Talk 7:** [Anotación](slides/20221117_2ED_curso_galaxy.virus_session4.1_annotation_ICuesta.pdf)
+- **Talk 7:** [Anotación](slides/20231116_3ED_curso_galaxy.virus_session4.1_annotation_ICuesta.pdf)
 - **Talk 8:** [Viralrecon](slides/08_viralrecon.pdf)
 - [**Exercise 7**](exercises/07_anotation.md) -- [Download pdf](exercises/07_anotation.pdf)
 
