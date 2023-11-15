@@ -88,7 +88,7 @@ Click the :eye: icon in the history: Spades Contigs stats.
     <details>
     <summary>How many contigs has been assembled?</summary>
     </br>
-    93
+    46
     </details>
 
 Click the :eye: icon in the history: Spades scaffolds.
