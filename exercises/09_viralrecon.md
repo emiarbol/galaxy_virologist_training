@@ -181,7 +181,7 @@ In order to call for variants between the samples and the reference, it's mandat
 
 ### Mapping reads with reference genome (Bowtie2)
 
-Now we can start with the main mapping process. The first thing we have to do is look for the program "_Bowtie2_" in the search bar and then select "_Bowtie2 - map reads against reference genome_". Here we will have to set the following parameters, for the first sample, same as [here](03_mapping.md#map-reads-using-bowtie2)
+Now we can start with the main mapping process. The first thing we have to do is look for the program "_Bowtie2_" in the search bar and then select "_Bowtie2 - map reads against reference genome_". Here we will have to set the following parameters, for the first sample, same as [here](04_mapping.md#map-reads-using-bowtie2)
 
 3. Is this single or paired library > Paired-end
 4. Fasta/Q file #1: **fastp Read 1 output** for both samples
