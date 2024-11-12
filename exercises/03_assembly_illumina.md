@@ -69,8 +69,6 @@ https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/875/385/GCF_000875385.1_ViralPr
 
 - Finally, add some usefull tags
 
-<p align="center"><img src="images/assembly_tags.png" alt="Change name 2" width="900"></p>    
-
 ### Assemble reads with Spades
 
 1. Search `Spades` in the search tool box and select _rnaviralSPAdes de novo assembler for transcriptomes, metatranscriptomes and metaviromes_
@@ -100,9 +98,10 @@ Click the :eye: icon in the history: Spades scaffolds.
 ### Assembly quality control with Quast
 
 1. Search Quast in the search tool box.
-2. rnaviralSpades Scaffolds
-3. Use a reference genome: Yes. Select the NC_009942.1 fasta file previously loaded.
-4. Genomic feature positions in the reference genome > NC_009942. gff file previously loaded.
+2. :warning: **Assembly mode? > Individual assembly**
+3. rnaviralSpades Scaffolds
+4. Use a reference genome: Yes. Select the NC_009942.1 fasta file previously loaded.
+5. Genomic feature positions in the reference genome > NC_009942. gff file previously loaded.
 
 <p align="center"><img src="images/quast_params1.png" alt="quast params" width="900"></p>
 <p align="center"><img src="images/quast_params2.png" alt="quast params" width="900"></p>
