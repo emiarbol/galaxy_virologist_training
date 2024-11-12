@@ -17,7 +17,7 @@ When we have to do a bioinformatic analysis using a reference genome, we need to
 
 First of all go to [Galaxy Web Server in Europe](https://usegalaxy.eu/) and you will se a display such as this one:
 
-<p align="center"><img src="images/Galaxy_web.PNG" alt="Webiste" width="900"></p>
+<p align="center"><img src="images/Galaxy_web.png" alt="Webiste" width="900"></p>
 
 Where you have 4 different elements:
 1. The first one in yellow is the Title panel with the buttons:
@@ -45,7 +45,7 @@ The first thing we would do is to sign up, so you can save your history. To do t
 
 <p align="center"><img src="images/login_2.png" alt="Login 2" width="900"></p>
 
-<p align="center"><img src="images/login_3.PNG" alt="Login 3" width="900"></p>
+<p align="center"><img src="images/login_3.png" alt="Login 3" width="900"></p>
 
 > **Optional**: Loging into TiaaS server: https://usegalaxy.eu/join-training/virologist_isciii
 

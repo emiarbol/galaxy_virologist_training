@@ -390,7 +390,7 @@ The first step consist in including the called variants into the reference genom
 3. Reference genome > Fasta file uploaded at the begining.
 4. Execute
 
-![bcftools_consensus](images/viralrecon_bcftoolsconsensus.PNG)
+![bcftools_consensus](images/viralrecon_bcftoolsconsensus.png)
 
 This will just generate a fasta file identical to the reference one, except for those nucleotides that are variants from the VCF file.
 
@@ -410,7 +410,7 @@ To do that you will search for "_bedtools genomecov_" in the search bar and sele
 
 This process will generate a BED file where each genomic position range of the reference genome has the coverage calculated. In this example you can see that for the positions of the reference genome from the nucleotide 2 to 54 they have a coverage of 2X and then will be masked.
 
-![bedtools_genomecov_result](images/bedtools_genomecov_result.PNG)
+![bedtools_genomecov_result](images/bedtools_genomecov_result.png)
 
 ### Regions filtering
 
@@ -433,11 +433,11 @@ Now that you have the consensus genome and the regions with a sequencing depth l
 4. FASTA file > Select the consensus genome fasta file generated with Bcftools consensus, for both samples
 5. Execute
 
-![bedtools_maskfasta](images/viralrecon_bedtoolsmaskfasta.PNG)
+![bedtools_maskfasta](images/viralrecon_bedtoolsmaskfasta.png)
 
 The resulting file is the consensus genome generated previously but now only contains Ns instead of A, T, G or C in the regions with less than 10X depth of coverage
 
-![bedtools_maskfasta_result](images/bedtools_maskfasta_result.PNG)
+![bedtools_maskfasta_result](images/bedtools_maskfasta_result.png)
 
 You can download this fasta file and use it to upload it to any public repository such as [ENA](https://www.ebi.ac.uk/ena/browser/home) or [GiSaid](https://gisaid.org/). Also you can use it to perform phylogenetic trees or whatever else you want to do with the SARS-CoV-2 consensus fasta file.
 
@@ -449,7 +449,7 @@ Now we are going to determine the lineage of the samples. We will use a software
 3. Select the *bedtools MaskFastaBed* generated in the previous step as input fasta file for both samples
 4. **Execute**
 
-<p align="center"><img src="images/viralrecon_pangolin.PNG" alt="pangolin" width="900"></p>
+<p align="center"><img src="images/viralrecon_pangolin.png" alt="pangolin" width="900"></p>
 
 Now we are going to have a look to the results from pangolin. As you can see, results are in table format, where you have in first place the reference genome and then de lineage assingned.
 
