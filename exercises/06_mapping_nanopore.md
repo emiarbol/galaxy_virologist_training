@@ -1,4 +1,4 @@
-# Galaxy for virologist training Exercise 4: Nanopore mapping and Assembly 101
+# Galaxy for virologist training Exercise 4: Nanopore mapping 101
 
 <div class="tables-start"></div>
 
