@@ -2,7 +2,7 @@
 
 Despite the improvement of sequencing methods, there is no error-free technique. A correct measuring of the sequencing quality is essential for identifying problems in the sequencing, thus, this must be the first step in every sequencing analysis. Once the quality control is finished, it's important to remove those low quality reads, or short reads, for which a trimming step is mandatory. After the trimming step it is recommended to perform a new quality control step to be sure that trimming worked.
 
-# 1. Illumina Quality control and trimming
+## 1. Illumina Quality control and trimming
 
 <div class="tables-start"></div>
 
@@ -15,19 +15,31 @@ Despite the improvement of sequencing methods, there is no error-free technique.
 
 <div class="tables-end"></div>
 
-## 1. Quality control
+### 1.1. Quality control
+
+#### 1.1.1. Upload data
 
 To run the quality control over the samples, follow these steps:
+
 1. [Create a new history, as we explained yesterday](https://github.com/BU-ISCIII/galaxy_virologist_training/blob/one_week_4day_format/exercises/01_introduction_to_galaxy.md#2-galaxys-history) named **Illumina preprocessing**
 2. [Upload data as seen yesterday](https://github.com/BU-ISCIII/galaxy_virologist_training/blob/one_week_4day_format/exercises/01_introduction_to_galaxy.md#3-loading-data), copy and paste the following URLs:
+
 ```
 ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR531/002/ERR5310322/ERR5310322_1.fastq.gz
 ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR531/002/ERR5310322/ERR5310322_2.fastq.gz
 ```
-3. Search for the **fastqc** tool and select **FastQC Read Quality reports** and set the following parameters:
-    - Select multiple file data set in Raw read data from your current history
-    - With the *Ctrl* key pressed, select the two datasets
-    - Then go down and select **Execute**
+
+3. Add some tags to the files. _**It is mandatory that the tag starts with `#` to be propagated to the processes**_.
+
+<img src="images/add_tag1.png" alt="add_tag1" width="250"><img src="images/add_tag2.png" alt="add_tag2" width="250"><img src="images/add_tag3.png" alt="add_tag3" width="250"></p>
+
+#### 1.1.2. Run FastQC
+
+1. Search for the **fastqc** tool
+2. Select **FastQC Read Quality reports** and set the following parameters:
+3. Select multiple file data set in Raw read data from your current history
+4. Select the two datasets
+5. Then go down and select **Run tool**
 
 <p align="center"><img src="images/fastqc_run.png" alt="fastqc_run" width="900"></p>
 
@@ -50,33 +62,53 @@ Here, you can see the number of reads in each file, the maximum and minimum leng
 Using FastQC
 </details>
 
-## 2. Trimming
+### 1.2. Trimming
 
 Once we have performed the quality control, we have to perform the quality and read length trimming:
 
-1. Search for **fastp** in the tools and select **fastp - fast all-in-one preprocessing for FASTQ files**
-2. Select custom parameters:
-    - Single-end or paired reads > Paired
-        - Input 1 > Browse datasets (right folder icon) > Select ERR5310322_1.fastq.gz
-        - Input 2 > Browse datasets > Select ERR5310322_2.fastq.gz
-    - Display Filter Options
-        - Quality Filtering options
-            - Qualified Quality Phred = 30
-            - Unqualified percent limit = 10
-        - Length Filtering Options
-            - Length required = 50
-    - Read modification options
-        - PoliX tail trimming > Enable polyX tail trimming
-        - Per read cutting by quality options
-            - Cut by quality in front (5') > Yes
-            - Cut by quality in tail (3') > Yes
-            - Cutting mean quality = 30
-3. Finally, click on **Execute**
+#### 1.2.1. Run Fastp
+
+1.Search for **fastp** in the tools
+
+2.Then select **fastp - fast all-in-one preprocessing for FASTQ files**
+
+-Select custom parameters:
+
+    3.Single-end or paired reads > Paired
+
+        4.Input 1 > Browse datasets (right folder icon) > Select ERR5310322_1.fastq.gz
+
+        5.Input 2 > Browse datasets > Select ERR5310322_2.fastq.gz
+
+    6.Display Filter Options
+
+        -Quality Filtering options
+
+            7.Qualified Quality Phred = 30
+
+            8.Unqualified percent limit = 10
+
+        -Length Filtering Options
+
+            9.Length required = 50
+
+    10.Read modification options
+
+        11.PoliX tail trimming > Enable polyX tail trimming
+
+        -Per read cutting by quality options
+
+            12.Cut by quality in front (5') > Yes
+
+            13.Cut by quality in tail (3') > Yes
+
+            14.Cutting mean quality = 30
+
+15.Finally, click on **Run tool**
 
 <p align="center"><img src="images/fastp_1.png" alt="fastp_1" width="900"></p>
 <p align="center"><img src="images/fastp_2.png" alt="fastp_2" width="900"></p>
 <p align="center"><img src="images/fastp_3.png" alt="fastp_3" width="900"></p>
-<p align="center"><img src="images/fastp_4.png" alt="fastp_4" width="900"></p>
 
 To see the trimming stats, have a look at the **fastp on data 2 and data 1: HTML report** file. You should see something like that.
 
@@ -88,16 +120,29 @@ To see the trimming stats, have a look at the **fastp on data 2 and data 1: HTML
 98664 reads
 </details>
 
-### Other trimming tools
-1. Search for **trimmomatic** in the tools and select **Trimmomatic flexible read trimming tool for Illumina NGS data**
-2. Select custom parameters:
-    - Single-end or paired-end reads? = Paired-end (two separated files)
-    - Input FASTQ file (R1/first of pair) = ERR5310322_1.fastq.gz
-    - Input FASTQ file (R2/second of pair) = ERR5310322_2.fastq.gz
-    - Insert Trimmomatic Operation:
-        - Select Trimmomatic operation to perform: **MINLEN**
-        - Minimum length of reads to be kept = 50
-3. Select **Execute**
+#### 1.2.2. Other trimming tools: Trimmomatic
+
+1.Search for **trimmomatic** in the tools
+
+2.Select **Trimmomatic flexible read trimming tool for Illumina NGS data**
+
+-Select custom parameters:
+
+    3.Single-end or paired-end reads? = Paired-end (two separated files)
+
+    4.Input FASTQ file (R1/first of pair) = ERR5310322_1.fastq.gz
+
+    5.Input FASTQ file (R2/second of pair) = ERR5310322_2.fastq.gz
+
+    6.Average quality required = 30
+
+    7.Insert Trimmomatic Operation:
+
+        8.Select Trimmomatic operation to perform: **MINLEN**
+
+        9.Minimum length of reads to be kept = 50
+
+10.Select **Run tool**
 
 <p align="center"><img src="images/trimmomatic_1.png" alt="trimmomatic_1" width="900"></p>
 <p align="center"><img src="images/trimmomatic_2.png" alt="trimmomatic_2" width="900"></p>
@@ -118,10 +163,9 @@ Trimmomatic does not perform statistics over trimmed reads, so we need to perfor
 Using a trimming software, such as fastp or trimmomatic.
 </details>
 
-- This hands-on history URL: https://usegalaxy.eu/u/s.varona/h/illumina-preprocessing
+- This hands-on history URL: [https://usegalaxy.eu/u/svarona/h/illumina-preprocessing](https://usegalaxy.eu/u/svarona/h/illumina-preprocessing)
 
-
-# 2. Nanopore Quality control and trimming
+## 2. Nanopore Quality control and trimming
 
 <div class="tables-start"></div>
 
@@ -134,7 +178,7 @@ Using a trimming software, such as fastp or trimmomatic.
 
 <div class="tables-end"></div>
 
-## 1. Quality control
+### 2.1. Quality control
 
 To run the quality control over the samples, follow these steps:
 1. [Create a new history has explained yesterday](https://github.com/BU-ISCIII/galaxy_virologist_training/blob/one_week_4day_format/exercises/01_introduction_to_galaxy.md#2-galaxys-history) named **Nanopore quality**
@@ -145,19 +189,20 @@ https://raw.githubusercontent.com/nf-core/test-datasets/viralrecon/nanopore/mini
 https://raw.githubusercontent.com/nf-core/test-datasets/viralrecon/nanopore/minion/fastq_pass/barcode01/FAO93606_pass_barcode01_7650855b_2.fastq
 ```
 
-### 1.1. PycoQC
+#### 2.1.1. PycoQC
 
 To use PycoQC we need to use the `sequencing_summary.txt` provided by de Nanopore sequencing machine.
 
-1. [Upload data as seen yesterday](https://github.com/BU-ISCIII/galaxy_virologist_training/blob/one_week_4day_format/exercises/01_introduction_to_galaxy.md#3-loading-data), copy and paste the following URL:
-```
+[Upload data as seen yesterday](https://github.com/BU-ISCIII/galaxy_virologist_training/blob/one_week_4day_format/exercises/01_introduction_to_galaxy.md#3-loading-data), copy and paste the following URL:
+
+```bash
 https://raw.githubusercontent.com/nf-core/test-datasets/viralrecon/nanopore/minion/sequencing_summary.txt
 ```
-2. Search for the **Pycoqc** tool and select it.
-4. Run the tool as follows:
-    - In *A sequencing_summary file*: Select the `sequencing_summary.txt` we just uploaded
-    - Leave the rest as defaults
-    - Select **Execute**
+
+1. Search for the **Pycoqc** tool
+2. Select **Pycoqc quality control for Nanopore sequencing data**
+3. In *A sequencing_summary file*: Select the `sequencing_summary.txt` we just uploaded
+4. Select **Run tool**
 
 <p align="center"><img src="images/pycoqc.png" alt="pycoqc_run" width="900"></p>
 
@@ -222,10 +267,13 @@ It gives an overview of available pores, pore usage during the experiment, inact
 Using NanoPlot or PycoQC and having a look to the statistic values.
 </details>
 
-## 2. Trimming
+### 2.2. Trimming
+
 When Nanopore reads are being sequenced, the MinKnown software splits Fast5 reads into quality pass and quality fail. As we will select only Fast5 pass reads, we won't need to perform a quality trimming, so even if we see that the reads have a bad Phred score, we know that the ONT software considered the reads as "good quality".
 
 Then we will only be performing a read length trimming. As we are using amplicon sequencing data, we won't be expecting reads smaller than 400 nucleotides, nor higher than 600, which would obviously correspond to chimeric reads.
+
+#### 2.2.1. Artic
 
 1. Search for **artic** tool
 2. Select **ARTIC guppyplex Filter Nanopore reads by read length and (optionally) quality**
@@ -237,7 +285,9 @@ Then we will only be performing a read length trimming. As we are using amplicon
 
 <p align="center"><img src="images/artic_filter.png" alt="nanofilt_run" width="900"></p>
 
-Now we are going to repeat NanoPlot on filtered data:
+#### 2.2.2. Nanoplot
+
+Now we are going to run NanoPlot on filtered data:
 
 1. Search for the **Nanoplot** tool and select **NanoPlot Plotting suite for Oxford Nanopore sequencing data and alignments**
 2. Run the tool as follows:
