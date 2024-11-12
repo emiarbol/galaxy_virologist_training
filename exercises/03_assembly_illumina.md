@@ -12,8 +12,10 @@
 <div class="tables-end"></div>
 
 ## 1. Description
+
 Sometimes, we don't have a reference genome to map against, or we want to reconstruct a genome without any bias caused by a reference. In such cases, we need to do a _de novo assembly_. This type of analysis tries to reconstruct the original genome without any template, using only the reads. 
 Some considerations:
+
 - When we assemble, the longer the reads are and the longer the size of the library fragments the easier it gets for the assembler. That's why pacbio or nanopore are recommended for assembly. Think of it like a puzzle, the bigger the pieces, the easier it is to form the image.
 - It's almost imposible to reconstruct the entire genome of a large-genome microorganism with only one sequencing, although it can be done for smaller ones, like viruses.
 - Assembly is not recommended for amplicon based libraries due to the depth of coverage uneveness and the amplicons intrinsic bias.
@@ -21,16 +23,18 @@ Some considerations:
 ## 2. Upload data to galaxy
 
 ### Training dataset
+
 - Experiment info: PRJEB43037, WGS, Illumina MiSeq, paired-end
 - Fastq R1: [ERR5310322_1](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR531/002/ERR5310322/ERR5310322_1.fastq.gz) - url : `ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR531/002/ERR5310322/ERR5310322_1.fastq.gz`
 - Fastq R2: [ERR5310322_2](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR531/002/ERR5310322/ERR5310322_2.fastq.gz)  url : `ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR531/002/ERR5310322/ERR5310322_2.fastq.gz`
 - Reference genome NC_009942.1: [fasta](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/875/385/GCF_000875385.1_ViralProj30293/GCF_000875385.1_ViralProj30293_genomic.fna.gz) -- [gff](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/875/385/GCF_000875385.1_ViralProj30293/GCF_000875385.1_ViralProj30293_genomic.gff.gz)
 
 ### Create new history
-- Click the `+` icon at the top of the history panel and create a new history with the name `illumina assembly 101 tutorial` as explained [here](https://github.com/BU-ISCIII/galaxy_virologist_training/blob/one_week_4day_format/exercises/01_introduction_to_galaxy.md#2-galaxys-history)
 
+- Click the `+` icon at the top of the history panel and create a new history with the name `Illumina Assembly` as explained [here](https://github.com/BU-ISCIII/galaxy_virologist_training/blob/one_week_4day_format/exercises/01_introduction_to_galaxy.md#2-galaxys-history)
 
 ### Upload data
+
 - Import and rename the read files `ERR5310322_1` and `ERR5310322_2`
     1. Click in upload data.
     2. Click in paste/fetch data
@@ -38,18 +42,19 @@ Some considerations:
     4. Click in Start.
     5. Wait until the job finishes (green in history)
     6. Do the same for fastq R2.
+
 <p align="center"><img src="images/upload_data_mapping.png" alt="Upload data mapping" width="900"></p>
 
 - Rename R1 and R2 files.
     1. Click in the ✏️ in the history for `ERR5310322_1.fastq.gz`
     2. Change the name to `ERR5310322_1`
     3. Do the same for R2.
-    
+
 <p align="center"><img src="images/changename1.png" alt="Change name 1" width="900"></p>    
 
 - Import the reference genome and GFF file.
 
-```
+```bash
 https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/875/385/GCF_000875385.1_ViralProj30293/GCF_000875385.1_ViralProj30293_genomic.fna.gz
 https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/875/385/GCF_000875385.1_ViralProj30293/GCF_000875385.1_ViralProj30293_genomic.gff.gz
 ```
@@ -62,6 +67,10 @@ https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/875/385/GCF_000875385.1_ViralPr
 
 <p align="center"><img src="images/changename2.png" alt="Change name 2" width="900"></p>    
 
+- Finally, add some usefull tags
+
+<p align="center"><img src="images/assembly_tags.png" alt="Change name 2" width="900"></p>    
+
 ### Assemble reads with Spades
 
 1. Search `Spades` in the search tool box and select _rnaviralSPAdes de novo assembler for transcriptomes, metatranscriptomes and metaviromes_
@@ -73,14 +82,9 @@ https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/875/385/GCF_000875385.1_ViralPr
 <p align="center"><img src="images/spades_params.png" alt="Spades params" width="900"></p>
 <p align="center"><img src="images/spades_params_2.png" alt="Spades params 2" width="900"></p>
 
-.
-
 > **Warning**
-
 > :coffee::fork_and_knife::clock330: **Assembly takes time!**
 > There is no such thing as Assembly in real time. It can take anywhere between 90 minutes and two hours.
-
-.
 
 **Questions:**
 
@@ -94,6 +98,7 @@ Click the :eye: icon in the history: Spades Contigs stats.
 Click the :eye: icon in the history: Spades scaffolds.
 
 ### Assembly quality control with Quast
+
 1. Search Quast in the search tool box.
 2. rnaviralSpades Scaffolds
 3. Use a reference genome: Yes. Select the NC_009942.1 fasta file previously loaded.
@@ -102,7 +107,7 @@ Click the :eye: icon in the history: Spades scaffolds.
 <p align="center"><img src="images/quast_params1.png" alt="quast params" width="900"></p>
 <p align="center"><img src="images/quast_params2.png" alt="quast params" width="900"></p>
 
-4. Click the :eye: icon Quast HTML report.
+5. Click the :eye: icon Quast HTML report.
     <details>
     <summary>How much of or reference genome have we reconstructed?</summary>
     </br>
@@ -124,7 +129,7 @@ Click the :eye: icon in the history: Spades scaffolds.
         11615
     </details>
 
-5. Open the Icarus viewer in the quast report.
+6. Open the Icarus viewer in the quast report.
 
 <p align="center"><img src="images/icarus.png" alt="quast params" width="400"></p>
 
