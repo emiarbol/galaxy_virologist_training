@@ -52,7 +52,7 @@ The material includes slides with theory concepts and a bunch of practical exerc
 
 - **Talk 5:** [Fase de mapping](slides/curso_ViralGalaxy_session_Mapping.pdf)
 - **Talk 6:** [Llamada a variantes: identificación de SNPs y obtención de secuencia consenso](slides/curso_ViralGalaxy_session_VariantCallingConsensus.pdf)
-- [**Exercise 5**](exercises/04_mapping.md) -- [Download pdf](exercises/04_mapping.pdf)
+- [**Exercise 5**](exercises/05_mapping.md) -- [Download pdf](exercises/05_mapping.pdf)
 - [**Exercise 6**](exercises/06_mapping_nanopore.md) -- [Download pdf](exercises/06_mapping_nanopore.pdf)
 - [**Exercise 7**](exercises/07_variant_calling_illumina.md) -- [Download pdf](exercises/07_variant_calling_illumina.pdf)
 - Schemas:
