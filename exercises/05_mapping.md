@@ -12,22 +12,25 @@
 <div class="tables-end"></div>
 
 ## 1. Description
+
 One of the most common experiments using massive sequencing are re-sequencing experiments. This type of experiments sequence already known microorganisms, with the goal to discover variation between an already assembled and known reference, and our reads. Mapping is a mandatory step for this kind of experiments, where we need to sort all the short sequences (reads) we have in our fastq file, lacking any genomic context.
 After the mapping step, we will transform our fastq file into a bam file that contains information about where a read came from, meaning we are going to have the coordinates where each read is placed inside our reference genome.
 
 ## 2. Upload data to galaxy
 
 ### Training dataset
+
 - Experiment info: PRJEB43037, WGS, Illumina MiSeq, paired-end
 - Fastq R1: [ERR5310322_1](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR531/002/ERR5310322/ERR5310322_1.fastq.gz) - url : `ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR531/002/ERR5310322/ERR5310322_1.fastq.gz`
 - Fastq R2: [ERR5310322_2](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR531/002/ERR5310322/ERR5310322_2.fastq.gz)  url : `ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR531/002/ERR5310322/ERR5310322_2.fastq.gz`
 - Reference genome NC_009942.1: [fasta](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/875/385/GCF_000875385.1_ViralProj30293/GCF_000875385.1_ViralProj30293_genomic.fna.gz) -- [gff](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/875/385/GCF_000875385.1_ViralProj30293/GCF_000875385.1_ViralProj30293_genomic.gff.gz)
 
 ### Create new history
+
 - Click the `+` icon at the top of the history panel and create a new history with the name `mapping 101 tutorial` as explained [here](https://github.com/BU-ISCIII/galaxy_virologist_training/blob/one_week_4day_format/exercises/01_introduction_to_galaxy.md#2-galaxys-history)
 
-
 ### Upload data
+
 - Import and rename the read files `ERR5310322_1` and `ERR5310322_2`
     1. Click in upload data.
     2. Click in paste/fetch data
@@ -46,7 +49,7 @@ After the mapping step, we will transform our fastq file into a bam file that co
 
 - Import the reference genome:
 
-```
+```bash
 https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/875/385/GCF_000875385.1_ViralProj30293/GCF_000875385.1_ViralProj30293_genomic.fna.gz
 ```
 
@@ -57,12 +60,13 @@ https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/875/385/GCF_000875385.1_ViralPr
 <p align="center"><img src="images/changename2.png" alt="Change name 2" width="900"></p>    
 
 ### Map reads using Bowtie2
+
 1. Search bowtie2 software in the search tools box on the left.
 
 <p align="center"><img src="images/search_bowtie2.png" alt="Search bowtie" width="400"></p>   
 
 2. Set bowtie2 parameters:
-    
+
     - Is this single or paired library: paired.
     - FASTA/Q file #1 : ERR5310322_1
     - FASTA/Q file #2 : ERR5310322_2
@@ -88,15 +92,15 @@ https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/875/385/GCF_000875385.1_ViralPr
     <details>
     <summary> Which is the mapping rate?</summary>
     <br>
-    96.59%
+    93.44%
     </details>
-    
+
 4. Calculate depth of coverage metrics using picard collectWGSMetrics.
-    
+
     - Search collectwgsmetrics on the search tool box.
     - Select SAM/BAM dataset or dataset collection: Bowtie2 alignments
     - Load reference genome from: History and select reference genome fasta file.
-    - Treat bases with coverage exceeding this value as if they had coverage at this value: 10000
+    - Treat bases with coverage exceeding this value as if they had coverage at this value: 3000
 
 <p align="center"><img src="images/collect_metrics.png" alt="view bam file" width="800"></p>
 
@@ -105,14 +109,16 @@ https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/875/385/GCF_000875385.1_ViralPr
     <details>
     <summary> Which is mean depth of coverage?</summary>
     <br>
-    2770
+    2805
     </details>
     <details>
     <summary> Which is genome coverage > 10x?</summary>
     <br>
     0.961193
     </details>
+
 ### Visualize bam file using IGV
+
 In order to visualize our mapping we will use IGV (Integrative Genomics Viewer). This is an open source, freely available and lightweight visualization tool that enables intuitive real-time exploration of diverse, large-scale genomic data sets on standard desktop computers. It supports flexible integration of a wide range of genomic data types including aligned sequence reads, mutations, copy number, RNA interference screens, gene expression, methylation and genomic annotations.
 
 Navigation through a data set is similar to that of Google Maps, allowing the user to zoom and pan seamlessly across the genome at any level of detail, from whole genome to base pair. Data sets can be loaded from either local or remote sources, including cloud-based resources, enabling investigators to view their own genomic data sets alongside publicly available data.
