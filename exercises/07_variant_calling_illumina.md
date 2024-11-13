@@ -71,7 +71,7 @@ Follow:
 <p align="center"><img src="images/bowtie2_vc1.png" alt="bowtie2_vc1" width="900"></p>
 <p align="center"><img src="images/bowtie2_vc2.png" alt="bowtie2_vc2" width="900"></p>
 
-## 5. Variant Calling.
+## 5. Variant Calling
 
 ### Samtools mpileup
 
@@ -170,7 +170,7 @@ Follow:
 <details>
   <summary>How many variants differ among the vcfs?</summary>
   </br>
-  There are up to 3 variants more in VarScan than the other callers.
+  There are up to 3 variants more in VarScan than iVar.
 </details>
 
 ## 7. Consensus genome
