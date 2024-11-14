@@ -1,4 +1,4 @@
-# Galaxy for virologist training Exercise 7: Illumina Variant Annotation 101
+# Galaxy for virologist training Exercise 8: Illumina Variant Annotation 101
 
 <div class="tables-start"></div>
 
