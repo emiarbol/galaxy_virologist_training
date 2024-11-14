@@ -14,17 +14,18 @@
 In this report you will find all the information necessary to follow the steps to analyze SARS-CoV-2 data with Galaxy.
 
 ## Training overview
+
 During this training we will following these steps:
-1. [Register/Login](https://github.com/BU-ISCIII/galaxy_virologist_training/blob/one_week_4day_format/exercises/01_introduction_to_galaxy.md#sign-uplogin)
-2. [Create a new history](#history) and name it **Viralrecon**
-3. [Upload data](#data): Upload data for the analysis.
-4. [Quality](#quality): Analysis of the quality of the raw reads.
-5. [Trimming](#trimming): Quality trimming using fastp
-6. [Mapping](#mapping): Mapping reads to reference genome with Bowtie2
-7. [Stats](#stats): Mapping statistics with samtools and picard.
-8. [Amplicons](#amplicons): Preprocessing steps mandatory for amplicon sequencing data.
-9. [Variants](#variants): Variant calling and filtering.
-10. [Consensus](#consensus): Consensus genome generation
+
+1. [Create a new history](#history) and name it **Viralrecon**
+2. [Upload data](#data): Upload data for the analysis.
+3. [Quality](#quality): Analysis of the quality of the raw reads.
+4. [Trimming](#trimming): Quality trimming using fastp
+5. [Mapping](#mapping): Mapping reads to reference genome with Bowtie2
+6. [Stats](#stats): Mapping statistics with samtools and picard.
+7. [Amplicons](#amplicons): Preprocessing steps mandatory for amplicon sequencing data.
+8. [Variants](#variants): Variant calling and filtering.
+9. [Consensus](#consensus): Consensus genome generation
 
 **_From now on, each job we run in Galaxy will have a unique number for identifying each process. This numbers can differ depending on the number of samples and the times you run or delete any process. This training's snapshots were taken using other samples and some process were deleted for any reason, so numbers and names MAY DIFFER. However, the steps you have to run are THE SAME_**
 
@@ -36,7 +37,7 @@ During this training we will following these steps:
 
 We are going to upload files using these URLS [as seen in the Galaxy tutorial first day](https://github.com/BU-ISCIII/galaxy_virologist_training/blob/one_week_4day_format/exercises/01_introduction_to_galaxy.md#sign-uplogin)
 
-```
+```bash
 https://zenodo.org/record/5724464/files/SARSCOV2-1_R1.fastq.gz?download=1
 https://zenodo.org/record/5724464/files/SARSCOV2-1_R2.fastq.gz?download=1
 https://zenodo.org/record/5724464/files/SARSCOV2-2_R1.fastq.gz?download=1
@@ -45,12 +46,13 @@ https://zenodo.org/record/5724464/files/SARSCOV2-2_R2.fastq.gz?download=1
 
 Prior to any analysis, we have to download the fasta reference genome using the following URL:
 
-```
+```bash
 https://zenodo.org/record/5724970/files/GCF_009858895.2_ASM985889v3_genomic.200409.fna.gz?download=1
 ```
 
 Also, you will download the bed file of the amplicon primers, which contains the positions in the reference genome of each of the amplicon primers. Use this URL in the window:
-```
+
+```bash
 https://zenodo.org/record/5724970/files/nCoV-2019.artic.V3.scheme.bed.txt?download=1
 ```
 
@@ -68,15 +70,17 @@ Finally, rename and tag the data as follows:
 ## Quality
 
 ### Quality Analysis (FastQC)
+
 Once we have the raw data, an important step is to analyze the quality of the reads, to know if the reads are worth it. To do this, we have to look for the program "_FastQC_" in the search bar, then select **FastQC Read Quality reports** and set the following parameters, same as [here](02_quality.md#1-quality-control):
 
-    - Select multiple file data set and select the fastq files R1 and R2 for both samples
-    - With *Ctrl* select the two datasets
-    - Then go down and select **Execute**
+- Select multiple file data set and select the fastq files R1 and R2 for both samples
+- With *Ctrl* select the two datasets
+- Then go down and select **Execute**
 
 <p align="center"><img src="images/viralrecon_fastqc.png" alt="viralrecon_fastqc" width="900"></p>
 
 ### FastQC results visualization and interprepation questions
+
 To visualize the information coming from FastQC we just have to select the job of interest. In this case we are interested in the "_Web page results_" so for the sample we want to see the results we have to click in the _eye_ to visualize galaxy results:
 
 **_For more information about FastQC output visit [FasxstQC website](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/3%20Analysis%20Modules/)_**
@@ -101,6 +105,7 @@ To visualize the information coming from FastQC we just have to select the job o
 ## Trimming
 
 ### Quality trimming (Fastp)
+
 Once we have check the quality of our reads, it's important to trim low quality nucleotides from those reads, for which we will use _Fastp_. So, in the search bar you look for fastp and then select "_fastp - fast all-in-one preprocessing for FASTQ files_". There, we will have to change some parameters ensure the trimming accuracy for this amplicon data. First of all we are going to do the analysis for the sample we gave to you (201569). These are the field we will have to change:
 
 1. Search for **fastp** in the tools and select **fastp - fast all-in-one preprocessing for FASTQ files**
@@ -128,13 +133,14 @@ Once we have check the quality of our reads, it's important to trim low quality 
 ![fastp4](images/viralrecon_fastp4.png)
 
 A message will appear, which means that 6 results will be generated:
+
   1. Two, one with the R1 trimmed reads, for each sample
   2. Another two, one with the R2 trimmed reads, for each sample
   3. Two, one with the HTML results, for each sample
 
 ### Fastp results
 
-Once fastp analysis is done, you can see the results by clicking in the eye ("_View Data_") in the fatp HTML results. 
+Once fastp analysis is done, you can see the results by clicking in the eye ("_View Data_") in the fatp HTML results.
 
 Among the most relevant results, you have the:
 
@@ -379,6 +385,7 @@ The SnpEff gives three different results, from which the most interesting ones a
 </details>
 
 ## Consensus
+
 Once we have the most relevant variants that can be considered to include in the consensus genome, you can start with the consensus genome generation.
 
 ### Bcftools consensus
@@ -442,6 +449,7 @@ The resulting file is the consensus genome generated previously but now only con
 You can download this fasta file and use it to upload it to any public repository such as [ENA](https://www.ebi.ac.uk/ena/browser/home) or [GiSaid](https://gisaid.org/). Also you can use it to perform phylogenetic trees or whatever else you want to do with the SARS-CoV-2 consensus fasta file.
 
 ## Lineage
+
 Now we are going to determine the lineage of the samples. We will use a software called pangolin. We are going to use the masked consensus genomes generated in the previous steps as follows:
 
 1. Search for the **pangolin** tool
