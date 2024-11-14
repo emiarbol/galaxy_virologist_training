@@ -56,23 +56,33 @@ Follow instructions [here](07_variant_calling_illumina.md#5-variant-calling)
 ### Snpeff build
 
 1. Search `snpeff build` in the search toolbox.
-2. Name of the database: WestNile.
-3. Input annotations are in: GFF
-4. GFF dataset to build database from: NC_009942.1 gff
-5. Choose the source of the reference genome: History. NC_009942.1 fasta.
-6. Click execute and wait.
+2. Select ` SnpEff build: database from Genbank or GFF record`
+3. Select the version icon (three boxes)
+4. Select the version `4.3+T.galaxy6`
+5. Name of the database: WestNile.
+6. Input annotations are in: GFF
+7. GFF dataset to build database from: NC_009942.1 gff
+8. Choose the source for the reference genome > History
+9. Genome in FASTA format > NC_009942.1 fasta.
+10. Click `Run tool`.
 
 <p align="center"><img src="images/snpeff_build_params1.png" alt="snpeff build" width="500"></p>
+<p align="center"><img src="images/snpeff_build_params2.png" alt="snpeff build" width="500"></p>
 
 ### Snpeff eff
 
 1. Search `snpeff eff` in the search toolbox.
-2. Sequence changes (SNPs, MNPs, InDels): ivar vcf file
-3. Create CSV report, useful for downstream analysis (-csvStats): Yes.
-4. Genome source: Custom snpEff database in your history. Snpeff build output.
-5. Click execute and wait.
+2. Select `SnpEff eff: annotate variants`
+3. Select the version icon (three boxes)
+4. Select the version `4.3+T.galaxy2`
+5. Sequence changes (SNPs, MNPs, InDels): ivar vcf file
+6. Create CSV report, useful for downstream analysis (-csvStats): Yes.
+7. Genome source: Custom snpEff database in your history. 
+8. SnpEff4.3 Genome Data > Snpeff build output.
+9. Click `Run tool` and wait.
 
 <p align="center"><img src="images/snpeff_eff_params1.png" alt="snpeff eff" width="500"></p>
+<p align="center"><img src="images/snpeff_eff_params2.png" alt="snpeff eff" width="500"></p>
 
 6. Click the :eye: icon in the SnpEff html output and check the results.
 

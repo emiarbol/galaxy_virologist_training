@@ -425,22 +425,32 @@ https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/875/385/GCF_000875385.1_ViralPr
 <h3 id="snpeff-build">Snpeff build</h3>
 <ol>
 <li>Search <code>snpeff build</code> in the search toolbox.</li>
+<li>Select <code> SnpEff build: database from Genbank or GFF record</code></li>
+<li>Select the version icon (three boxes)</li>
+<li>Select the version <code>4.3+T.galaxy6</code></li>
 <li>Name of the database: WestNile.</li>
 <li>Input annotations are in: GFF</li>
 <li>GFF dataset to build database from: NC_009942.1 gff</li>
-<li>Choose the source of the reference genome: History. NC_009942.1 fasta.</li>
-<li>Click execute and wait.</li>
+<li>Choose the source for the reference genome &gt; History</li>
+<li>Genome in FASTA format &gt; NC_009942.1 fasta.</li>
+<li>Click <code>Run tool</code>.</li>
 </ol>
 <p align="center"><img src="images/snpeff_build_params1.png" alt="snpeff build" width="500"></p>
+<p align="center"><img src="images/snpeff_build_params2.png" alt="snpeff build" width="500"></p>
 <h3 id="snpeff-eff">Snpeff eff</h3>
 <ol>
 <li>Search <code>snpeff eff</code> in the search toolbox.</li>
+<li>Select <code>SnpEff eff: annotate variants</code></li>
+<li>Select the version icon (three boxes)</li>
+<li>Select the version <code>4.3+T.galaxy2</code></li>
 <li>Sequence changes (SNPs, MNPs, InDels): ivar vcf file</li>
 <li>Create CSV report, useful for downstream analysis (-csvStats): Yes.</li>
-<li>Genome source: Custom snpEff database in your history. Snpeff build output.</li>
-<li>Click execute and wait.</li>
+<li>Genome source: Custom snpEff database in your history.</li>
+<li>SnpEff4.3 Genome Data &gt; Snpeff build output.</li>
+<li>Click <code>Run tool</code> and wait.</li>
 </ol>
 <p align="center"><img src="images/snpeff_eff_params1.png" alt="snpeff eff" width="500"></p>
+<p align="center"><img src="images/snpeff_eff_params2.png" alt="snpeff eff" width="500"></p>
 <ol start="6">
 <li>Click the :eye: icon in the SnpEff html output and check the results.</li>
 </ol>
